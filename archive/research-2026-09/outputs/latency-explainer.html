@@ -1,0 +1,122 @@
+<div id="hal-latency-explainer">
+  <style>
+    #hal-latency-explainer { color: var(--foreground); }
+    #hal-latency-explainer .lane { margin-top: 16px; }
+    #hal-latency-explainer .lane-label { margin-bottom: 5px; font-weight: 500; }
+    #hal-latency-explainer .frames { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 3px; }
+    #hal-latency-explainer .cell { min-height: 34px; display: flex; align-items: center; justify-content: center; color: var(--foreground); }
+    #hal-latency-explainer .queued { background: color-mix(in srgb, var(--foreground) 12%, transparent); }
+    #hal-latency-explainer .old { background: color-mix(in srgb, var(--viz-series-2) 24%, transparent); }
+    #hal-latency-explainer .new { background: color-mix(in srgb, var(--viz-series-1) 24%, transparent); }
+    #hal-latency-explainer .compute { background: color-mix(in srgb, var(--viz-series-3) 24%, transparent); }
+    #hal-latency-explainer .reserve { border: 1px dashed var(--viz-series-1); }
+    #hal-latency-explainer .jitter { background-image: repeating-linear-gradient(135deg, transparent, transparent 4px, color-mix(in srgb, var(--foreground) 13%, transparent) 4px, color-mix(in srgb, var(--foreground) 13%, transparent) 6px); }
+    #hal-latency-explainer .legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 16px; }
+    #hal-latency-explainer .legend span { display: inline-flex; align-items: center; gap: 6px; }
+    #hal-latency-explainer .swatch { width: 16px; height: 16px; display: inline-block; }
+    #hal-latency-explainer .prefix { grid-column: 2 / 6; border-bottom: 2px solid var(--border); text-align: center; padding: 4px 0; }
+    #hal-latency-explainer .detail { margin-top: 14px; }
+  </style>
+  <h3>One request, eight future actions</h3>
+  <div class="text-small">Compute C = 1 · jitter J = 1 · transport T = 2 · horizon H = 8</div>
+  <div class="viz-controls">
+    <label class="form-label">Response arrives after observation
+      <select class="form-select" id="hal-completion">
+        <option value="1">+1 — early</option>
+        <option value="2">+2 — on time</option>
+        <option value="4">+4 — late</option>
+        <option value="6">+6 — no reachable actions</option>
+      </select>
+    </label>
+  </div>
+  <div role="img" aria-label="Game observations continue during inference. Actions one through four are forced. Normally, the new plan starts at action five, with actions seven and eight held in reserve.">
+    <div class="lane">
+      <div class="lane-label">Observations · game keeps running →</div>
+      <div class="frames tabular-nums text-small" id="hal-observations"></div>
+    </div>
+    <div class="lane">
+      <div class="lane-label">Inference · request at t; one shared jitter frame</div>
+      <div class="frames text-small" id="hal-inference"></div>
+    </div>
+    <div class="lane">
+      <div class="lane-label">Submission · numbers are target action offsets</div>
+      <div class="frames tabular-nums text-small" id="hal-submission"></div>
+    </div>
+    <div class="lane">
+      <div class="lane-label">Transport · first usable new action</div>
+      <div class="frames text-small" id="hal-transport"></div>
+    </div>
+    <div class="lane">
+      <div class="lane-label">Execution · this request’s contribution</div>
+      <div class="frames text-small"><div class="prefix">Forced prefix: +1 … +4</div></div>
+      <div class="frames text-small" id="hal-execution"></div>
+    </div>
+  </div>
+  <div class="legend text-small">
+    <span><i class="swatch queued"></i>Already queued</span>
+    <span><i class="swatch old"></i>Previous plan</span>
+    <span><i class="swatch new"></i>New plan</span>
+    <span><i class="swatch reserve"></i>Reserve if needed</span>
+    <span><i class="swatch jitter"></i>Shared jitter allowance</span>
+  </div>
+  <div class="detail text-small" id="hal-detail" aria-live="polite"></div>
+  <script>
+    (() => {
+      const root = document.getElementById('hal-latency-explainer');
+      const select = root.querySelector('#hal-completion');
+      function lane(id, cells) {
+        const row = root.querySelector(id);
+        row.replaceChildren(...cells.map(({text = '', kind = '', label = ''}) => {
+          const cell = document.createElement('div');
+          cell.className = 'cell ' + kind;
+          cell.textContent = text;
+          if (label) cell.setAttribute('data-tooltip', label);
+          return cell;
+        }));
+      }
+      function draw() {
+        const completion = Number(select.value);
+        const handoff = Math.max(2, completion);
+        const first = handoff + 3;
+        const slots = Array.from({length: 9}, (_, i) => i);
+        lane('#hal-observations', slots.map(i => ({text: i ? '+' + i : 't'})));
+        lane('#hal-inference', slots.map(i => {
+          if (i === 0) return {text: 'run', kind: 'compute', label: 'Inference and request delivery start from observation t'};
+          if (i === 1) return {text: completion === 1 ? 'hold' : 'run', kind: 'jitter', label: 'The single shared jitter allowance; an early result waits'};
+          if (i < completion) return {text: 'run', kind: 'compute', label: 'Inference or delivery is overrunning the calibrated budget'};
+          if (i === handoff) return {text: '↧', label: first <= 8 ? 'Accept reachable suffix; request again from current observations' : 'No reachable suffix; request again from current observations'};
+          return {};
+        }));
+        lane('#hal-submission', slots.map(i => {
+          const target = i + 3;
+          if (target > 8) return {};
+          if (target <= 4) return {text: '+' + target, kind: 'old', label: 'Submit the previous-plan action reserved by the forced prefix'};
+          if (i < handoff || first > 8) return {text: '+' + target, kind: 'old', label: 'Continue previous tail, or neutral if it is exhausted'};
+          return {text: '+' + target, kind: completion <= 2 && target >= 7 ? 'reserve' : 'new', label: 'Submit this request’s action for target +' + target};
+        }));
+        lane('#hal-transport', slots.map(i => {
+          if (first > 8) return {};
+          if (i === handoff) return {text: 'send', kind: 'new', label: 'Submit action +' + first + ' after observing +' + handoff};
+          if (i > handoff && i < first) return {text: 'wait', kind: 'queued', label: 'Slippi transport delay'};
+          if (i === first) return {text: 'play', kind: 'new', label: 'First new action executes at +' + first};
+          return {};
+        }));
+        lane('#hal-execution', slots.map(i => {
+          if (i === 0) return {};
+          if (i <= 2) return {text: 'old', kind: 'queued', label: 'Already in Slippi’s queue at t'};
+          if (i <= 4) return {text: 'old', kind: 'old', label: 'Previous-plan action committed while inference runs'};
+          if (i < first) return {text: 'old*', kind: 'old', label: 'New offset skipped; previous tail or neutral executes'};
+          if (completion <= 2 && i >= 7) return {text: 'res.', kind: 'reserve', label: 'Reserve action; used if the following request is late'};
+          return {text: 'new', kind: 'new', label: 'Reachable action from this request'};
+        }));
+        root.querySelector('#hal-detail').textContent = first > 8
+          ? 'Skip +5…+8. Continue the previous tail, then neutral if exhausted.'
+          : completion > 2
+            ? 'Skip +5 and +6; first new action +7. Old* = previous tail, or neutral if exhausted.'
+            : 'Handoff at +2 → first new action +5. Minimum horizon 6; two reserve actions.';
+      }
+      select.addEventListener('change', draw);
+      draw();
+    })();
+  </script>
+</div>

@@ -1,0 +1,20 @@
+{
+  "app_id": "ap-9lFRrMfY6823cjLj7GPZua",
+  "app_name": "hal-o59-fixed120-20260925-173335-35faa791",
+  "app_url": "https://modal.com/apps/eric-yue-gu/main/ap-9lFRrMfY6823cjLj7GPZua",
+  "baseline_git_sha": "295404aa16af91b333595efe0c5647ed8eb2bd5b",
+  "completed_boots": 96,
+  "checkpoint_sha256": "52b5233ed506f59f514f7e90a6a6111206152db7413f451dc35be5c30d1e671b",
+  "checkpoint_update": 131072,
+  "desired_return": 120.0,
+  "eval_source_sha256": "35faa7919a5425c01774fad9ebfefdacb91f0a61e3b506f8cf6bae9a561e114c",
+  "function_call_id": "fc-01M3CT4SY9CAP8XMC21S0CAT12",
+  "launcher_sha256": "e5f01f6a50b59cecf96946132a6238801f1563bff364256da1660bc72a471c6c",
+  "max_parallel": 32,
+  "n_matchups": 96,
+  "net_stock_per_min": 1.4134906258086966,
+  "output_name": "eval96-step-0131072-fixed120",
+  "run_name": "260921-092548_059_muon_history_decoder_o59v5-cooldown32768",
+  "status": "complete",
+  "wandb_namespace": "eval_fixed120"
+}

@@ -1,0 +1,16 @@
+{
+  "app_id": "ap-Z5y0SfzWdjl288M0L3fEME",
+  "app_name": "hal-o58-confirmation-20260925-223256-b103bd5e",
+  "app_url": "https://modal.com/apps/eric-yue-gu/main/ap-Z5y0SfzWdjl288M0L3fEME",
+  "base_git_sha": "295404aa16af91b333595efe0c5647ed8eb2bd5b",
+  "control_checkpoint_sha256": "e8ef7228d0fb0197e31e328fee6b0667b768878b7f0cb3d803da0abdb35c5136",
+  "eval_seed": 1,
+  "eval_source_sha256": "b103bd5e0d24e39c202e20af2835e7c384909fbcd9329604d52148a878228d33",
+  "function_call_id": "fc-01M3DB7ZYTGVMV9M5PQS6CWR98",
+  "launcher_sha256": "8586a75992872ef12f8276dd4fd94104b87ded107c8855a895a7c02dd2787c6e",
+  "n_matchups": 96,
+  "status": "launched",
+  "target_index": 2,
+  "target_value": 20.905278205871582,
+  "treatment_checkpoint_sha256": "9a88a3401f59e43dd9db717f3d8c1275027458f0fba73748c3c9c2e8e6a5e78c"
+}

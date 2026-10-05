@@ -1,0 +1,5114 @@
+{
+  "checkpoint_sha256": "52b5233ed506f59f514f7e90a6a6111206152db7413f451dc35be5c30d1e671b",
+  "step": 131071,
+  "p90": 19.9760597229004,
+  "stride": 60,
+  "rows": [
+    {
+      "replay": "runs/netplay/qualification-o59/boot_000/Game_20260924T142521.slp",
+      "port": "p1",
+      "frame": 132,
+      "return60": 13.909826278686523,
+      "value": -19.162630081176758
+    },
+    {
+      "replay": "runs/netplay/qualification-o59/boot_000/Game_20260924T142521.slp",
+      "port": "p2",
+      "frame": 132,
+      "return60": -13.909826278686523,
+      "value": -8.376860618591309
+    },
+    {
+      "replay": "runs/netplay/qualification-o59/boot_000/Game_20260924T142521.slp",
+      "port": "p1",
+      "frame": 192,
+      "return60": 8.697473526000977,
+      "value": -16.60960578918457
+    },
+    {
+      "replay": "runs/netplay/qualification-o59/boot_000/Game_20260924T142521.slp",
+      "port": "p2",
+      "frame": 192,
+      "return60": -8.697473526000977,
+      "value": -32.914859771728516
+    },
+    {
+      "replay": "runs/netplay/qualification-o59/boot_000/Game_20260924T142521.slp",
+      "port": "p1",
+      "frame": 252,
+      "return60": -6.6064229011535645,
+      "value": 48.440513610839844
+    },
+    {
+      "replay": "runs/netplay/qualification-o59/boot_000/Game_20260924T142521.slp",
+      "port": "p2",
+      "frame": 252,
+      "return60": 6.6064229011535645,
+      "value": -30.695703506469727
+    },
+    {
+      "replay": "runs/netplay/qualification-o59/boot_000/Game_20260924T142521.slp",
+      "port": "p1",
+      "frame": 312,
+      "return60": 5.9104509353637695,
+      "value": 32.74874496459961
+    },
+    {
+      "replay": "runs/netplay/qualification-o59/boot_000/Game_20260924T142521.slp",
+      "port": "p2",
+      "frame": 312,
+      "return60": -5.9104509353637695,
+      "value": -34.81218719482422
+    },
+    {
+      "replay": "runs/netplay/qualification-o59/boot_000/Game_20260924T142521.slp",
+      "port": "p1",
+      "frame": 372,
+      "return60": 11.639849662780762,
+      "value": 22.690155029296875
+    },
+    {
+      "replay": "runs/netplay/qualification-o59/boot_000/Game_20260924T142521.slp",
+      "port": "p2",
+      "frame": 372,
+      "return60": -11.639849662780762,
+      "value": -44.39124298095703
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 132,
+      "return60": 0.0,
+      "value": -3.4651036262512207
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 132,
+      "return60": -0.0,
+      "value": 41.88574981689453
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 192,
+      "return60": -14.570940017700195,
+      "value": 0.9740709066390991
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 192,
+      "return60": 14.570940017700195,
+      "value": 23.510190963745117
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 252,
+      "return60": 4.276361465454102,
+      "value": -3.323342800140381
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 252,
+      "return60": -4.276361465454102,
+      "value": 30.142927169799805
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 312,
+      "return60": 4.589751243591309,
+      "value": -2.0136098861694336
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 312,
+      "return60": -4.589751243591309,
+      "value": 22.561004638671875
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 372,
+      "return60": 0.0,
+      "value": 18.855791091918945
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 372,
+      "return60": -0.0,
+      "value": 32.86906433105469
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 432,
+      "return60": -11.015402793884277,
+      "value": 9.14449691772461
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 432,
+      "return60": 11.015402793884277,
+      "value": 28.668020248413086
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 492,
+      "return60": 0.0,
+      "value": -18.925670623779297
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 492,
+      "return60": -0.0,
+      "value": 42.52983093261719
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 552,
+      "return60": 10.728623390197754,
+      "value": 24.45331382751465
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 552,
+      "return60": -10.728623390197754,
+      "value": 37.60541534423828
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 612,
+      "return60": -17.259830474853516,
+      "value": 19.66280174255371
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 612,
+      "return60": 17.259830474853516,
+      "value": 19.70273208618164
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 672,
+      "return60": -6.4536848068237305,
+      "value": -8.344039916992188
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 672,
+      "return60": 6.4536848068237305,
+      "value": 66.67296600341797
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 732,
+      "return60": 0.0,
+      "value": -12.228038787841797
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 732,
+      "return60": -0.0,
+      "value": 74.85875701904297
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 792,
+      "return60": -14.192558288574219,
+      "value": -11.764830589294434
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 792,
+      "return60": 14.192558288574219,
+      "value": 89.60423278808594
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 852,
+      "return60": -2.943939447402954,
+      "value": -46.952392578125
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 852,
+      "return60": 2.943939447402954,
+      "value": 81.46207427978516
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 912,
+      "return60": -4.603148460388184,
+      "value": -47.579429626464844
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 912,
+      "return60": 4.603148460388184,
+      "value": 90.20966339111328
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 972,
+      "return60": 0.0,
+      "value": -77.83980560302734
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 972,
+      "return60": -0.0,
+      "value": 130.333251953125
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1032,
+      "return60": -4.328986167907715,
+      "value": -76.72972106933594
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1032,
+      "return60": 4.328986167907715,
+      "value": 110.96533203125
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1092,
+      "return60": -0.940875768661499,
+      "value": -69.69083404541016
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1092,
+      "return60": 0.940875768661499,
+      "value": 116.48519897460938
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1152,
+      "return60": -111.60202026367188,
+      "value": -62.59498977661133
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1152,
+      "return60": 111.60202026367188,
+      "value": 67.53118896484375
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1212,
+      "return60": 0.0,
+      "value": 30.797996520996094
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1212,
+      "return60": -0.0,
+      "value": 1.39712655544281
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1272,
+      "return60": 114.38923645019531,
+      "value": 16.074052810668945
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1272,
+      "return60": -114.38923645019531,
+      "value": -79.16119384765625
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1332,
+      "return60": 0.0,
+      "value": 22.493324279785156
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1332,
+      "return60": -0.0,
+      "value": 12.495718002319336
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1392,
+      "return60": 0.0,
+      "value": 7.109057426452637
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1392,
+      "return60": -0.0,
+      "value": 28.493892669677734
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1452,
+      "return60": 0.0,
+      "value": 11.549591064453125
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1452,
+      "return60": -0.0,
+      "value": 25.8608341217041
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1512,
+      "return60": -17.026630401611328,
+      "value": 20.529788970947266
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1512,
+      "return60": 17.026630401611328,
+      "value": 28.589466094970703
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1572,
+      "return60": -16.788955688476562,
+      "value": 7.107059478759766
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1572,
+      "return60": 16.788955688476562,
+      "value": 29.487751007080078
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1632,
+      "return60": 0.0,
+      "value": -11.51407241821289
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1632,
+      "return60": -0.0,
+      "value": 49.062496185302734
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1692,
+      "return60": -16.120622634887695,
+      "value": -10.827009201049805
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1692,
+      "return60": 16.120622634887695,
+      "value": 62.64635467529297
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1752,
+      "return60": -11.878728866577148,
+      "value": -20.379920959472656
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1752,
+      "return60": 11.878728866577148,
+      "value": 58.41975402832031
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1812,
+      "return60": -14.402772903442383,
+      "value": -37.82049560546875
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1812,
+      "return60": 14.402772903442383,
+      "value": 57.536903381347656
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1872,
+      "return60": 0.0,
+      "value": -51.014732360839844
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1872,
+      "return60": -0.0,
+      "value": 103.91690826416016
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1932,
+      "return60": -6.510117530822754,
+      "value": -57.389183044433594
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1932,
+      "return60": 6.510117530822754,
+      "value": 68.69587707519531
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 1992,
+      "return60": -3.9252524375915527,
+      "value": -41.58497619628906
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 1992,
+      "return60": 3.9252524375915527,
+      "value": 80.7806167602539
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2052,
+      "return60": 14.189693450927734,
+      "value": -54.23480224609375
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2052,
+      "return60": -14.189693450927734,
+      "value": 81.31061553955078
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2112,
+      "return60": 0.0,
+      "value": 30.41362953186035
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2112,
+      "return60": -0.0,
+      "value": -18.879966735839844
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2172,
+      "return60": 13.598036766052246,
+      "value": 33.73553466796875
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2172,
+      "return60": -13.598036766052246,
+      "value": 2.7330679893493652
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2232,
+      "return60": 0.0,
+      "value": 64.48229217529297
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2232,
+      "return60": -0.0,
+      "value": -59.021968841552734
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2292,
+      "return60": 0.9942126274108887,
+      "value": 90.29261016845703
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2292,
+      "return60": -0.9942126274108887,
+      "value": -64.56136322021484
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2352,
+      "return60": -5.369889259338379,
+      "value": -1.9369384050369263
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2352,
+      "return60": 5.369889259338379,
+      "value": 26.012182235717773
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2412,
+      "return60": -13.572260856628418,
+      "value": -14.99498176574707
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2412,
+      "return60": 13.572260856628418,
+      "value": 75.55138397216797
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2472,
+      "return60": 0.0,
+      "value": -18.74630355834961
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2472,
+      "return60": -0.0,
+      "value": 57.49433898925781
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2532,
+      "return60": -4.3532209396362305,
+      "value": -38.19408416748047
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2532,
+      "return60": 4.3532209396362305,
+      "value": 74.52729797363281
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2592,
+      "return60": -6.889155864715576,
+      "value": -33.436561584472656
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2592,
+      "return60": 6.889155864715576,
+      "value": 59.743064880371094
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2652,
+      "return60": -17.947837829589844,
+      "value": -69.21942138671875
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2652,
+      "return60": 17.947837829589844,
+      "value": 100.09973907470703
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2712,
+      "return60": 0.0,
+      "value": -85.22699737548828
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2712,
+      "return60": -0.0,
+      "value": 104.6204605102539
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2772,
+      "return60": -110.79524230957031,
+      "value": -108.51526641845703
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2772,
+      "return60": 110.79524230957031,
+      "value": 107.84503936767578
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2832,
+      "return60": 0.0,
+      "value": -39.891937255859375
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2832,
+      "return60": -0.0,
+      "value": 42.68304443359375
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2892,
+      "return60": 0.0,
+      "value": 22.879587173461914
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2892,
+      "return60": -0.0,
+      "value": 18.108034133911133
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 2952,
+      "return60": 24.04916763305664,
+      "value": 13.146799087524414
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 2952,
+      "return60": -24.04916763305664,
+      "value": 4.562788486480713
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3012,
+      "return60": 11.455534934997559,
+      "value": 63.476890563964844
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3012,
+      "return60": -11.455534934997559,
+      "value": -21.610031127929688
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3072,
+      "return60": 0.0,
+      "value": 50.858978271484375
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3072,
+      "return60": -0.0,
+      "value": -13.522271156311035
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3132,
+      "return60": 7.925232887268066,
+      "value": 59.137264251708984
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3132,
+      "return60": -7.925232887268066,
+      "value": -22.056556701660156
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3192,
+      "return60": 9.327197074890137,
+      "value": 46.28319549560547
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3192,
+      "return60": -9.327197074890137,
+      "value": -8.613275527954102
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3252,
+      "return60": 6.634088039398193,
+      "value": 67.46800994873047
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3252,
+      "return60": -6.634088039398193,
+      "value": -40.49819564819336
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3312,
+      "return60": 0.0,
+      "value": 50.19725036621094
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3312,
+      "return60": -0.0,
+      "value": -17.822954177856445
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3372,
+      "return60": 12.812891006469727,
+      "value": 50.26219177246094
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3372,
+      "return60": -12.812891006469727,
+      "value": -2.996762752532959
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3432,
+      "return60": 0.0,
+      "value": 78.50080871582031
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3432,
+      "return60": -0.0,
+      "value": -48.95553970336914
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3492,
+      "return60": 0.0,
+      "value": 91.59736633300781
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3492,
+      "return60": -0.0,
+      "value": -48.6727294921875
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3552,
+      "return60": 0.0,
+      "value": 56.856773376464844
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3552,
+      "return60": -0.0,
+      "value": -34.736629486083984
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3612,
+      "return60": 7.089800834655762,
+      "value": 41.107818603515625
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3612,
+      "return60": -7.089800834655762,
+      "value": -33.27819061279297
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3672,
+      "return60": 0.0,
+      "value": 84.45832061767578
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3672,
+      "return60": -0.0,
+      "value": -27.93514060974121
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3732,
+      "return60": 11.301323890686035,
+      "value": 95.84485626220703
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3732,
+      "return60": -11.301323890686035,
+      "value": -66.49616241455078
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3792,
+      "return60": 112.90509033203125,
+      "value": 112.30821990966797
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3792,
+      "return60": -112.90509033203125,
+      "value": -115.25013732910156
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3852,
+      "return60": 0.0,
+      "value": 34.095924377441406
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3852,
+      "return60": -0.0,
+      "value": 15.091035842895508
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3912,
+      "return60": 0.0,
+      "value": -2.6399664878845215
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3912,
+      "return60": -0.0,
+      "value": 5.538676738739014
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 3972,
+      "return60": -4.703942775726318,
+      "value": 2.2641167640686035
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 3972,
+      "return60": 4.703942775726318,
+      "value": -7.680169582366943
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4032,
+      "return60": -10.141579627990723,
+      "value": -27.4503173828125
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4032,
+      "return60": 10.141579627990723,
+      "value": 54.398807525634766
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4092,
+      "return60": 6.9853692054748535,
+      "value": 11.756303787231445
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4092,
+      "return60": -6.9853692054748535,
+      "value": 19.580726623535156
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4152,
+      "return60": 8.064496040344238,
+      "value": 49.25372314453125
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4152,
+      "return60": -8.064496040344238,
+      "value": -5.439319133758545
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4212,
+      "return60": 20.372577667236328,
+      "value": 50.382606506347656
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4212,
+      "return60": -20.372577667236328,
+      "value": -6.716538906097412
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4272,
+      "return60": 17.51051902770996,
+      "value": 48.46510314941406
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4272,
+      "return60": -17.51051902770996,
+      "value": -19.67650032043457
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4332,
+      "return60": 7.967288494110107,
+      "value": 49.272037506103516
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4332,
+      "return60": -7.967288494110107,
+      "value": -24.87091636657715
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4392,
+      "return60": -14.23654556274414,
+      "value": 34.7265739440918
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4392,
+      "return60": 14.23654556274414,
+      "value": 22.75989532470703
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4452,
+      "return60": 11.422337532043457,
+      "value": 28.03549575805664
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4452,
+      "return60": -11.422337532043457,
+      "value": 1.1644142866134644
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4512,
+      "return60": -12.768628120422363,
+      "value": 51.31273651123047
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4512,
+      "return60": 12.768628120422363,
+      "value": -17.9597225189209
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4572,
+      "return60": 0.0,
+      "value": 35.012977600097656
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4572,
+      "return60": -0.0,
+      "value": 23.638620376586914
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4632,
+      "return60": 0.0,
+      "value": 37.741519927978516
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4632,
+      "return60": -0.0,
+      "value": -2.389979839324951
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4692,
+      "return60": -19.222274780273438,
+      "value": 19.659236907958984
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4692,
+      "return60": 19.222274780273438,
+      "value": 52.2652587890625
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4752,
+      "return60": -6.919210910797119,
+      "value": 4.577258586883545
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4752,
+      "return60": 6.919210910797119,
+      "value": 52.19927215576172
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4812,
+      "return60": -8.46788215637207,
+      "value": 1.779647707939148
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4812,
+      "return60": 8.46788215637207,
+      "value": 39.390380859375
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4872,
+      "return60": -10.097325325012207,
+      "value": -25.959789276123047
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4872,
+      "return60": 10.097325325012207,
+      "value": 64.95938110351562
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4932,
+      "return60": 0.0,
+      "value": 7.885115146636963
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4932,
+      "return60": -0.0,
+      "value": 48.356834411621094
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 4992,
+      "return60": -114.38923645019531,
+      "value": -66.37255859375
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 4992,
+      "return60": 114.38923645019531,
+      "value": 101.38087463378906
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5052,
+      "return60": 0.0,
+      "value": 33.96345520019531
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5052,
+      "return60": -0.0,
+      "value": 13.56001091003418
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5112,
+      "return60": 0.0,
+      "value": 43.44212341308594
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5112,
+      "return60": -0.0,
+      "value": 1.0295523405075073
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5172,
+      "return60": 6.519571304321289,
+      "value": 39.964515686035156
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5172,
+      "return60": -6.519571304321289,
+      "value": -11.57307243347168
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5232,
+      "return60": 3.8519017696380615,
+      "value": 60.69618225097656
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5232,
+      "return60": -3.8519017696380615,
+      "value": -19.700864791870117
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5292,
+      "return60": 4.956657409667969,
+      "value": 62.38390350341797
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5292,
+      "return60": -4.956657409667969,
+      "value": 6.803527355194092
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5352,
+      "return60": 7.1446990966796875,
+      "value": 51.40495300292969
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5352,
+      "return60": -7.1446990966796875,
+      "value": -11.908066749572754
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5412,
+      "return60": 12.392168045043945,
+      "value": 89.60796356201172
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5412,
+      "return60": -12.392168045043945,
+      "value": -22.592832565307617
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5472,
+      "return60": 0.0,
+      "value": 83.29224395751953
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5472,
+      "return60": -0.0,
+      "value": -31.482839584350586
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5532,
+      "return60": 0.0,
+      "value": 77.53096771240234
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5532,
+      "return60": -0.0,
+      "value": -36.17118453979492
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5592,
+      "return60": 14.298654556274414,
+      "value": 75.8846206665039
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5592,
+      "return60": -14.298654556274414,
+      "value": -35.904212951660156
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5652,
+      "return60": 0.0,
+      "value": 82.18932342529297
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5652,
+      "return60": -0.0,
+      "value": -29.021169662475586
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5712,
+      "return60": 0.0,
+      "value": 96.73120880126953
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5712,
+      "return60": -0.0,
+      "value": -55.41376495361328
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5772,
+      "return60": 13.433856010437012,
+      "value": 107.32801055908203
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5772,
+      "return60": -13.433856010437012,
+      "value": -64.86822509765625
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5832,
+      "return60": 114.05775451660156,
+      "value": 111.56710052490234
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5832,
+      "return60": -114.05775451660156,
+      "value": -86.48092651367188
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5892,
+      "return60": 0.0,
+      "value": 22.769224166870117
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5892,
+      "return60": -0.0,
+      "value": 8.510671615600586
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 5952,
+      "return60": 0.0,
+      "value": -6.521876811981201
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 5952,
+      "return60": -0.0,
+      "value": 19.442367553710938
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6012,
+      "return60": 0.0,
+      "value": 15.55409049987793
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6012,
+      "return60": -0.0,
+      "value": 20.58781623840332
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6072,
+      "return60": 0.0,
+      "value": 21.80926513671875
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6072,
+      "return60": -0.0,
+      "value": 22.72901725769043
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6132,
+      "return60": -5.819924831390381,
+      "value": 17.46799087524414
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6132,
+      "return60": 5.819924831390381,
+      "value": 18.036090850830078
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6192,
+      "return60": -15.980879783630371,
+      "value": 7.864313125610352
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6192,
+      "return60": 15.980879783630371,
+      "value": 44.749488830566406
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6252,
+      "return60": -14.04083251953125,
+      "value": -6.187694072723389
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6252,
+      "return60": 14.04083251953125,
+      "value": 48.67658996582031
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6312,
+      "return60": -15.511730194091797,
+      "value": -23.394119262695312
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6312,
+      "return60": 15.511730194091797,
+      "value": 38.0255126953125
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6372,
+      "return60": -13.869516372680664,
+      "value": -14.481630325317383
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6372,
+      "return60": 13.869516372680664,
+      "value": 45.63694763183594
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6432,
+      "return60": 0.0,
+      "value": -23.635456085205078
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6432,
+      "return60": -0.0,
+      "value": 43.8701286315918
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6492,
+      "return60": 6.6282958984375,
+      "value": -10.049777030944824
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6492,
+      "return60": -6.6282958984375,
+      "value": 37.56517028808594
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6552,
+      "return60": 26.516897201538086,
+      "value": 20.98894691467285
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6552,
+      "return60": -26.516897201538086,
+      "value": 18.805578231811523
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6612,
+      "return60": 0.0,
+      "value": 12.367181777954102
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6612,
+      "return60": -0.0,
+      "value": 16.423410415649414
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6672,
+      "return60": 14.142590522766113,
+      "value": -6.049426555633545
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6672,
+      "return60": -14.142590522766113,
+      "value": 47.85639953613281
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6732,
+      "return60": 4.3722124099731445,
+      "value": 50.895660400390625
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6732,
+      "return60": -4.3722124099731445,
+      "value": -18.440662384033203
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6792,
+      "return60": 0.0,
+      "value": 63.69537353515625
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6792,
+      "return60": -0.0,
+      "value": -9.903206825256348
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6852,
+      "return60": -6.4349822998046875,
+      "value": 14.498519897460938
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6852,
+      "return60": 6.4349822998046875,
+      "value": 25.604900360107422
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6912,
+      "return60": -3.7854106426239014,
+      "value": -14.500467300415039
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6912,
+      "return60": 3.7854106426239014,
+      "value": 55.51556396484375
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 6972,
+      "return60": -6.550074577331543,
+      "value": 17.05742073059082
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 6972,
+      "return60": 6.550074577331543,
+      "value": 50.38753128051758
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 7032,
+      "return60": -4.151886463165283,
+      "value": -32.885196685791016
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 7032,
+      "return60": 4.151886463165283,
+      "value": 75.88060760498047
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 7092,
+      "return60": -6.513504505157471,
+      "value": -35.4704704284668
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 7092,
+      "return60": 6.513504505157471,
+      "value": 72.98357391357422
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p1",
+      "frame": 7152,
+      "return60": 0.0,
+      "value": -82.91452026367188
+    },
+    {
+      "replay": "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp",
+      "port": "p2",
+      "frame": 7152,
+      "return60": -0.0,
+      "value": 93.26055145263672
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 132,
+      "return60": 16.179943084716797,
+      "value": 15.720386505126953
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 132,
+      "return60": -16.179943084716797,
+      "value": 20.56502342224121
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 192,
+      "return60": 20.66447639465332,
+      "value": 38.587066650390625
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 192,
+      "return60": -20.66447639465332,
+      "value": -11.388641357421875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 252,
+      "return60": 4.711209774017334,
+      "value": 30.944660186767578
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 252,
+      "return60": -4.711209774017334,
+      "value": -15.068612098693848
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 312,
+      "return60": -4.7455153465271,
+      "value": 30.67181968688965
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 312,
+      "return60": 4.7455153465271,
+      "value": -12.578444480895996
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 372,
+      "return60": 4.3942718505859375,
+      "value": 19.46875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 372,
+      "return60": -4.3942718505859375,
+      "value": 22.951627731323242
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 432,
+      "return60": 10.59199333190918,
+      "value": 39.92232131958008
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 432,
+      "return60": -10.59199333190918,
+      "value": 1.7976659536361694
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 492,
+      "return60": 0.0,
+      "value": 39.27204895019531
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 492,
+      "return60": -0.0,
+      "value": -19.546524047851562
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 552,
+      "return60": 114.22337341308594,
+      "value": 78.39472198486328
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 552,
+      "return60": -114.22337341308594,
+      "value": -81.57027435302734
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 612,
+      "return60": 0.0,
+      "value": -5.719674587249756
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 612,
+      "return60": -0.0,
+      "value": 36.573211669921875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 672,
+      "return60": 0.0,
+      "value": -3.437216281890869
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 672,
+      "return60": -0.0,
+      "value": 31.760501861572266
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 732,
+      "return60": 0.0,
+      "value": 8.997293472290039
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 732,
+      "return60": -0.0,
+      "value": 40.77574920654297
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 792,
+      "return60": 0.0,
+      "value": 0.9296752214431763
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 792,
+      "return60": -0.0,
+      "value": 37.029388427734375
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 852,
+      "return60": 7.791359901428223,
+      "value": 15.042533874511719
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 852,
+      "return60": -7.791359901428223,
+      "value": 35.455322265625
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 912,
+      "return60": 0.15988272428512573,
+      "value": 32.8082160949707
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 912,
+      "return60": -0.15988272428512573,
+      "value": 15.971765518188477
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 972,
+      "return60": 10.214900970458984,
+      "value": 16.461851119995117
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 972,
+      "return60": -10.214900970458984,
+      "value": 24.435781478881836
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1032,
+      "return60": 7.04922342300415,
+      "value": 7.092296123504639
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1032,
+      "return60": -7.04922342300415,
+      "value": 26.21030616760254
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1092,
+      "return60": -11.015402793884277,
+      "value": 22.132720947265625
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1092,
+      "return60": 11.015402793884277,
+      "value": 15.628539085388184
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1152,
+      "return60": -4.629885673522949,
+      "value": 5.948625087738037
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1152,
+      "return60": 4.629885673522949,
+      "value": 50.423065185546875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1212,
+      "return60": 4.091721534729004,
+      "value": -1.044626235961914
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1212,
+      "return60": -4.091721534729004,
+      "value": 32.385379791259766
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1272,
+      "return60": 12.213648796081543,
+      "value": 33.72246551513672
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1272,
+      "return60": -12.213648796081543,
+      "value": 20.769880294799805
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1332,
+      "return60": 6.682394981384277,
+      "value": 41.75003433227539
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1332,
+      "return60": -6.682394981384277,
+      "value": 7.899313449859619
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1392,
+      "return60": -5.74441385269165,
+      "value": 36.204246520996094
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1392,
+      "return60": 5.74441385269165,
+      "value": 2.3606390953063965
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1452,
+      "return60": 0.0,
+      "value": 14.868877410888672
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1452,
+      "return60": -0.0,
+      "value": 43.29203414916992
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1512,
+      "return60": -116.27861022949219,
+      "value": -51.07849884033203
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1512,
+      "return60": 116.27861022949219,
+      "value": 107.48216247558594
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1572,
+      "return60": 0.0,
+      "value": 36.608177185058594
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1572,
+      "return60": -0.0,
+      "value": 7.983129978179932
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1632,
+      "return60": 0.0,
+      "value": 46.075401306152344
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1632,
+      "return60": -0.0,
+      "value": 12.136554718017578
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1692,
+      "return60": 0.0,
+      "value": 56.13865280151367
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1692,
+      "return60": -0.0,
+      "value": 1.244651198387146
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1752,
+      "return60": 0.0,
+      "value": 49.038185119628906
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1752,
+      "return60": -0.0,
+      "value": 5.244731903076172
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1812,
+      "return60": 0.0,
+      "value": 31.98920249938965
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1812,
+      "return60": -0.0,
+      "value": 3.9720120429992676
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1872,
+      "return60": 4.942293643951416,
+      "value": 28.844482421875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1872,
+      "return60": -4.942293643951416,
+      "value": -10.089725494384766
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1932,
+      "return60": -8.125794410705566,
+      "value": 34.38738250732422
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1932,
+      "return60": 8.125794410705566,
+      "value": 3.5824713706970215
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 1992,
+      "return60": 0.0,
+      "value": 50.7994384765625
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 1992,
+      "return60": -0.0,
+      "value": -21.98235511779785
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2052,
+      "return60": 8.641663551330566,
+      "value": 55.86567306518555
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2052,
+      "return60": -8.641663551330566,
+      "value": -5.9620137214660645
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2112,
+      "return60": 0.0,
+      "value": 45.23346710205078
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2112,
+      "return60": -0.0,
+      "value": 5.833064556121826
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2172,
+      "return60": 13.259556770324707,
+      "value": 50.01582336425781
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2172,
+      "return60": -13.259556770324707,
+      "value": -8.247215270996094
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2232,
+      "return60": 0.0,
+      "value": 88.55813598632812
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2232,
+      "return60": -0.0,
+      "value": -25.919052124023438
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2292,
+      "return60": 0.0,
+      "value": 69.95384216308594
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2292,
+      "return60": -0.0,
+      "value": -34.33332061767578
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2352,
+      "return60": -11.444385528564453,
+      "value": 36.16206359863281
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2352,
+      "return60": 11.444385528564453,
+      "value": 7.4508233070373535
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2412,
+      "return60": -15.5684814453125,
+      "value": 27.2416934967041
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2412,
+      "return60": 15.5684814453125,
+      "value": 30.219240188598633
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2472,
+      "return60": -11.225166320800781,
+      "value": -3.9582161903381348
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2472,
+      "return60": 11.225166320800781,
+      "value": 35.805389404296875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2532,
+      "return60": -6.84928560256958,
+      "value": -29.009851455688477
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2532,
+      "return60": 6.84928560256958,
+      "value": 54.10378646850586
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2592,
+      "return60": 0.0,
+      "value": -12.699286460876465
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2592,
+      "return60": -0.0,
+      "value": 63.6162109375
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2652,
+      "return60": 0.0,
+      "value": 46.081390380859375
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2652,
+      "return60": -0.0,
+      "value": 2.3975491523742676
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2712,
+      "return60": 16.984983444213867,
+      "value": 43.29189682006836
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2712,
+      "return60": -16.984983444213867,
+      "value": 7.176348686218262
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2772,
+      "return60": 0.0,
+      "value": 74.27034759521484
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2772,
+      "return60": -0.0,
+      "value": -81.36436462402344
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2832,
+      "return60": 0.0,
+      "value": 91.59336853027344
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2832,
+      "return60": -0.0,
+      "value": -81.92488861083984
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2892,
+      "return60": 111.76407623291016,
+      "value": 62.29991149902344
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2892,
+      "return60": -111.76407623291016,
+      "value": -93.11150360107422
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 2952,
+      "return60": 0.0,
+      "value": 7.501838684082031
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 2952,
+      "return60": -0.0,
+      "value": -27.308313369750977
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3012,
+      "return60": 0.0,
+      "value": -8.191319465637207
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3012,
+      "return60": -0.0,
+      "value": 34.931419372558594
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3072,
+      "return60": -8.704588890075684,
+      "value": -3.9805350303649902
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3072,
+      "return60": 8.704588890075684,
+      "value": 25.679048538208008
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3132,
+      "return60": 11.771994590759277,
+      "value": -16.599977493286133
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3132,
+      "return60": -11.771994590759277,
+      "value": 61.486785888671875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3192,
+      "return60": -3.8630967140197754,
+      "value": 5.1072282791137695
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3192,
+      "return60": 3.8630967140197754,
+      "value": 39.47260665893555
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3252,
+      "return60": -11.62297248840332,
+      "value": -12.023730278015137
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3252,
+      "return60": 11.62297248840332,
+      "value": 46.49456024169922
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3312,
+      "return60": -6.9695940017700195,
+      "value": -25.252779006958008
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3312,
+      "return60": 6.9695940017700195,
+      "value": 74.63092803955078
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3372,
+      "return60": 9.449475288391113,
+      "value": -13.708484649658203
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3372,
+      "return60": -9.449475288391113,
+      "value": 47.19456481933594
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3432,
+      "return60": 0.0,
+      "value": 43.67127227783203
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3432,
+      "return60": -0.0,
+      "value": 18.244792938232422
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3492,
+      "return60": 0.0,
+      "value": 76.89407348632812
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3492,
+      "return60": -0.0,
+      "value": -19.172395706176758
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3552,
+      "return60": 0.0,
+      "value": 93.58477783203125
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3552,
+      "return60": -0.0,
+      "value": -46.036495208740234
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3612,
+      "return60": 118.44305419921875,
+      "value": 65.13288116455078
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3612,
+      "return60": -118.44305419921875,
+      "value": -68.92557525634766
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3672,
+      "return60": 0.0,
+      "value": -4.36740255355835
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3672,
+      "return60": -0.0,
+      "value": 52.26226043701172
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3732,
+      "return60": 0.0,
+      "value": -6.404148578643799
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3732,
+      "return60": -0.0,
+      "value": 65.13968658447266
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3792,
+      "return60": -7.090559959411621,
+      "value": -21.334115982055664
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3792,
+      "return60": 7.090559959411621,
+      "value": 82.35721588134766
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3852,
+      "return60": -18.717180252075195,
+      "value": -57.720787048339844
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3852,
+      "return60": 18.717180252075195,
+      "value": 88.18724060058594
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3912,
+      "return60": 0.0,
+      "value": -58.057350158691406
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3912,
+      "return60": -0.0,
+      "value": 135.02439880371094
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 3972,
+      "return60": 0.0,
+      "value": -94.05065155029297
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 3972,
+      "return60": -0.0,
+      "value": 96.03111267089844
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4032,
+      "return60": -119.13252258300781,
+      "value": -41.15335464477539
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4032,
+      "return60": 119.13252258300781,
+      "value": 58.41870880126953
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4092,
+      "return60": 0.0,
+      "value": 18.112529754638672
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4092,
+      "return60": -0.0,
+      "value": -13.835853576660156
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4152,
+      "return60": 11.741632461547852,
+      "value": 20.62474822998047
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4152,
+      "return60": -11.741632461547852,
+      "value": 11.168312072753906
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4212,
+      "return60": 0.0,
+      "value": 45.956905364990234
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4212,
+      "return60": -0.0,
+      "value": 12.77349853515625
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4272,
+      "return60": 14.113136291503906,
+      "value": 21.403757095336914
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4272,
+      "return60": -14.113136291503906,
+      "value": 19.096059799194336
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4332,
+      "return60": 13.106524467468262,
+      "value": 38.789093017578125
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4332,
+      "return60": -13.106524467468262,
+      "value": 1.0528007745742798
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4392,
+      "return60": 11.52841567993164,
+      "value": 65.07366180419922
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4392,
+      "return60": -11.52841567993164,
+      "value": -0.46574556827545166
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4452,
+      "return60": 0.0,
+      "value": 54.792381286621094
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4452,
+      "return60": -0.0,
+      "value": -20.21695327758789
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4512,
+      "return60": 8.338126182556152,
+      "value": 82.8262710571289
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4512,
+      "return60": -8.338126182556152,
+      "value": -29.145044326782227
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4572,
+      "return60": 0.0,
+      "value": 99.58391571044922
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4572,
+      "return60": -0.0,
+      "value": -48.84550857543945
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4632,
+      "return60": 0.0,
+      "value": 23.68635368347168
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4632,
+      "return60": -0.0,
+      "value": 11.369413375854492
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4692,
+      "return60": 11.815662384033203,
+      "value": 62.18480682373047
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4692,
+      "return60": -11.815662384033203,
+      "value": -31.787452697753906
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4752,
+      "return60": 0.0,
+      "value": 66.13616180419922
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4752,
+      "return60": -0.0,
+      "value": -22.056257247924805
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4812,
+      "return60": 10.529288291931152,
+      "value": 56.30002212524414
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4812,
+      "return60": -10.529288291931152,
+      "value": -11.51097297668457
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4872,
+      "return60": 0.0,
+      "value": 122.56405639648438
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4872,
+      "return60": -0.0,
+      "value": -86.54766082763672
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p1",
+      "frame": 4932,
+      "return60": 0.9870254397392273,
+      "value": 131.44383239746094
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp",
+      "port": "p2",
+      "frame": 4932,
+      "return60": -0.9870254397392273,
+      "value": -106.94120788574219
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 132,
+      "return60": 0.0,
+      "value": 25.957517623901367
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 132,
+      "return60": -0.0,
+      "value": -4.5565876960754395
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 192,
+      "return60": 7.381359577178955,
+      "value": 61.542816162109375
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 192,
+      "return60": -7.381359577178955,
+      "value": -27.912750244140625
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 252,
+      "return60": 14.771533966064453,
+      "value": 49.89828109741211
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 252,
+      "return60": -14.771533966064453,
+      "value": 1.113867163658142
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 312,
+      "return60": 10.244586944580078,
+      "value": 63.515342712402344
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 312,
+      "return60": -10.244586944580078,
+      "value": 1.4009212255477905
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 372,
+      "return60": 9.788070678710938,
+      "value": 55.41115188598633
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 372,
+      "return60": -9.788070678710938,
+      "value": -8.19729232788086
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 432,
+      "return60": 0.0,
+      "value": 63.15412521362305
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 432,
+      "return60": -0.0,
+      "value": -6.0901198387146
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 492,
+      "return60": 6.308009624481201,
+      "value": 38.400150299072266
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 492,
+      "return60": -6.308009624481201,
+      "value": -6.801307678222656
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 552,
+      "return60": 6.909178256988525,
+      "value": 62.835548400878906
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 552,
+      "return60": -6.909178256988525,
+      "value": -24.74549674987793
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 612,
+      "return60": 4.963854789733887,
+      "value": 12.288021087646484
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 612,
+      "return60": -4.963854789733887,
+      "value": 6.3422465324401855
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 672,
+      "return60": 13.370455741882324,
+      "value": 44.930564880371094
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 672,
+      "return60": -13.370455741882324,
+      "value": 1.6575759649276733
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 732,
+      "return60": 0.0,
+      "value": 70.40454864501953
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 732,
+      "return60": -0.0,
+      "value": -24.846696853637695
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 792,
+      "return60": 10.960192680358887,
+      "value": 42.93640899658203
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 792,
+      "return60": -10.960192680358887,
+      "value": 10.159480094909668
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 852,
+      "return60": 0.0,
+      "value": 83.66226959228516
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 852,
+      "return60": -0.0,
+      "value": -33.135833740234375
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 912,
+      "return60": 1.9683302640914917,
+      "value": 48.702205657958984
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 912,
+      "return60": -1.9683302640914917,
+      "value": -3.0139641761779785
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 972,
+      "return60": 4.337148189544678,
+      "value": 59.94023895263672
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 972,
+      "return60": -4.337148189544678,
+      "value": -19.499874114990234
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1032,
+      "return60": 0.0,
+      "value": 81.04220581054688
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1032,
+      "return60": -0.0,
+      "value": -32.51593780517578
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1092,
+      "return60": 1.0,
+      "value": 73.4764175415039
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1092,
+      "return60": -1.0,
+      "value": -21.871118545532227
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1152,
+      "return60": 119.30551147460938,
+      "value": 108.83971405029297
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1152,
+      "return60": -119.30551147460938,
+      "value": -91.99068450927734
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1212,
+      "return60": 0.0,
+      "value": 16.699180603027344
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1212,
+      "return60": -0.0,
+      "value": 25.050806045532227
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1272,
+      "return60": 0.0,
+      "value": -3.3373160362243652
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1272,
+      "return60": -0.0,
+      "value": 30.75053596496582
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1332,
+      "return60": 0.0,
+      "value": 12.171873092651367
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1332,
+      "return60": -0.0,
+      "value": 44.930030822753906
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1392,
+      "return60": -8.93493938446045,
+      "value": 13.979254722595215
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1392,
+      "return60": 8.93493938446045,
+      "value": 47.156253814697266
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1452,
+      "return60": -20.309232711791992,
+      "value": -30.97568130493164
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1452,
+      "return60": 20.309232711791992,
+      "value": 66.94351196289062
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1512,
+      "return60": -4.203333854675293,
+      "value": -31.68018913269043
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1512,
+      "return60": 4.203333854675293,
+      "value": 50.91895294189453
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1572,
+      "return60": 2.826725959777832,
+      "value": -32.26795196533203
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1572,
+      "return60": -2.826725959777832,
+      "value": 48.21629333496094
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1632,
+      "return60": -3.691579580307007,
+      "value": 8.167098999023438
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1632,
+      "return60": 3.691579580307007,
+      "value": 38.7917366027832
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1692,
+      "return60": 20.425640106201172,
+      "value": -0.5096813440322876
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1692,
+      "return60": -20.425640106201172,
+      "value": 46.339447021484375
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1752,
+      "return60": 0.0,
+      "value": 40.47417449951172
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1752,
+      "return60": -0.0,
+      "value": 22.79528045654297
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1812,
+      "return60": 27.49148178100586,
+      "value": 51.77899169921875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1812,
+      "return60": -27.49148178100586,
+      "value": -5.432117938995361
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1872,
+      "return60": 8.418874740600586,
+      "value": 48.402523040771484
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1872,
+      "return60": -8.418874740600586,
+      "value": -7.090432167053223
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1932,
+      "return60": -4.864032745361328,
+      "value": 31.78782081604004
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1932,
+      "return60": 4.864032745361328,
+      "value": -5.564647197723389
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 1992,
+      "return60": -10.806836128234863,
+      "value": -9.388154983520508
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 1992,
+      "return60": 10.806836128234863,
+      "value": 43.99916076660156
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2052,
+      "return60": -3.9987218379974365,
+      "value": -38.271881103515625
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2052,
+      "return60": 3.9987218379974365,
+      "value": 53.06880187988281
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2112,
+      "return60": 0.0,
+      "value": -19.776309967041016
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2112,
+      "return60": -0.0,
+      "value": 54.52677536010742
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2172,
+      "return60": -3.7719900608062744,
+      "value": -62.93204879760742
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2172,
+      "return60": 3.7719900608062744,
+      "value": 101.24730682373047
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2232,
+      "return60": -119.65225219726562,
+      "value": -81.1640396118164
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2232,
+      "return60": 119.65225219726562,
+      "value": 118.4531021118164
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2292,
+      "return60": 0.0,
+      "value": 48.93022918701172
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2292,
+      "return60": -0.0,
+      "value": 2.5943398475646973
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2352,
+      "return60": 2.897322416305542,
+      "value": 44.21935272216797
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2352,
+      "return60": -2.897322416305542,
+      "value": -20.86197280883789
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2412,
+      "return60": 6.839354038238525,
+      "value": 57.23429870605469
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2412,
+      "return60": -6.839354038238525,
+      "value": -21.497671127319336
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2472,
+      "return60": 11.639849662780762,
+      "value": 60.315093994140625
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2472,
+      "return60": -11.639849662780762,
+      "value": -19.34770393371582
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2532,
+      "return60": 4.603090763092041,
+      "value": 69.32272338867188
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2532,
+      "return60": -4.603090763092041,
+      "value": -26.518537521362305
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2592,
+      "return60": 0.0,
+      "value": 102.7868881225586
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2592,
+      "return60": -0.0,
+      "value": -68.57276153564453
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2652,
+      "return60": 14.298654556274414,
+      "value": 118.15534210205078
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2652,
+      "return60": -14.298654556274414,
+      "value": -89.21955871582031
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2712,
+      "return60": 0.0,
+      "value": 90.70011901855469
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2712,
+      "return60": -0.0,
+      "value": -89.96271514892578
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2772,
+      "return60": 115.04764556884766,
+      "value": 87.09566497802734
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2772,
+      "return60": -115.04764556884766,
+      "value": -79.23865509033203
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2832,
+      "return60": 0.0,
+      "value": -11.950810432434082
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2832,
+      "return60": -0.0,
+      "value": 13.836751937866211
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2892,
+      "return60": 0.0,
+      "value": 4.057583332061768
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2892,
+      "return60": -0.0,
+      "value": -0.4930664300918579
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 2952,
+      "return60": -2.868042230606079,
+      "value": 8.911375999450684
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 2952,
+      "return60": 2.868042230606079,
+      "value": 24.91805076599121
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3012,
+      "return60": 0.0,
+      "value": 22.539270401000977
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3012,
+      "return60": -0.0,
+      "value": 32.655548095703125
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3072,
+      "return60": 13.049592018127441,
+      "value": 24.3402099609375
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3072,
+      "return60": -13.049592018127441,
+      "value": 23.655933380126953
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3132,
+      "return60": 9.491000175476074,
+      "value": 28.17985725402832
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3132,
+      "return60": -9.491000175476074,
+      "value": 22.45145606994629
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3192,
+      "return60": -2.7181413173675537,
+      "value": 26.841398239135742
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3192,
+      "return60": 2.7181413173675537,
+      "value": 8.166370391845703
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3252,
+      "return60": 0.0,
+      "value": 15.767515182495117
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3252,
+      "return60": -0.0,
+      "value": 35.386688232421875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3312,
+      "return60": -4.956657409667969,
+      "value": -31.916173934936523
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3312,
+      "return60": 4.956657409667969,
+      "value": 66.1327133178711
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3372,
+      "return60": -0.9518614411354065,
+      "value": -75.23572540283203
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3372,
+      "return60": 0.9518614411354065,
+      "value": 90.4847183227539
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3432,
+      "return60": -111.76407623291016,
+      "value": -85.1107406616211
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3432,
+      "return60": 111.76407623291016,
+      "value": 101.56906127929688
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3492,
+      "return60": 0.0,
+      "value": 29.533620834350586
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3492,
+      "return60": -0.0,
+      "value": 17.480417251586914
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3552,
+      "return60": 0.0,
+      "value": 28.832557678222656
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3552,
+      "return60": -0.0,
+      "value": -12.234321594238281
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3612,
+      "return60": 0.0,
+      "value": 13.031651496887207
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3612,
+      "return60": -0.0,
+      "value": -7.481338024139404
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3672,
+      "return60": 0.0,
+      "value": 19.607908248901367
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3672,
+      "return60": -0.0,
+      "value": 15.797125816345215
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3732,
+      "return60": -4.549999713897705,
+      "value": 29.665178298950195
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3732,
+      "return60": 4.549999713897705,
+      "value": 15.45512866973877
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3792,
+      "return60": 11.809981346130371,
+      "value": 38.42245101928711
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3792,
+      "return60": -11.809981346130371,
+      "value": 15.292081832885742
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3852,
+      "return60": 24.23893928527832,
+      "value": 54.895263671875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3852,
+      "return60": -24.23893928527832,
+      "value": -31.2399845123291
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3912,
+      "return60": 0.0,
+      "value": 48.073875427246094
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3912,
+      "return60": -0.0,
+      "value": -15.870819091796875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 3972,
+      "return60": 4.814877033233643,
+      "value": 65.76885223388672
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 3972,
+      "return60": -4.814877033233643,
+      "value": -27.40443229675293
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4032,
+      "return60": 4.324692726135254,
+      "value": 61.276065826416016
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4032,
+      "return60": -4.324692726135254,
+      "value": -35.39894104003906
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4092,
+      "return60": 0.0,
+      "value": 93.75625610351562
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4092,
+      "return60": -0.0,
+      "value": -89.6047134399414
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4152,
+      "return60": 0.0,
+      "value": 132.58985900878906
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4152,
+      "return60": -0.0,
+      "value": -113.07456970214844
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4212,
+      "return60": 1.5080301761627197,
+      "value": -12.659791946411133
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4212,
+      "return60": -1.5080301761627197,
+      "value": -85.2148208618164
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4272,
+      "return60": 0.0,
+      "value": 34.796653747558594
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4272,
+      "return60": -0.0,
+      "value": 6.7550740242004395
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4332,
+      "return60": 0.0,
+      "value": 5.819085121154785
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4332,
+      "return60": -0.0,
+      "value": -2.7353549003601074
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4392,
+      "return60": 0.0,
+      "value": 17.57826042175293
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4392,
+      "return60": -0.0,
+      "value": 1.5727161169052124
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4452,
+      "return60": 3.580430746078491,
+      "value": 13.42485523223877
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4452,
+      "return60": -3.580430746078491,
+      "value": 14.945764541625977
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4512,
+      "return60": 4.935127258300781,
+      "value": 36.71918487548828
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4512,
+      "return60": -4.935127258300781,
+      "value": 8.855447769165039
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4572,
+      "return60": -21.8289794921875,
+      "value": 12.844868659973145
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4572,
+      "return60": 21.8289794921875,
+      "value": 23.772554397583008
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4632,
+      "return60": 0.0,
+      "value": 1.6526206731796265
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4632,
+      "return60": -0.0,
+      "value": 34.277015686035156
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4692,
+      "return60": 6.932434558868408,
+      "value": 0.7931798696517944
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4692,
+      "return60": -6.932434558868408,
+      "value": 18.986665725708008
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4752,
+      "return60": 17.586910247802734,
+      "value": 55.35205078125
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4752,
+      "return60": -17.586910247802734,
+      "value": -12.15853500366211
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4812,
+      "return60": 8.960906982421875,
+      "value": 30.184499740600586
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4812,
+      "return60": -8.960906982421875,
+      "value": -18.2199649810791
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4872,
+      "return60": -11.039761543273926,
+      "value": 24.468881607055664
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4872,
+      "return60": 11.039761543273926,
+      "value": 2.374626636505127
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4932,
+      "return60": 7.650065898895264,
+      "value": 14.689409255981445
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4932,
+      "return60": -7.650065898895264,
+      "value": 35.61097717285156
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 4992,
+      "return60": 14.592103004455566,
+      "value": 37.07869338989258
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 4992,
+      "return60": -14.592103004455566,
+      "value": -24.93312644958496
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5052,
+      "return60": 0.0,
+      "value": 42.68206787109375
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5052,
+      "return60": -0.0,
+      "value": -1.2921940088272095
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5112,
+      "return60": 0.0,
+      "value": 60.4056510925293
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5112,
+      "return60": -0.0,
+      "value": -6.975199222564697
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5172,
+      "return60": 14.256306648254395,
+      "value": 47.36117935180664
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5172,
+      "return60": -14.256306648254395,
+      "value": -29.604734420776367
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5232,
+      "return60": 0.0,
+      "value": 28.145679473876953
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5232,
+      "return60": -0.0,
+      "value": -14.139498710632324
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5292,
+      "return60": 0.0,
+      "value": 72.55179595947266
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5292,
+      "return60": -0.0,
+      "value": -39.56584930419922
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5352,
+      "return60": 13.689314842224121,
+      "value": 59.08326721191406
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5352,
+      "return60": -13.689314842224121,
+      "value": -40.8021354675293
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5412,
+      "return60": 0.0,
+      "value": 47.38074493408203
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5412,
+      "return60": -0.0,
+      "value": -19.061445236206055
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5472,
+      "return60": 12.584574699401855,
+      "value": 56.35118865966797
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5472,
+      "return60": -12.584574699401855,
+      "value": -21.6611385345459
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5532,
+      "return60": 6.911454677581787,
+      "value": 51.94794464111328
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5532,
+      "return60": -6.911454677581787,
+      "value": -34.43499755859375
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5592,
+      "return60": 13.469221115112305,
+      "value": 96.71595001220703
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5592,
+      "return60": -13.469221115112305,
+      "value": -77.39220428466797
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5652,
+      "return60": 0.0,
+      "value": 81.86244201660156
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5652,
+      "return60": -0.0,
+      "value": -53.020442962646484
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5712,
+      "return60": 0.9422419667243958,
+      "value": 116.96232604980469
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5712,
+      "return60": -0.9422419667243958,
+      "value": -90.74725341796875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5772,
+      "return60": 11.872255325317383,
+      "value": 105.58143615722656
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5772,
+      "return60": -11.872255325317383,
+      "value": -85.53043365478516
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p1",
+      "frame": 5832,
+      "return60": 158.3324432373047,
+      "value": 105.90827178955078
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp",
+      "port": "p2",
+      "frame": 5832,
+      "return60": -158.3324432373047,
+      "value": -90.94479370117188
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 132,
+      "return60": -19.32960319519043,
+      "value": 2.8126235008239746
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 132,
+      "return60": 19.32960319519043,
+      "value": 43.69120407104492
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 192,
+      "return60": 4.718050956726074,
+      "value": -24.27669334411621
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 192,
+      "return60": -4.718050956726074,
+      "value": 41.5098762512207
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 252,
+      "return60": 0.0,
+      "value": 74.44125366210938
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 252,
+      "return60": -0.0,
+      "value": -44.715023040771484
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 312,
+      "return60": 4.274776458740234,
+      "value": 81.42911529541016
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 312,
+      "return60": -4.274776458740234,
+      "value": -29.662609100341797
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 372,
+      "return60": 0.0,
+      "value": 82.47601318359375
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 372,
+      "return60": -0.0,
+      "value": -78.55291748046875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 432,
+      "return60": 0.0,
+      "value": 102.91658782958984
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 432,
+      "return60": -0.0,
+      "value": -77.5425796508789
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 492,
+      "return60": 116.22972106933594,
+      "value": 7.686026096343994
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 492,
+      "return60": -116.22972106933594,
+      "value": -18.283693313598633
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 552,
+      "return60": 0.0,
+      "value": -28.4732666015625
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 552,
+      "return60": -0.0,
+      "value": 43.127899169921875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 612,
+      "return60": -117.92857360839844,
+      "value": -77.48309326171875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 612,
+      "return60": 117.92857360839844,
+      "value": 57.56909942626953
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 672,
+      "return60": 0.0,
+      "value": 20.591354370117188
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 672,
+      "return60": -0.0,
+      "value": 10.993180274963379
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 732,
+      "return60": 0.0,
+      "value": 22.20201301574707
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 732,
+      "return60": -0.0,
+      "value": -6.87786340713501
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 792,
+      "return60": 0.0,
+      "value": 29.528841018676758
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 792,
+      "return60": -0.0,
+      "value": 16.34248161315918
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 852,
+      "return60": -4.7939629554748535,
+      "value": 23.828540802001953
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 852,
+      "return60": 4.7939629554748535,
+      "value": 15.371702194213867
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 912,
+      "return60": -11.225166320800781,
+      "value": 16.709970474243164
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 912,
+      "return60": 11.225166320800781,
+      "value": 12.413105010986328
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 972,
+      "return60": -4.546910285949707,
+      "value": 12.78931713104248
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 972,
+      "return60": 4.546910285949707,
+      "value": 33.90360641479492
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1032,
+      "return60": -17.66363525390625,
+      "value": 16.186182022094727
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1032,
+      "return60": 17.66363525390625,
+      "value": 16.123958587646484
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1092,
+      "return60": -4.293764114379883,
+      "value": -19.010351181030273
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1092,
+      "return60": 4.293764114379883,
+      "value": 51.70264434814453
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1152,
+      "return60": 6.909178256988525,
+      "value": -30.630573272705078
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1152,
+      "return60": -6.909178256988525,
+      "value": 5.532702922821045
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1212,
+      "return60": 4.927971363067627,
+      "value": 21.172561645507812
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1212,
+      "return60": -4.927971363067627,
+      "value": 5.441723823547363
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1272,
+      "return60": 0.0,
+      "value": 92.49356079101562
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1272,
+      "return60": -0.0,
+      "value": -75.29206085205078
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1332,
+      "return60": 110.79524230957031,
+      "value": 90.5469741821289
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1332,
+      "return60": -110.79524230957031,
+      "value": -64.62457275390625
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1392,
+      "return60": 0.0,
+      "value": 17.840784072875977
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1392,
+      "return60": -0.0,
+      "value": 22.784860610961914
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1452,
+      "return60": 0.0,
+      "value": -1.347781777381897
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1452,
+      "return60": -0.0,
+      "value": 27.7463436126709
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1512,
+      "return60": 0.0,
+      "value": -3.117692470550537
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1512,
+      "return60": -0.0,
+      "value": 46.318843841552734
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1572,
+      "return60": 0.0,
+      "value": 4.185675144195557
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1572,
+      "return60": -0.0,
+      "value": 5.347579479217529
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1632,
+      "return60": 11.561211585998535,
+      "value": 16.147981643676758
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1632,
+      "return60": -11.561211585998535,
+      "value": 22.361984252929688
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1692,
+      "return60": 25.950836181640625,
+      "value": 47.47744369506836
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1692,
+      "return60": -25.950836181640625,
+      "value": -4.704598903656006
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1752,
+      "return60": -4.589751243591309,
+      "value": 48.99299621582031
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1752,
+      "return60": 4.589751243591309,
+      "value": -11.219744682312012
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1812,
+      "return60": 7.576557636260986,
+      "value": -2.8098044395446777
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1812,
+      "return60": -7.576557636260986,
+      "value": 17.765722274780273
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1872,
+      "return60": 4.586668014526367,
+      "value": 41.17842102050781
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1872,
+      "return60": -4.586668014526367,
+      "value": 12.418522834777832
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1932,
+      "return60": 0.6960412859916687,
+      "value": 40.44580078125
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1932,
+      "return60": -0.6960412859916687,
+      "value": 10.228796005249023
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 1992,
+      "return60": 11.438923835754395,
+      "value": 52.195919036865234
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 1992,
+      "return60": -11.438923835754395,
+      "value": -22.180646896362305
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2052,
+      "return60": 0.0,
+      "value": 69.19652557373047
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2052,
+      "return60": -0.0,
+      "value": -34.48780059814453
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2112,
+      "return60": 4.375187873840332,
+      "value": 70.4740219116211
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2112,
+      "return60": -4.375187873840332,
+      "value": -30.66922950744629
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2172,
+      "return60": 0.0,
+      "value": 124.9633560180664
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2172,
+      "return60": -0.0,
+      "value": -87.40052795410156
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2232,
+      "return60": 0.0,
+      "value": 95.55367279052734
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2232,
+      "return60": -0.0,
+      "value": -95.06928253173828
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2292,
+      "return60": 118.61504364013672,
+      "value": 71.63684844970703
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2292,
+      "return60": -118.61504364013672,
+      "value": -78.46227264404297
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2352,
+      "return60": 0.0,
+      "value": 12.682086944580078
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2352,
+      "return60": -0.0,
+      "value": 32.94485855102539
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2412,
+      "return60": 0.0,
+      "value": 1.2484210729599
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2412,
+      "return60": -0.0,
+      "value": 32.24435806274414
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2472,
+      "return60": -6.939316749572754,
+      "value": -5.304776668548584
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2472,
+      "return60": 6.939316749572754,
+      "value": 39.96302032470703
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2532,
+      "return60": -6.9375996589660645,
+      "value": -17.586519241333008
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2532,
+      "return60": 6.9375996589660645,
+      "value": 42.856903076171875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2592,
+      "return60": -11.555705070495605,
+      "value": -40.060707092285156
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2592,
+      "return60": 11.555705070495605,
+      "value": 72.57109069824219
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2652,
+      "return60": -10.872565269470215,
+      "value": -28.62778663635254
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2652,
+      "return60": 10.872565269470215,
+      "value": 55.44955825805664
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2712,
+      "return60": 0.0,
+      "value": -14.608663558959961
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2712,
+      "return60": -0.0,
+      "value": 63.32905197143555
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2772,
+      "return60": -16.88668441772461,
+      "value": -11.979349136352539
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2772,
+      "return60": 16.88668441772461,
+      "value": 75.9276351928711
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2832,
+      "return60": 0.0,
+      "value": -67.5688247680664
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2832,
+      "return60": -0.0,
+      "value": 98.96512603759766
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2892,
+      "return60": 0.0,
+      "value": -71.8742446899414
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2892,
+      "return60": -0.0,
+      "value": 116.9792251586914
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 2952,
+      "return60": -111.27861022949219,
+      "value": -83.40626525878906
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 2952,
+      "return60": 111.27861022949219,
+      "value": 108.05801391601562
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3012,
+      "return60": 0.0,
+      "value": 1.032244086265564
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3012,
+      "return60": -0.0,
+      "value": 80.04552459716797
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3072,
+      "return60": 0.0,
+      "value": 23.649402618408203
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3072,
+      "return60": -0.0,
+      "value": -4.694814205169678
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3132,
+      "return60": 17.913047790527344,
+      "value": 20.010101318359375
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3132,
+      "return60": -17.913047790527344,
+      "value": 0.007793799042701721
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3192,
+      "return60": 0.0,
+      "value": 60.051185607910156
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3192,
+      "return60": -0.0,
+      "value": -5.216252326965332
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3252,
+      "return60": -12.173797607421875,
+      "value": 9.336881637573242
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3252,
+      "return60": 12.173797607421875,
+      "value": 27.57411766052246
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3312,
+      "return60": 13.930026054382324,
+      "value": 36.878665924072266
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3312,
+      "return60": -13.930026054382324,
+      "value": 12.403778076171875
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3372,
+      "return60": 12.787169456481934,
+      "value": 29.523731231689453
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3372,
+      "return60": -12.787169456481934,
+      "value": 2.079550266265869
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3432,
+      "return60": 0.0,
+      "value": 69.02360534667969
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3432,
+      "return60": -0.0,
+      "value": -20.204341888427734
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3492,
+      "return60": 0.0,
+      "value": 42.04365539550781
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3492,
+      "return60": -0.0,
+      "value": 18.206140518188477
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3552,
+      "return60": -118.27130889892578,
+      "value": -44.215938568115234
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3552,
+      "return60": 118.27130889892578,
+      "value": 105.48068237304688
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3612,
+      "return60": 0.0,
+      "value": 48.40144729614258
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3612,
+      "return60": -0.0,
+      "value": 30.826967239379883
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3672,
+      "return60": 0.0,
+      "value": 46.30385971069336
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3672,
+      "return60": -0.0,
+      "value": -21.947099685668945
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3732,
+      "return60": 11.656752586364746,
+      "value": 42.57258605957031
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3732,
+      "return60": -11.656752586364746,
+      "value": -7.017079830169678
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3792,
+      "return60": 14.613287925720215,
+      "value": 65.69718170166016
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3792,
+      "return60": -14.613287925720215,
+      "value": -41.41171646118164
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3852,
+      "return60": 0.0,
+      "value": 55.09317398071289
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3852,
+      "return60": -0.0,
+      "value": -28.425857543945312
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p1",
+      "frame": 3912,
+      "return60": 162.05142211914062,
+      "value": 148.5664520263672
+    },
+    {
+      "replay": "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp",
+      "port": "p2",
+      "frame": 3912,
+      "return60": -162.05142211914062,
+      "value": -91.90558624267578
+    }
+  ],
+  "replay_sha256": {
+    "runs/netplay/qualification-o59/boot_000/Game_20260924T142521.slp": "ce450115a87fd50b1f03bc5e50fc9eb840f78d60e93f45ec12b01d743727ea21",
+    "runs/netplay/selfplay-o59-20260924-retry1/replays-a/Game_20260924T152607.slp": "81af02a949c3c436d5e527b5dd83600d42338887d4445de4dc515e489e6cbe94",
+    "runs/netplay/streaming-o59/mixed-1000-a/peer-0/replays/Game_20260924T175432.slp": "c7a9fdcc35b1e3830f8ce0de12646c6170d59f58aba55417d8b17488871ffa34",
+    "runs/netplay/streaming-o59/streaming-selfplay/peer-0/replays/Game_20260924T174811.slp": "eda8fa9a986cad21c3994fc48d98e00daae807d4e0d61d8e4badc23e00448948",
+    "runs/netplay/streaming-o59/window-selfplay/peer-0/replays/Game_20260924T175201.slp": "04c02d80b492506c3632b2156d7cc55aa1c4c3b23eee58db5d1b01b84bf4fd24"
+  },
+  "checkpoint_git_sha": "f05d41502a429b399fe9b64d534c442d1a9a6379",
+  "analysis_git_sha": "295404aa16af91b333595efe0c5647ed8eb2bd5b",
+  "method": "Every 60 frames from frame index 255 through the last full 28-frame action chunk, both player views, 256-frame context, masked player identity, CPU float32 dense trunk, valid 60-frame future-return labels."
+}

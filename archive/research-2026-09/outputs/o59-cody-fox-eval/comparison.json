@@ -1,0 +1,198 @@
+{
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 20260925,
+  "checkpoint_sha256": "52b5233ed506f59f514f7e90a6a6111206152db7413f451dc35be5c30d1e671b",
+  "control_matches": 175,
+  "control_net_stock_per_min_from_rows": 1.7793705902116699,
+  "control_return": 19.9760597229004,
+  "limits": "Matchups are paired, but stages and game randomness are not shared across runs.",
+  "matched_boots": 96,
+  "opponent_schedule_sha256": "8049dc6414c032049df716f17cc8fbee6ca7658459ef4fb84873d69a940bf0c4",
+  "paired_bootstrap_95_ci": [
+    -0.24058701113455594,
+    0.14554514352419476
+  ],
+  "paired_character_stratified_bootstrap_95_ci": [
+    -0.21340982291685057,
+    0.11697319157369727
+  ],
+  "per_character": [
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.13375901773245524,
+      "fixed120_net_stock_per_min": 1.4193039675997277,
+      "opponent": "MARIO",
+      "p90_net_stock_per_min": 1.553062985332183
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": 1.0478553928011862,
+      "fixed120_net_stock_per_min": 2.459016393442623,
+      "opponent": "CPTFALCON",
+      "p90_net_stock_per_min": 1.4111610006414368
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.5176876617773942,
+      "fixed120_net_stock_per_min": 1.2942191544434858,
+      "opponent": "DK",
+      "p90_net_stock_per_min": 1.81190681622088
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.9116511408852908,
+      "fixed120_net_stock_per_min": 1.2885214216686351,
+      "opponent": "KIRBY",
+      "p90_net_stock_per_min": 2.200172562553926
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.12885214216686358,
+      "fixed120_net_stock_per_min": 1.4173735638354987,
+      "opponent": "BOWSER",
+      "p90_net_stock_per_min": 1.5462257060023623
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.5312428682486279,
+      "fixed120_net_stock_per_min": 1.021820117083555,
+      "opponent": "LINK",
+      "p90_net_stock_per_min": 1.553062985332183
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": 0.00968614571724613,
+      "fixed120_net_stock_per_min": 2.200172562553926,
+      "opponent": "NESS",
+      "p90_net_stock_per_min": 2.1904864168366798
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.12828736369467597,
+      "fixed120_net_stock_per_min": 1.0262989095574087,
+      "opponent": "PEACH",
+      "p90_net_stock_per_min": 1.1545862732520846
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.7822292254409422,
+      "fixed120_net_stock_per_min": 1.2885214216686351,
+      "opponent": "POPO",
+      "p90_net_stock_per_min": 2.0707506471095773
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.12942191544434856,
+      "fixed120_net_stock_per_min": 2.0707506471095773,
+      "opponent": "PIKACHU",
+      "p90_net_stock_per_min": 2.200172562553926
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": 0.0,
+      "fixed120_net_stock_per_min": 1.539448364336113,
+      "opponent": "SAMUS",
+      "p90_net_stock_per_min": 1.539448364336113
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.006837279329820589,
+      "fixed120_net_stock_per_min": 1.5462257060023623,
+      "opponent": "YOSHI",
+      "p90_net_stock_per_min": 1.553062985332183
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.3882657463330459,
+      "fixed120_net_stock_per_min": 1.9413287316652286,
+      "opponent": "JIGGLYPUFF",
+      "p90_net_stock_per_min": 2.3295944779982745
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": 0.7845083185508823,
+      "fixed120_net_stock_per_min": 2.5884383088869716,
+      "opponent": "MEWTWO",
+      "p90_net_stock_per_min": 1.8039299903360893
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": 0.5199267964449537,
+      "fixed120_net_stock_per_min": 1.5462257060023623,
+      "opponent": "LUIGI",
+      "p90_net_stock_per_min": 1.0262989095574087
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": 0.5176876617773942,
+      "fixed120_net_stock_per_min": 2.5884383088869716,
+      "opponent": "MARTH",
+      "p90_net_stock_per_min": 2.0707506471095773
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.3945332523853813,
+      "fixed120_net_stock_per_min": 1.4173735638354987,
+      "opponent": "ZELDA",
+      "p90_net_stock_per_min": 1.81190681622088
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.39780270181478206,
+      "fixed120_net_stock_per_min": 1.2772751463544438,
+      "opponent": "YLINK",
+      "p90_net_stock_per_min": 1.675077848169226
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.4018803673291156,
+      "fixed120_net_stock_per_min": 1.539448364336113,
+      "opponent": "DOC",
+      "p90_net_stock_per_min": 1.9413287316652286
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": 0.5250947143847,
+      "fixed120_net_stock_per_min": 2.200172562553926,
+      "opponent": "FALCO",
+      "p90_net_stock_per_min": 1.675077848169226
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": 0.3865564265005905,
+      "fixed120_net_stock_per_min": 2.1904864168366798,
+      "opponent": "PICHU",
+      "p90_net_stock_per_min": 1.8039299903360893
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": -0.647109577221743,
+      "fixed120_net_stock_per_min": 1.9413287316652286,
+      "opponent": "GAMEANDWATCH",
+      "p90_net_stock_per_min": 2.5884383088869716
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": 0.12324872216159077,
+      "fixed120_net_stock_per_min": 1.1495476317189994,
+      "opponent": "GANONDORF",
+      "p90_net_stock_per_min": 1.0262989095574087
+    },
+    {
+      "boots": 4,
+      "delta_net_stock_per_min": 0.3979518920502918,
+      "fixed120_net_stock_per_min": 2.5884383088869716,
+      "opponent": "ROY",
+      "p90_net_stock_per_min": 2.1904864168366798
+    }
+  ],
+  "pooled_net_stock_delta_from_rows": -0.05018916190661682,
+  "protocol_differences": [
+    "desired_return",
+    "return_target"
+  ],
+  "schema_version": 1,
+  "treatment_matches": 170,
+  "treatment_net_stock_per_min_from_rows": 1.729181428305053,
+  "treatment_return": 120.0
+}

@@ -1,0 +1,2129 @@
+{
+  "selection": {
+    "seed": 20260925,
+    "index_sha256": "22ac48f73a5ba5cd5718701d3de6666b15e75b2d777458da4927561e0b0fa75d",
+    "archive": "data/raw/ranked-anonymized-1-116248.7z",
+    "candidate_count": 1189,
+    "records": [
+      {
+        "id": 0,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-9ba807c5949506ab757eb16a.slp",
+        "sha1": "a0777c489d3427cc33adafd0277e99560d5a031e",
+        "frame_count_index": 12350,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 1,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-5b2504bc2573b74dd6433f9c.slp",
+        "sha1": "24324d18c96a65194d880bda0120f0d9ec0397e7",
+        "frame_count_index": 10150,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 2,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-af86c45fbc31f60ffccc8b96.slp",
+        "sha1": "c0e992ef4049b700c26251481b3e8af4bb6f81e2",
+        "frame_count_index": 9497,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 3,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-6dc3e9557c9279ad42918b39.slp",
+        "sha1": "b50e80680e1184fd698c20c3efb522e4e0df313e",
+        "frame_count_index": 13131,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 4,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-4dacf7a4a42af790a8e9fb0e.slp",
+        "sha1": "3f6bb27d561c03f8e7100061776fc5e8d446582a",
+        "frame_count_index": 9608,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 5,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-754e3d0ae3c635994f9ed83d.slp",
+        "sha1": "6f11d42b90cc7c78b03e49d2a01f2d2266cfeb11",
+        "frame_count_index": 22669,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 6,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-a1fc6cd8dc6a3718b9293080.slp",
+        "sha1": "504cd6841757f646bdc62855b1bf7a53ac683c47",
+        "frame_count_index": 8983,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 7,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-9a2816d15314eb9834d42799.slp",
+        "sha1": "ed6627f9d7c943063c5ac6be0881e4612cd39c67",
+        "frame_count_index": 10321,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 8,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-992e7d34e597ad65a361b5d2.slp",
+        "sha1": "9a65d04a82856f89a6aec0e551b5a9e5de866acd",
+        "frame_count_index": 12497,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 9,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-8f6e00b06894a0e7c1647ca8.slp",
+        "sha1": "aa0751518d7dc669f8e5aa1b1c531421f9bcd046",
+        "frame_count_index": 8926,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 10,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-ca6cd7044a5fad4e18e51a99.slp",
+        "sha1": "1b459ecd4a3e3b5ef0b71a4ce6bcd3b2ad15d650",
+        "frame_count_index": 9033,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 11,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-baf9fe086efe6e50a3bb7c7b.slp",
+        "sha1": "2aef3418af04674c5ec8d68c543ef509aa9c1183",
+        "frame_count_index": 7941,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 12,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-ae2f8f510ebfff5b6bd0ad61.slp",
+        "sha1": "c9b3ef046a8443a80540b076623af7d6f226b767",
+        "frame_count_index": 11562,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 13,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-0ebfb9919236df99eba01173.slp",
+        "sha1": "e2e8f89bfee618c4f65ab5768870bad9d6b3b3df",
+        "frame_count_index": 5886,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 14,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-4828174ff28035ca739fd820.slp",
+        "sha1": "3ab36ce96ca14828c9490e2ddcfc9f99236482ed",
+        "frame_count_index": 17931,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 15,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-7dcf340f77902ffe4700490c.slp",
+        "sha1": "709abb7bbc97d7763a24588d022d3923f3ec8ce4",
+        "frame_count_index": 11508,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 16,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-b81d560b4a526d1bbb279f8e.slp",
+        "sha1": "9967173e5fbe9666e7fd1ef288d85b001b867f3f",
+        "frame_count_index": 7393,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 17,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-322a476f6ff1014535047482.slp",
+        "sha1": "057db005959222628e7f65e2b360d0258ec08ee8",
+        "frame_count_index": 7962,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 18,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-5173c6a97bd43d4465cb8b97.slp",
+        "sha1": "3f1eda4c2222064a722a4544b697dc1aa854e9cf",
+        "frame_count_index": 8657,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 19,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-6e64b64c66f2d543198a2451.slp",
+        "sha1": "3ca3b9507424bfd865c8f1a336d95a58398b8dac",
+        "frame_count_index": 8285,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 20,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-fa799476cc725b2b1fd0c6d5.slp",
+        "sha1": "9564904288c99e926543760eb181f00123b1251c",
+        "frame_count_index": 17286,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 21,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-48eb105a2bc78e864f188618.slp",
+        "sha1": "7ee387bd0d57775ffede3ee0885045c329ce1b42",
+        "frame_count_index": 7642,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 22,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-eda78625da083a8baad0a2b9.slp",
+        "sha1": "1f7a1f0b841e80dce7d5df93d320028b806ef628",
+        "frame_count_index": 4618,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 23,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-9c40512aec138ea9a5871712.slp",
+        "sha1": "728e10de2650d83521b9aef69aa7072d00c756a1",
+        "frame_count_index": 11894,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 24,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-5abf7dc05f71d50a06ba8e8e.slp",
+        "sha1": "e97973eb4b2f1131b863b6633cdf3e9e1444c7fa",
+        "frame_count_index": 9527,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 25,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-4861a161e7ae1710458dea49.slp",
+        "sha1": "38d6aca936a9fece1fbbf2086d7f6b32481cbe86",
+        "frame_count_index": 11894,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 26,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-7b58731c41640cc73561dcbe.slp",
+        "sha1": "e7a8378b8b1579c5992f5aba7cee3088f4ae9b50",
+        "frame_count_index": 13727,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 27,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-2897ee84449a9c6040225cfa.slp",
+        "sha1": "919a041d5090b55e663ca78480e85ca2303e81f0",
+        "frame_count_index": 10578,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 28,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-bfa227029ca625fc98a15c37.slp",
+        "sha1": "a6b89e2021e7afc39927dda735f8ed269a92b1f8",
+        "frame_count_index": 9284,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 29,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-0ca1e9b70b086bf150f87725.slp",
+        "sha1": "c19e97f4b7e8586f95b7ccc01022ccec03499d70",
+        "frame_count_index": 6667,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 30,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-708f2673925cec365cd42ae1.slp",
+        "sha1": "ee9b9f616fb330eea784c65a99207464528d931b",
+        "frame_count_index": 13915,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 31,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-3882ce0df8acf99536bce4cb.slp",
+        "sha1": "f6cbcb837e0f656dae1f9323edd15c9b5f25ea23",
+        "frame_count_index": 15343,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 32,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-6475aa38738075e1f8f0563c.slp",
+        "sha1": "5b7aa2d2d072d5e13ca5aaa29188d783710e3778",
+        "frame_count_index": 11813,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 33,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-51dae22693c27ee4baafb235.slp",
+        "sha1": "cd255bc2ac0d9b0a3c23048b6af43ba2130d8473",
+        "frame_count_index": 15647,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 34,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-b2a445b2158c4f068076a9d0.slp",
+        "sha1": "afe17c3d46efdd2b544c68349a15e3f42cc672ab",
+        "frame_count_index": 9369,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 35,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-cf3d9de18686f806098959b6.slp",
+        "sha1": "a0e5ed1df2570809465f02c0d25631fc478bf76b",
+        "frame_count_index": 9639,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 36,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-094a2775d822b68001549a0f.slp",
+        "sha1": "1cc634ffce85345949e315c2e445b2496f04da5b",
+        "frame_count_index": 8501,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 37,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-8cb974ca6b647b80504308ac.slp",
+        "sha1": "5c3340be4dd1105aae51da9c30aa8f4945e3bf5f",
+        "frame_count_index": 8796,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 38,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-bb863759aad24d494ff7016b.slp",
+        "sha1": "dfc8ee7104b673770b5b3241ace1d0c1794d9136",
+        "frame_count_index": 9719,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 39,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-ac5ea9bde303321aa14d0718.slp",
+        "sha1": "a343131288545f8f9b3865a76e1cbd168dfc9f44",
+        "frame_count_index": 10161,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 40,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-c3a295811ff7dc098f443153.slp",
+        "sha1": "e74a5c93d9a3d99afa5290b4413977343ad750d3",
+        "frame_count_index": 7701,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 41,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-691adee84f505308ca17e462.slp",
+        "sha1": "9560db75f927b8c310765c3ed45f5ba9d16384ac",
+        "frame_count_index": 8471,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 42,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-4b376ab51a7485f633144b99.slp",
+        "sha1": "e4020369ff636b213d0ba41117cfc44e8c71ecdc",
+        "frame_count_index": 13491,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 43,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-e0d529eccecd8cc37deec3f3.slp",
+        "sha1": "6467abb2c92bae99862efddd97294c012cc6aeb7",
+        "frame_count_index": 12600,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 44,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-773efd876b11817752bf43c4.slp",
+        "sha1": "7ba536552719d8fef0de8ee1979bc52ea6b70baf",
+        "frame_count_index": 12421,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 45,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-55d7f6a6669d948552643dc8.slp",
+        "sha1": "7d08821822a53e779fa7c3b4daaa0246d634e7d4",
+        "frame_count_index": 12088,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 46,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-5e92440e4a1ca443450ddbcf.slp",
+        "sha1": "78c764abd72c84cda2ef37eb817850de93aa5e51",
+        "frame_count_index": 8636,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 47,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-4a58788784e3fd3fb6a0ba5c.slp",
+        "sha1": "470a02d55eca0407ba2ab6d3dcc832275198f6c5",
+        "frame_count_index": 7982,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 48,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-1ee5d6be3386d25eba8aa75f.slp",
+        "sha1": "bedd7820abc64b29f350f7cb5478cb0b158661cc",
+        "frame_count_index": 7320,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 49,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-f0d127dd3f4ed7a9e00b67e9.slp",
+        "sha1": "e1354b6a92bc8e44c9d07c04be9d3aca8f98543a",
+        "frame_count_index": 7279,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 50,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-b64e0af983eaadb0f182d4ea.slp",
+        "sha1": "461a8a54c9dfb027910fe5d35ad31f3d1bdc9205",
+        "frame_count_index": 12483,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 51,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-546a55ceb85059ef97a811bd.slp",
+        "sha1": "9d1334de29983bcd300a74598c98012e64c23e73",
+        "frame_count_index": 15513,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 52,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-6120b6cec6d990dd7b707b39.slp",
+        "sha1": "5167cbda46a2dc7b71bb8017fbaebf89c37d0982",
+        "frame_count_index": 8916,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 53,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-d72f06f706112511995cda0d.slp",
+        "sha1": "c8d3a09845fd2bcb91506f768909bbe19d53217f",
+        "frame_count_index": 11943,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 54,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-756dc8c4c488fb3401c29fdc.slp",
+        "sha1": "818c4e44a2974241e739e5bf50384fb420f773b9",
+        "frame_count_index": 9456,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 55,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-2fa035e7c0eda5e9f0697121.slp",
+        "sha1": "c99edbd217925b64f6e2c202f7af75c18609ed65",
+        "frame_count_index": 13509,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 56,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-7e0b55b6c6aa21b7e96a268d.slp",
+        "sha1": "a15c55f20b7c03044457fb8d8c93d511a8f5fcde",
+        "frame_count_index": 11053,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 57,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-ecf15fe15372a34e05a751a6.slp",
+        "sha1": "931433134b70831366546dad1e0b300d7e56b673",
+        "frame_count_index": 8992,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 58,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-0a6a5ce69b3d765ac8bdc4f8.slp",
+        "sha1": "f212cc7d7723abc51c3a45a8fa0cbb1720b07a0f",
+        "frame_count_index": 13809,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 59,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-e3c66c142360bc61f6b97bd9.slp",
+        "sha1": "ef9d499af528c08a7206ef3b16e330b259d97113",
+        "frame_count_index": 10012,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 60,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-e5b1001a725ecd5d12b7ef1a.slp",
+        "sha1": "d932d9fdeda4a78cfa0b646954fe23ec529bf141",
+        "frame_count_index": 9569,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 61,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-c61583c10da26564fce0af24.slp",
+        "sha1": "5cf524fdaa162dd85b1c4e6500214da3343b223e",
+        "frame_count_index": 8208,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 62,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-d1b904d7cdb8a6f2679ab7b0.slp",
+        "sha1": "eb5ba206398818a34f1dff2b48b4e80ef77c8a79",
+        "frame_count_index": 13114,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 63,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-66986729c320efaae1724d29.slp",
+        "sha1": "f48175bfd5493cadb6ef70b82038c3a2ffa1069a",
+        "frame_count_index": 11326,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 64,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-fe6ec0fdb084a4f337816f84.slp",
+        "sha1": "8f113b0fe52288e62269e0e69754570f22218a8e",
+        "frame_count_index": 12178,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 65,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-41ea091f9da8ef80c59867d9.slp",
+        "sha1": "80f607fc6b9154e2834e4261c5660df3051cc917",
+        "frame_count_index": 7980,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 66,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-1cfc31fc1c75eda7e89c7724.slp",
+        "sha1": "6e7dff50343118b30b0b15053f75f61c57f416c0",
+        "frame_count_index": 10215,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 67,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-53b5ced46a0a438a2f09ea88.slp",
+        "sha1": "1ec377dd0fcdb82d5e5948d3398a2432a6ba1f93",
+        "frame_count_index": 16744,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 68,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-9dce770f5ccb51d388cb7bcf.slp",
+        "sha1": "1f583862add310dc049bf4d1304c0d6f8e99e39d",
+        "frame_count_index": 20232,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 69,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-eddd4a7b062356ea0c4e8ccf.slp",
+        "sha1": "c9320b652698b2706421d90e986acc6b4a1eae82",
+        "frame_count_index": 12287,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 70,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-2a0638c0c84aab28de2fd82f.slp",
+        "sha1": "996d5828c96ec15414cabe74e25c86fb3ef6c1e5",
+        "frame_count_index": 9912,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 71,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-8a062a8264b78c678171525a.slp",
+        "sha1": "ee7cf866041687cbe69fbc936bb08a158642b1fb",
+        "frame_count_index": 10875,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 72,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-b3061d07df1d373639c3552b.slp",
+        "sha1": "e8aa4a709d5af8d3ad5393910217ef70bcfd7798",
+        "frame_count_index": 11193,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 73,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-16722fa0e367294a6b4350a4.slp",
+        "sha1": "817165f8bc163ee6fde967157d36a7be411f45fc",
+        "frame_count_index": 9251,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 74,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-36ea51aa0dc3878590e6114d.slp",
+        "sha1": "07eb82e62c4ce2c257ec8601cf5ecb3631f2a5c8",
+        "frame_count_index": 9816,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 75,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-6c4369b9cb9695ee82f5aec3.slp",
+        "sha1": "5b082fc707446849ceb9a4625846ca55814b514c",
+        "frame_count_index": 12435,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 76,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-b4ddc745924834b907ae4db6.slp",
+        "sha1": "09829fe2998226a8432eeff8f61e2b0e94a94bcb",
+        "frame_count_index": 7967,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 77,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-4c3a486bf0ebba346b13d333.slp",
+        "sha1": "95daf631c1533c625d261aed2472e1c1d7b8181c",
+        "frame_count_index": 9500,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 78,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-018c7814e4aa9cf04555cd01.slp",
+        "sha1": "5d28d906e70e7b4af8156cf643fa018f3ba5e313",
+        "frame_count_index": 10181,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 79,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-31e5b5bff2e3f58d367c43b5.slp",
+        "sha1": "686e72df5d33ebdb648ad89e9b4afd3aff437c46",
+        "frame_count_index": 12687,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 80,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-38cc1eb42734d9c8d8440283.slp",
+        "sha1": "fface5c66a8f2cc0cba8017902324a68992abd20",
+        "frame_count_index": 11236,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 81,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-a8e2eda96fde49ddad9b5530.slp",
+        "sha1": "a3fcd14504b499685002ad78610afcc52f1e98cf",
+        "frame_count_index": 11775,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 82,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-716775676895fe1191f1a65b.slp",
+        "sha1": "0f09257ac50deb08272025ab03673b9265f0c453",
+        "frame_count_index": 7217,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 83,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-b4741f7095c6413e144eb183.slp",
+        "sha1": "0c67adead5aca7eb0167fb481625d4ab20033127",
+        "frame_count_index": 9352,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 84,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-dbe530609ae243c2e5b13f2f.slp",
+        "sha1": "6d074944640c570395911ac6570dd47d1378415b",
+        "frame_count_index": 7611,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 85,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-df6e5f7b6a6b41513a2cbcca.slp",
+        "sha1": "6bd2cab0076d5ac523df72a9e5abe243b40c3c21",
+        "frame_count_index": 13553,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 86,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-d89714c621dbc09b59dbe1d1.slp",
+        "sha1": "5686ae3ab5a2a798324388a627fdb2f79ba10fcd",
+        "frame_count_index": 8445,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 87,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-655d341b3c76db6cb9e6e3fc.slp",
+        "sha1": "3137da2020cf2c4986b247c16547454459d733e1",
+        "frame_count_index": 8390,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 88,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-55f30541a908de1a69f5360d.slp",
+        "sha1": "1f1568592a4e35912dcdc9da1d2906bbad598074",
+        "frame_count_index": 15629,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 89,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-7684dd1c1663ec03122b696b.slp",
+        "sha1": "63a71ad8311dec01a31856a0fecc7d3385ca11d5",
+        "frame_count_index": 9896,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 90,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-6b6a13adba1ed311623197d9.slp",
+        "sha1": "47bedf3388b859afa5ae49c7d05d5d29559024e2",
+        "frame_count_index": 15290,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 91,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-87f5ac3816a5033d88787b7f.slp",
+        "sha1": "7225ce3080b5f3af5f696546170be25ece811e33",
+        "frame_count_index": 11000,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 92,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-3f86014446d3b5eabaf0355c.slp",
+        "sha1": "0e0b1cd9425d23f84790b2088c1b4d4f0bd068aa",
+        "frame_count_index": 2442,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 93,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-a7e498fc459e8c6fe72a1b3d.slp",
+        "sha1": "e0c87442f8eb9dd185e50579bcf0737e614a615a",
+        "frame_count_index": 10676,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 94,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-3941710caf850cca8551b51a.slp",
+        "sha1": "5027e07b6d0ee34ae2083cffdc1e72f3375cf85b",
+        "frame_count_index": 11557,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 95,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-aa2404557e7f63347042613b.slp",
+        "sha1": "bbb455b4c5bae7064a55bbdfbd763205bfdcadf2",
+        "frame_count_index": 8178,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 96,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-c33a594996d9134ea175924b.slp",
+        "sha1": "9c0b3d8dabba4e8d63f47e0d5fdcef814edf068c",
+        "frame_count_index": 7769,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 97,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-c1277f9b221dbeff57a71552.slp",
+        "sha1": "f2b9f8feb47275da8a8b9b7b395ba6bdefdc895d",
+        "frame_count_index": 9694,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 98,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-b1774ad5a69a7a80bb6f0d19.slp",
+        "sha1": "6b0d4d0e67c5fe917e2e59d3b52b4331ea650f86",
+        "frame_count_index": 11617,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 99,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-4ec5c4510ed9eedde7fb4a98.slp",
+        "sha1": "f3dbb4ba9dff76fa4ff75a682dc944c442b8eaa5",
+        "frame_count_index": 13702,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 100,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-b1f022a41553f09d47eaff89.slp",
+        "sha1": "5d51f71a75ecc4c72e18005435d8de5d395e4d7f",
+        "frame_count_index": 14691,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 101,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-b2a4713adca108e2694436fa.slp",
+        "sha1": "895bb5f209272899dc2f65d97c0b95a4c37b88d8",
+        "frame_count_index": 10013,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 102,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-04ce7078ebc8634a7709f028.slp",
+        "sha1": "c9d1f8385460d92ccc1374d22778bb2443cbbf19",
+        "frame_count_index": 13349,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 103,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-38fbdbc21b5e43dfba5ef16b.slp",
+        "sha1": "36e1d9d55d8ba2666ccb58ccc82d48e693a5d4ab",
+        "frame_count_index": 7544,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 104,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-eb9ef78ac25735b60f13cfb3.slp",
+        "sha1": "9dc2e515a7827894f4eb5145f3f592eefed9b6a4",
+        "frame_count_index": 10348,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 105,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-ae3ee58d22f68efa3a1fdd50.slp",
+        "sha1": "e89e3aa81dd9bb8d0e279a1cf3738f8742a5c685",
+        "frame_count_index": 8985,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 106,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-710308efd3bb6676b71d752c.slp",
+        "sha1": "b1c7063a3b1239632c3aca4f3b9b305569f9b776",
+        "frame_count_index": 10106,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 107,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-a2e7b57709df67ddea1ce5e3.slp",
+        "sha1": "62b6829ed68ef1fced353c8d2a175e31fda30799",
+        "frame_count_index": 11188,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 108,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-231a5163b81ea7be9c896673.slp",
+        "sha1": "d6e77005d58e416d598f3e6a177912e633b2439f",
+        "frame_count_index": 10164,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 109,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-197cd45f6b3d066fcd5c03ee.slp",
+        "sha1": "ab6d82b67dd90ce324f101397728dc676782cd81",
+        "frame_count_index": 8982,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 110,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-a7e392efd9bf241ee3e722ea.slp",
+        "sha1": "0303e3fbd530625308454ebdebed28acb4497ca9",
+        "frame_count_index": 10287,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 111,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-85e60775b3d5965abcb8dbe8.slp",
+        "sha1": "a760b1c32e595a8161824e11e2c37242e19a3ccf",
+        "frame_count_index": 8534,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 112,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-f7aba614f250cc0b656d7a60.slp",
+        "sha1": "7ea065222d7dbce644fd6f7b395c89c8270e3284",
+        "frame_count_index": 12882,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 113,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-3d34f2ff5f5b7f2bf2f29cc4.slp",
+        "sha1": "828bce15507e0fe5c7c436c0a40e613fce5214d7",
+        "frame_count_index": 9667,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 114,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-61e37b212817888c0039b5f4.slp",
+        "sha1": "dbcbd931d9b7465986ee177336bf699ee046491a",
+        "frame_count_index": 10083,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 115,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-6718f0b5f5c50ad4f860d915.slp",
+        "sha1": "79fb22a0caa1f0b2cfbc2049882b0be7c12581b4",
+        "frame_count_index": 13197,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 116,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-2ee5749ae25e7393044e0e47.slp",
+        "sha1": "7c443ef4a42693fe3583967e73c8c038831286c6",
+        "frame_count_index": 13379,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 117,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-54473a0d0adcb6fa389255a6.slp",
+        "sha1": "2d6b74a601371454fe823687ba43d701ea1c9f4d",
+        "frame_count_index": 10782,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 118,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-d467ccace10b9d3ff03c7406.slp",
+        "sha1": "77fc7b24f362e16be0000868bef63faa606d8225",
+        "frame_count_index": 8190,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 119,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-a4e5b31be96e71dbb087873a.slp",
+        "sha1": "0130239abafccca1dca11a75595575d00c302525",
+        "frame_count_index": 10432,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 120,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-5fe718a10294ceca09ef362c.slp",
+        "sha1": "f2c7d38e52da6b5211d1c915058af9ca45b53f2c",
+        "frame_count_index": 7630,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 121,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-710b0c16b9690860a342878f.slp",
+        "sha1": "9b50928d548cd50f31435a5e8adde2ec29a7a595",
+        "frame_count_index": 9246,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 122,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-42efea1e9feb1feffcd5aa20.slp",
+        "sha1": "6291b97c7d36284b2057f4ac5ffe4d2be6b9e01f",
+        "frame_count_index": 12745,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 123,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-6bc5e95760b245f0fe992f74.slp",
+        "sha1": "ca2ee2016b9043684a9012d5c7375f539cede3ea",
+        "frame_count_index": 8256,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 124,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-9c22cd0a542bd5e30513ac9e.slp",
+        "sha1": "9e5ba76ec6d34544247f6ab009fb0f46c55476f6",
+        "frame_count_index": 13955,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 125,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-e5ca31d060591fd562ed3aa7.slp",
+        "sha1": "05b4ad77972a37f26534ae564d4c35d5ffe08fe2",
+        "frame_count_index": 12958,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 126,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-b5f47e5647f75409c9785ff6.slp",
+        "sha1": "c2f45c592cee2092f4fb668af9b4e639bc780271",
+        "frame_count_index": 10336,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 127,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-2ffb12c4822dc7eb42d8188b.slp",
+        "sha1": "412260586254ad959658287f2568944ba54a03d8",
+        "frame_count_index": 11312,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 128,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-cc049b856c7777106ad1d1b3.slp",
+        "sha1": "6abfb512417787f1406d413f9704b6c5a9b72c3f",
+        "frame_count_index": 10208,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 129,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-48e72fe0abff66aca8e6afaa.slp",
+        "sha1": "0f6b64743dfe49fcf8c9027548bd385caaa0ffec",
+        "frame_count_index": 8478,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 130,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-d5cd63d51188c1d017762d1e.slp",
+        "sha1": "dd748e4340f030a8d4443f44d2d34961509b1cb1",
+        "frame_count_index": 16652,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 131,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-0542151461df7bd959ba5571.slp",
+        "sha1": "6e11e5af0435fb9de14030f325de522e409379bd",
+        "frame_count_index": 15100,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 132,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-a7b9afe48e3c219d9670ef39.slp",
+        "sha1": "2047bfc81f17ea9e6515c7eb651d9bb023a9bf56",
+        "frame_count_index": 4746,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 133,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-70a2c66cc0f22fd48f0d974d.slp",
+        "sha1": "d7b104a0529afa45d3155ef92db15e6d7850787a",
+        "frame_count_index": 10483,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 134,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-e5314d9b8ee4dc2bb3e4bf65.slp",
+        "sha1": "8f99f4ec34ff0a67356bfcdf9e537ef7aa9b4ea3",
+        "frame_count_index": 11148,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 135,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-0e4c8c7aec25c50422338a1c.slp",
+        "sha1": "20ba5417c1dd87e4f884216ac712ced5b1845874",
+        "frame_count_index": 11280,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 136,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-2ac7677a4f4000f728f82037.slp",
+        "sha1": "76a40715b327f567e3055a82249c6cc254f5afcd",
+        "frame_count_index": 10517,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 137,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-2ca7b0d77f243e2101337a69.slp",
+        "sha1": "c75c74f730b429116843d4a51bccf54edcd0c57f",
+        "frame_count_index": 9029,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 138,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-25701a7d32f8bb4e0a6ad1db.slp",
+        "sha1": "0133d160a4a532b0fa747254aaab218b1c4ef834",
+        "frame_count_index": 7224,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 139,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-639d6e3c91e9f67d2fbec765.slp",
+        "sha1": "69751df13b5f6d32a4832fcaee86aeeb96aa483b",
+        "frame_count_index": 15084,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 140,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-0f918c545fe6f7f823ac36fc.slp",
+        "sha1": "cca2dce333d905f1cc72677394c2d7d708afd7b4",
+        "frame_count_index": 9459,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 141,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-9c546973c1944e1393c77e4b.slp",
+        "sha1": "45f255b742f059b17ff5be3ff5e3cec8d30d42df",
+        "frame_count_index": 12199,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 142,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-a7b9b03c7ad9b80be1cfa5d4.slp",
+        "sha1": "32860cd95a24f50010233568ab91097651a3da1d",
+        "frame_count_index": 9281,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 143,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-9ccdeb6deb905341bd63e42e.slp",
+        "sha1": "69a4e4065e918387ae94ae49c39cebe9d9fd4e63",
+        "frame_count_index": 10185,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 144,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-cff3706b244115d529a20b97.slp",
+        "sha1": "971292fd3867cf9b09c3149bbe441acefce018fd",
+        "frame_count_index": 7254,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 145,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-4c2fca3927b0656c0ce088c0.slp",
+        "sha1": "6e4657df53d411b73946ca8adb974ca9c47f9f9e",
+        "frame_count_index": 12752,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 146,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-d67fcc04db619ac6f30de056.slp",
+        "sha1": "9f1e19603f301804c487fbf3af8b4c37eca365f7",
+        "frame_count_index": 8803,
+        "perspective": "p2",
+        "set": "fit"
+      },
+      {
+        "id": 147,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-6fc38738788b15124200f014.slp",
+        "sha1": "6b8d0e72999347e394718fa67411ed626f67d625",
+        "frame_count_index": 8645,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 148,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-de67c0c93c3ee30782a8a306.slp",
+        "sha1": "2ab8f0698442743fdc1a2a3b13345f3fefe6de2b",
+        "frame_count_index": 10159,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 149,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-3b5e98580d288966aacefc43.slp",
+        "sha1": "f94acd09bcd7a78b1bb352ee75489bdb856d5e56",
+        "frame_count_index": 7123,
+        "perspective": "p1",
+        "set": "fit"
+      },
+      {
+        "id": 150,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-c4aa8a2cf02580bdb63a4314.slp",
+        "sha1": "4fedd5fdfc5e7f7cb8892b7a62cac45a0b662583",
+        "frame_count_index": 6724,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 151,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-c8b620ae36735dfa7319697f.slp",
+        "sha1": "ede55282e1ee5a3e25bf320d4b5ed0148aaf7820",
+        "frame_count_index": 5806,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 152,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-a9ab5ec079e789808feb0a5f.slp",
+        "sha1": "f748dd0424f93c2704605703b8feadaf39927a8c",
+        "frame_count_index": 14162,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 153,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-0f563aab503a2f8a8450761e.slp",
+        "sha1": "0c9c6c28ae8fe850db47d115df62630d2ff81d98",
+        "frame_count_index": 10137,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 154,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-c72268755a8f42b6379e70e8.slp",
+        "sha1": "86f365c07fda7188066a5f437ce345a1148ee52a",
+        "frame_count_index": 15117,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 155,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-3bde2e40b083b5793e9f57c7.slp",
+        "sha1": "1fe226d5ca4c562a848c0a0f5d5c0b3f3a8f86d4",
+        "frame_count_index": 14735,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 156,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-3b62869abd1df8d798ae3c47.slp",
+        "sha1": "3a7a06e37d5bca9c37e8bd8ce19a9e7bc39ec781",
+        "frame_count_index": 10844,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 157,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-2ce14dbe383fdfb059cf6083.slp",
+        "sha1": "8fb3c44fb8a9147b7632c01d9d435084fc4d5514",
+        "frame_count_index": 8710,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 158,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-9509a8b0b70025947d076738.slp",
+        "sha1": "95a69d68803c0c1793bac6d88bfdb93d7b331b94",
+        "frame_count_index": 8497,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 159,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-a884f0d911fc4e8c6e25ba05.slp",
+        "sha1": "f777d65a54fcbe8f4e12ef6ac255707181c66092",
+        "frame_count_index": 11512,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 160,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-2b807648662b2151f3917930.slp",
+        "sha1": "b4486ae523dd97f2f3a9420c3685e9dac43b11f8",
+        "frame_count_index": 12667,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 161,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-03635a72fa995435c038eac0.slp",
+        "sha1": "ea3b98a4bd2f1b630d63d79286a1efb6667849b7",
+        "frame_count_index": 5265,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 162,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-03fd755e299c864ead4ed487.slp",
+        "sha1": "b8ca4b85adec0545c3c03ade72b01981543ea3c9",
+        "frame_count_index": 11300,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 163,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-a6de22836244d239eea2f5e2.slp",
+        "sha1": "b6dcee414fcc42683fbd821f4e36b217bc1e2463",
+        "frame_count_index": 7823,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 164,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-e145c52921b13e664bc4d918.slp",
+        "sha1": "58357aea826b6141bdc6b5a1fe861eab3f54035f",
+        "frame_count_index": 8458,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 165,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-c250d249541e0b08e445dd5d.slp",
+        "sha1": "52625e09230c1e537d3796360d374a7d4c9f097b",
+        "frame_count_index": 12349,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 166,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-79ac8931cc19d1c129c30f98.slp",
+        "sha1": "f2904c02847f0d5249bf8e09d9edb1f11d5a6aa0",
+        "frame_count_index": 19507,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 167,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-0d43f900d2763dfce4a88447.slp",
+        "sha1": "9e075d906c1a9a519e023d698c02ff7819b18248",
+        "frame_count_index": 13407,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 168,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-988081c6307eb0b7f6b3768a.slp",
+        "sha1": "a8768c20d228e6703ebf9b3a04978fdb6ea43c63",
+        "frame_count_index": 8703,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 169,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-2f2db154624a1fc697a4e68d.slp",
+        "sha1": "832efa1863eb0d4b05d9194d0d92907690ba46e6",
+        "frame_count_index": 7621,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 170,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-3ad24db6e71b5439e6e69ce1.slp",
+        "sha1": "6be7f302fe9adc134dfb69f7d2cc92be99cbcd75",
+        "frame_count_index": 12312,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 171,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-688ea77c60cdb6bd1815b089.slp",
+        "sha1": "da66ce84545b8065d2fd9b1d761374fa35510ebc",
+        "frame_count_index": 14605,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 172,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-c698a60288ea20722fe72ea4.slp",
+        "sha1": "51bec63f74011d21c5cec0105943f86dafdce2d0",
+        "frame_count_index": 10265,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 173,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-90e3f0c7d45b8e7fb6536c44.slp",
+        "sha1": "955efe22348bfeca74bce2eea424bd2353c4f445",
+        "frame_count_index": 12730,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 174,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-76b651777b47e50a4243d478.slp",
+        "sha1": "83a0a44c04cdbee4e70f2c38a65f31a59171682d",
+        "frame_count_index": 5978,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 175,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-2eb1dc9c7faf55ea3813b37f.slp",
+        "sha1": "6849e134aae53226a3786752cb441491cbf4ea51",
+        "frame_count_index": 16650,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 176,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-0b6f1acc108b8c187296608f.slp",
+        "sha1": "a2160e97e869f1805c778549ee9635a2e0a960fb",
+        "frame_count_index": 6553,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 177,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-platinum-781b514a4b097db494e947b7.slp",
+        "sha1": "34a8cfffc8e7b4cf595a285ea94449df3ea2906a",
+        "frame_count_index": 9671,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 178,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-61c3e86b4707dd4ae484ddf5.slp",
+        "sha1": "0fe5e3791d0ed523b006f2cc740fcc9546696b5b",
+        "frame_count_index": 7024,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 179,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-b228a792e91a3e70840cc017.slp",
+        "sha1": "c9c18250900487f108b024e0cdbd9bfeb4711a4d",
+        "frame_count_index": 9622,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 180,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-430c0d2c7ffa8a6769787d39.slp",
+        "sha1": "4e45208d62a29c80f676f284bc9336102857be17",
+        "frame_count_index": 12864,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 181,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-5658d7b733089dd70d74f1c3.slp",
+        "sha1": "d38d7c37777680ef8096916057eccf875d536dd4",
+        "frame_count_index": 12139,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 182,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-d30c29de90e688d229037a4b.slp",
+        "sha1": "f17ce266e1c0de2961e278027c251d8ec015e47e",
+        "frame_count_index": 8001,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 183,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-3d8524596df4519f49b35aa8.slp",
+        "sha1": "ba721b5cca03600b0c692dd343b268549e51a8f7",
+        "frame_count_index": 10989,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 184,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-16629e808e45346460a06456.slp",
+        "sha1": "99d24d60c5b88f08b6e35e6c5e6a41db82f6babb",
+        "frame_count_index": 6355,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 185,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-46a768258ebad504f53b5413.slp",
+        "sha1": "037c3705a1b4708fe56549536fb9790d80e90131",
+        "frame_count_index": 16540,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 186,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-5592b52d85a8f0392e3e620c.slp",
+        "sha1": "700ff8990a89bb95960d7d49b256bda8812fe6bf",
+        "frame_count_index": 14194,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 187,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-5001079ce3a6cdac9cf8071c.slp",
+        "sha1": "5fe2426e54b23cc5cf216ae2d258d86ddcf0cd70",
+        "frame_count_index": 10567,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 188,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-3de6a9dd979368ac2a234e36.slp",
+        "sha1": "5062840b6968000e712dcb8c251b60be85ee8340",
+        "frame_count_index": 11501,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 189,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-3d02e5d085f417f01c0cea19.slp",
+        "sha1": "f82d80939136c4af690db108ad84c240583e261b",
+        "frame_count_index": 10297,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 190,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-fc1f01df79e49ae910bf6d4d.slp",
+        "sha1": "6461989fb490d725f0fdad98b0fa62584357036a",
+        "frame_count_index": 8197,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 191,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-adb183d0cec51d077e91c436.slp",
+        "sha1": "421408b4a6df56271a2a64c145b3246852c6cee7",
+        "frame_count_index": 14435,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 192,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-diamond-e5d9485dfb80bc2d1d047645.slp",
+        "sha1": "2532cb65c5e1e5f59a9c9a457b12245eb9dcdc0f",
+        "frame_count_index": 10950,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 193,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-cdc2c9dbc3fa38c9e9d37b8c.slp",
+        "sha1": "35b639ca2040ded079314c4b7678527b5a2e4500",
+        "frame_count_index": 12453,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 194,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/platinum-platinum-7356524a828b14c38ae2a4c6.slp",
+        "sha1": "d301ce00d7a204e4af2adf6ce29c38d1462d13bf",
+        "frame_count_index": 15045,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 195,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-604255a56d39843ad54caa57.slp",
+        "sha1": "3e1152227a9fdcd1af3b78607b6d90a836c19745",
+        "frame_count_index": 13107,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 196,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-5bc81a92e83df9f6b74e21db.slp",
+        "sha1": "a931a25f97c5085a142052d41643be4c8ee28dfc",
+        "frame_count_index": 12196,
+        "perspective": "p1",
+        "set": "test"
+      },
+      {
+        "id": 197,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-master-8e559dfd97b047081b58dae5.slp",
+        "sha1": "c398bc5f1683beb47b5c324c4017cbaa3cd4accb",
+        "frame_count_index": 13029,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 198,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/diamond-platinum-04cdf7080fd2b40aa58909f8.slp",
+        "sha1": "24a68e978924fd1108b50c47638320776c8cc603",
+        "frame_count_index": 10097,
+        "perspective": "p2",
+        "set": "test"
+      },
+      {
+        "id": 199,
+        "path": "archive://data/raw/ranked-anonymized-1-116248.7z!ranked-anonymized/master-diamond-3d4ebbe94f45b875c9cc458f.slp",
+        "sha1": "49f2e65817ecb6e70bd1105649a2657af80ab826",
+        "frame_count_index": 9387,
+        "perspective": "p2",
+        "set": "test"
+      }
+    ]
+  },
+  "summary": {
+    "fit": {
+      "games": 150,
+      "frames": 2400,
+      "pearson": 0.5095080482224675,
+      "frame_weighted_pearson": 0.49664047902303454,
+      "frame_weighted_ols_slope_intercept": [
+        0.3360066739728022,
+        0.8303686820055048
+      ],
+      "spearman": 0.3591047359566568,
+      "p_return_above_100": 0.01770367712196323,
+      "value_quantiles": [
+        -56.89093379974365,
+        -21.095531463623047,
+        -1.9524890780448914,
+        18.915156364440918,
+        53.72986545562742
+      ],
+      "return_quantiles": [
+        -14.065126895904541,
+        -0.0,
+        -0.0,
+        0.0,
+        4.177409744262696,
+        10.874145984649656,
+        14.586323022842393,
+        114.89162178039543
+      ]
+    },
+    "test": {
+      "games": 50,
+      "frames": 800,
+      "pearson": 0.4877877431718747,
+      "frame_weighted_pearson": 0.47063380544534206,
+      "frame_weighted_ols_slope_intercept": [
+        0.34815243469715745,
+        0.07224958112774493
+      ],
+      "spearman": 0.36597937579873246,
+      "p_return_above_100": 0.018022656343499994,
+      "value_quantiles": [
+        -66.60362586975097,
+        -21.389894008636475,
+        -0.791466236114502,
+        17.644288539886475,
+        53.670855522155655
+      ],
+      "return_quantiles": [
+        -14.77832074165344,
+        0.0,
+        0.0,
+        0.0,
+        4.637982654571535,
+        10.94568042755127,
+        14.006681489944452,
+        114.39422691345214
+      ],
+      "pearson_game_bootstrap_95pct": [
+        0.3657154222168687,
+        0.5613407887904144
+      ]
+    },
+    "all": {
+      "games": 200,
+      "frames": 3200,
+      "pearson": 0.5029992685984941,
+      "frame_weighted_pearson": 0.48902606654850156,
+      "frame_weighted_ols_slope_intercept": [
+        0.3394380158811038,
+        0.6333404723640219
+      ],
+      "spearman": 0.3608578071668513,
+      "p_return_above_100": 0.01778543507284446,
+      "value_quantiles": [
+        -58.9377103805542,
+        -21.211541652679443,
+        -1.7157233953475952,
+        18.605271339416504,
+        53.72986545562742
+      ],
+      "return_quantiles": [
+        -14.258254432678223,
+        0.0,
+        0.0,
+        0.0,
+        4.201294422149666,
+        10.889375209808348,
+        14.41184096336363,
+        114.8882827758789
+      ]
+    }
+  },
+  "models": {
+    "offset": {
+      "offset": 24.027158737182617,
+      "test": {
+        "all": {
+          "n": 800,
+          "coverage": 0.7793962834758753,
+          "pinball_loss": 8.920040921332983,
+          "estimate_quantiles": [
+            -42.57646713256836,
+            23.235692501068115,
+            77.69801425933827
+          ],
+          "coverage_game_bootstrap_95pct": [
+            0.7370289743181497,
+            0.8181191564851894
+          ]
+        },
+        "near_zero": {
+          "n": 207,
+          "coverage": 0.9884898745232106,
+          "pinball_loss": 7.143065113777233,
+          "estimate_quantiles": [
+            25.16311409473419,
+            32.99739456176758,
+            42.72452354431152
+          ],
+          "coverage_game_bootstrap_95pct": [
+            0.973423019897288,
+            1.0
+          ]
+        },
+        "tail": {
+          "n": 17,
+          "coverage": 0.20543501858071436,
+          "pinball_loss": 27.92762494602316,
+          "estimate_quantiles": [
+            29.264620471000672,
+            93.00118827819824,
+            133.7659832000732
+          ]
+        }
+      }
+    },
+    "affine": {
+      "coefficients": [
+        5.068618827682698,
+        4.728284235546538
+      ],
+      "test": {
+        "all": {
+          "n": 800,
+          "coverage": 0.7908635832190236,
+          "pinball_loss": 4.086408951279932,
+          "estimate_quantiles": [
+            -1.2297986569209642,
+            4.993773281138948,
+            10.144040029156788
+          ],
+          "coverage_game_bootstrap_95pct": [
+            0.7589063684974188,
+            0.8213053331353279
+          ]
+        },
+        "near_zero": {
+          "n": 207,
+          "coverage": 0.8015932570880094,
+          "pinball_loss": 2.8484541963863177,
+          "estimate_quantiles": [
+            5.176041223870613,
+            5.916895320453095,
+            6.836747932958903
+          ],
+          "coverage_game_bootstrap_95pct": [
+            0.7441913804381095,
+            0.861974907555791
+          ]
+        },
+        "tail": {
+          "n": 17,
+          "coverage": 0.0,
+          "pinball_loss": 86.05722938381399,
+          "estimate_quantiles": [
+            5.563902982688501,
+            11.591195158500806,
+            15.446145902388588
+          ]
+        }
+      },
+      "at_values": {
+        "-40": 1.2859914392454677,
+        "0": 5.068618827682698,
+        "10": 6.014275674792006,
+        "20": 6.9599325219013135,
+        "40": 8.851246216119929,
+        "80": 12.63387360455716
+      }
+    },
+    "hinge": {
+      "coefficients": [
+        -0.0,
+        -0.0,
+        11.13372510078855,
+        85.9594880408883
+      ],
+      "test": {
+        "all": {
+          "n": 800,
+          "coverage": 0.8032877475304494,
+          "pinball_loss": 3.8348895306263784,
+          "estimate_quantiles": [
+            0.0,
+            0.0,
+            35.453925861465414
+          ],
+          "coverage_game_bootstrap_95pct": [
+            0.7753719370899278,
+            0.8304619483000611
+          ]
+        },
+        "near_zero": {
+          "n": 207,
+          "coverage": 0.750497590970343,
+          "pinball_loss": 2.9202601959438903,
+          "estimate_quantiles": [
+            0.25294829355494397,
+            1.997442795203485,
+            4.16342639743463
+          ],
+          "coverage_game_bootstrap_95pct": [
+            0.6828846162612705,
+            0.8132198399534306
+          ]
+        },
+        "tail": {
+          "n": 17,
+          "coverage": 0.10084028247793939,
+          "pinball_loss": 48.833577108476014,
+          "estimate_quantiles": [
+            1.1662491834045918,
+            65.17061259661227,
+            144.33031103713932
+          ]
+        }
+      },
+      "at_values": {
+        "-40": 0.0,
+        "0": 0.0,
+        "10": 2.22674502015771,
+        "20": 4.45349004031542,
+        "40": 8.90698008063084,
+        "80": 86.58155059397232
+      }
+    }
+  },
+  "test_bins": [
+    {
+      "low": null,
+      "high": -40,
+      "n": 95,
+      "games": 40,
+      "value_median": -61.11421203613281,
+      "return_q80": -0.0,
+      "return_q90": -0.0,
+      "p_return_above_100": 0.0
+    },
+    {
+      "low": -40,
+      "high": -20,
+      "n": 118,
+      "games": 42,
+      "value_median": -29.10262680053711,
+      "return_q80": -0.0,
+      "return_q90": 8.443450927734375,
+      "p_return_above_100": 0.0
+    },
+    {
+      "low": -20,
+      "high": 0,
+      "n": 198,
+      "games": 50,
+      "value_median": -10.35428762435913,
+      "return_q80": 2.769881248474121,
+      "return_q90": 8.333793640136719,
+      "p_return_above_100": 0.0
+    },
+    {
+      "low": 0,
+      "high": 10,
+      "n": 114,
+      "games": 44,
+      "value_median": 4.661006927490234,
+      "return_q80": 4.54988431930542,
+      "return_q90": 10.715993881225586,
+      "p_return_above_100": 0.01589652409453421
+    },
+    {
+      "low": 10,
+      "high": 20,
+      "n": 93,
+      "games": 45,
+      "value_median": 14.389484405517578,
+      "return_q80": 7.333103179931641,
+      "return_q90": 10.5123872756958,
+      "p_return_above_100": 0.0
+    },
+    {
+      "low": 20,
+      "high": 40,
+      "n": 102,
+      "games": 46,
+      "value_median": 28.084843635559082,
+      "return_q80": 9.560140609741211,
+      "return_q90": 11.62297248840332,
+      "p_return_above_100": 0.017655908942879366
+    },
+    {
+      "low": 40,
+      "high": 80,
+      "n": 71,
+      "games": 34,
+      "value_median": 52.538490295410156,
+      "return_q80": 13.402873039245605,
+      "return_q90": 106.15520477294922,
+      "p_return_above_100": 0.10452955974499933
+    },
+    {
+      "low": 80,
+      "high": null,
+      "n": 9,
+      "games": 8,
+      "value_median": 93.27469635009766,
+      "return_q80": 114.22337341308594,
+      "return_q90": 114.8882827758789,
+      "p_return_above_100": 0.4376054238173488
+    }
+  ],
+  "tail": {
+    "clusters": 647,
+    "sampled_rows": 3235,
+    "sampled_games": 200,
+    "near_zero_value_rows": 178,
+    "near_zero_value_games": 90,
+    "near_zero_value_clusters": 116,
+    "near_zero_value_examples": [
+      {
+        "game": 74,
+        "set": "fit",
+        "value": 19.912372589111328,
+        "return60": 176.79107666015625,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 74,
+        "set": "fit",
+        "value": 0.3105586767196655,
+        "return60": 174.7506866455078,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 1,
+        "set": "fit",
+        "value": 17.928068161010742,
+        "return60": 171.69955444335938,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 120,
+        "set": "fit",
+        "value": 17.45505714416504,
+        "return60": 170.77011108398438,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 138,
+        "set": "fit",
+        "value": 18.993257522583008,
+        "return60": 169.80987548828125,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 120,
+        "set": "fit",
+        "value": 18.05692481994629,
+        "return60": 168.7991943359375,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 141,
+        "set": "fit",
+        "value": 9.157347679138184,
+        "return60": 168.61502075195312,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 175,
+        "set": "test",
+        "value": 7.553785800933838,
+        "return60": 167.94752502441406,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 120,
+        "set": "fit",
+        "value": 11.207649230957031,
+        "return60": 166.85104370117188,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 64,
+        "set": "fit",
+        "value": 15.708048820495605,
+        "return60": 163.4684600830078,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 190,
+        "set": "test",
+        "value": 7.617461204528809,
+        "return60": 161.58181762695312,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 15,
+        "set": "fit",
+        "value": 13.175621032714844,
+        "return60": 159.71694946289062,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 175,
+        "set": "test",
+        "value": 14.842291831970215,
+        "return60": 159.71694946289062,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 177,
+        "set": "test",
+        "value": 14.216431617736816,
+        "return60": 159.71694946289062,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 190,
+        "set": "test",
+        "value": 9.001749992370605,
+        "return60": 159.71694946289062,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 15,
+        "set": "fit",
+        "value": 7.620779514312744,
+        "return60": 157.8736114501953,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 64,
+        "set": "fit",
+        "value": 0.042740240693092346,
+        "return60": 157.8736114501953,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 152,
+        "set": "test",
+        "value": 13.071061134338379,
+        "return60": 157.8736114501953,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 190,
+        "set": "test",
+        "value": 1.930702567100525,
+        "return60": 157.8736114501953,
+        "cluster": 3,
+        "base": false
+      },
+      {
+        "game": 15,
+        "set": "fit",
+        "value": 16.740447998046875,
+        "return60": 156.05154418945312,
+        "cluster": 3,
+        "base": false
+      }
+    ]
+  },
+  "analysis": "Natural frame sample: 16 stratified random frames per held-out game, one random player view. Additional >100-return frames are only for tail diagnostics and are excluded from fitting/correlation.",
+  "provenance": {
+    "checkpoint_sha256": "52b5233ed506f59f514f7e90a6a6111206152db7413f451dc35be5c30d1e671b",
+    "checkpoint_update": 131072,
+    "checkpoint_training_git_sha": "f05d41502a429b399fe9b64d534c442d1a9a6379",
+    "analysis_git_sha": "295404aa16af91b333595efe0c5647ed8eb2bd5b",
+    "experiment_source_sha256": "6595d43f6ae593ac142db6edfac16b2f29d8e5b42f77c089b495d5811f1693ee",
+    "bundle_stats_sha256": "49b8299b93f6afdae28e876490065299959148e4389d12ac9190893ada39f775",
+    "python": "3.14.4",
+    "torch": "2.11.0+cu130",
+    "numpy": "2.1.3",
+    "scipy": "1.17.1",
+    "model_precision": "CPU float32",
+    "player_identity": "masked (ranked-anon-1 has no player codes)",
+    "context_frames": 256,
+    "return_horizon_frames": 60,
+    "frame_sample": "16 random frames in equal-length game intervals, one random player view per game",
+    "tail_sample": "up to five frames per >100-return run, capped at 20 frames per game; excluded from fit"
+  }
+}

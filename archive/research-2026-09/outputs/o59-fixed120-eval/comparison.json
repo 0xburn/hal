@@ -1,0 +1,23 @@
+{
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 20260925,
+  "checkpoint_sha256": "52b5233ed506f59f514f7e90a6a6111206152db7413f451dc35be5c30d1e671b",
+  "control_matches": 154,
+  "control_net_stock_per_min_from_rows": 1.2048945494140642,
+  "control_return": 19.9760597229004,
+  "limits": "Matchups are paired, but stages and game randomness are not shared across runs.",
+  "matched_boots": 96,
+  "paired_bootstrap_95_ci": [
+    0.019756836965918047,
+    0.40088665076729896
+  ],
+  "pooled_net_stock_delta_from_rows": 0.20859607639463285,
+  "protocol_differences": [
+    "desired_return",
+    "return_target"
+  ],
+  "schema_version": 1,
+  "treatment_matches": 154,
+  "treatment_net_stock_per_min_from_rows": 1.413490625808697,
+  "treatment_return": 120.0
+}

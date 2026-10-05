@@ -1,0 +1,32 @@
+{
+  "app_id": "ap-wjpUvDQvAlFjH8zwi79NJP",
+  "app_name": "hal-o59-cody-fox-20260925-215549-7fa64041",
+  "app_url": "https://modal.com/apps/eric-yue-gu/main/ap-wjpUvDQvAlFjH8zwi79NJP",
+  "base_git_sha": "295404aa16af91b333595efe0c5647ed8eb2bd5b",
+  "checkpoint_sha256": "52b5233ed506f59f514f7e90a6a6111206152db7413f451dc35be5c30d1e671b",
+  "checkpoint_update": 131072,
+  "cpu_level": 9,
+  "eval_seed": 0,
+  "eval_source_sha256": "7fa6404145789d403dc0b63160a6e946f7b03d20e175c360e9347c14f630f3d7",
+  "function_call_ids": {
+    "p90": "fc-01M3D946BC9C630DCXGT0DF8B3",
+    "fixed120": "fc-01M3D946FSGNXRAK3CCW2BV3CV"
+  },
+  "launcher_sha256": "e233fad419159586693e9a3bea411ad75191739c44bea5b550e7ef7d9f990f0b",
+  "p90_match_rows_sha256": "6841b3571fc8f52c1c6e4ff70334ee938c89dccea1dab3bdcfc921cfea258c52",
+  "fixed120_match_rows_sha256": "9777b9284af9bfe4aa082538dc3affce965bb68d4d9848b39ad04a1ef91ed9bb",
+  "p90_net_stock_per_min": 1.7793705902116692,
+  "fixed120_net_stock_per_min": 1.729181428305053,
+  "fixed120_minus_p90_net_stock_per_min": -0.05018916190661682,
+  "paired_character_stratified_bootstrap_95_ci": [-0.21340982291685057, 0.11697319157369727],
+  "max_parallel": 32,
+  "n_matchups_per_arm": 96,
+  "opponent_schedule_sha256": "8049dc6414c032049df716f17cc8fbee6ca7658459ef4fb84873d69a940bf0c4",
+  "player_code": "IBDW#0",
+  "replay_r2_prefixes": {
+    "p90": "r2://hal/runs/260921-092548_059_muon_history_decoder_o59v5-cooldown32768/checkpoints/eval96-step-0131072-cody-fox-all-cpus-p90/",
+    "fixed120": "r2://hal/runs/260921-092548_059_muon_history_decoder_o59v5-cooldown32768/checkpoints/eval96-step-0131072-cody-fox-all-cpus-fixed120/"
+  },
+  "run_name": "260921-092548_059_muon_history_decoder_o59v5-cooldown32768",
+  "status": "complete"
+}
