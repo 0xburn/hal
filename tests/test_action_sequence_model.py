@@ -8,6 +8,7 @@ import torch
 
 from hal.models.action_sequence import ActionSequenceConfig
 from hal.models.action_sequence import ActionSequenceTransformer
+from hal.models.action_sequence import TemporalBlock
 
 _FIXTURE = Path(__file__).parent / "fixtures" / "o59" / "model_proxy_parity.json"
 
@@ -16,6 +17,42 @@ def test_default_059_parameter_count() -> None:
     with torch.device("meta"):
         model = ActionSequenceTransformer(ActionSequenceConfig())
     assert sum(parameter.numel() for parameter in model.parameters()) == 246_862_205
+
+
+def test_zero_width_omits_return_conditioning_parameters_and_modulation() -> None:
+    config = ActionSequenceConfig(
+        d_model=32,
+        n_layers=1,
+        n_heads=4,
+        temporal_d_model=32,
+        temporal_layers=2,
+        temporal_heads=4,
+        temporal_ff_dim=64,
+        group_head_dim=16,
+        value_hidden_dim=16,
+        return_embed_dim=0,
+        return_conditioning=False,
+    )
+    with torch.device("meta"):
+        model = ActionSequenceTransformer(config)
+
+    conditioner = model.temporal.return_conditioner
+    assert not tuple(conditioner.parameters())
+    assert (
+        conditioner(
+            torch.empty(3, device="meta"),
+            torch.zeros(3, dtype=torch.bool, device="meta"),
+        )
+        is None
+    )
+
+    model = ActionSequenceTransformer(config).eval()
+    block = model.temporal.blocks[0]
+    assert isinstance(block, TemporalBlock)
+    states = torch.randn(2, 3, config.temporal_d_model)
+    zero_modulation = torch.zeros(2, 1, 4, config.temporal_d_model)
+    with torch.no_grad():
+        torch.testing.assert_close(block(states, None), block(states, zero_modulation))
 
 
 def test_proxy_parameter_order_initialization_and_rng_match_control() -> None:
