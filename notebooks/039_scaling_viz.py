@@ -18,6 +18,7 @@
 # | `11_match_distributions.png` | per-match outcome distributions and per-character breakdown |
 # | `12_closed_loop_controlled.png` | fixed-d1 and minimum-feasible-delay curves against C and D |
 # | `13_closed_loop_iso_data.png` | capacity at fixed D under the same two delay rules |
+# | `14_o59_compute_comparison.png` | O59 compute budgets and the recovered frame +4 loss proxy |
 #
 # Closed-loop metric: the rate against the CPU per minute of active play, read three ways from
 # the same matches, each with a 90% CI from a bootstrap over boot clusters.
@@ -63,6 +64,14 @@ BOOTSTRAP_RESAMPLES = 2000
 DIVERGENCE_NLL_MARGIN = 0.01
 
 raw = pd.read_csv(RESULTS / "experiment_039_raw_outcomes.csv", low_memory=False)
+o59_evidence = json.loads(
+    (Path(__file__).resolve().parents[1] / "experiments/o59/scaling-comparison/evidence.json").read_text()
+)
+if o59_evidence["schema_version"] != 1 or o59_evidence["experiment_id"] != "059_muon_history_decoder_v5":
+    raise ValueError("unsupported O59 scaling evidence")
+if o59_evidence["fit_inclusion"] is not False:
+    raise ValueError("O59's different validation objective must not enter the O39 fit")
+o59_runs = o59_evidence["o59_runs"]
 
 # %% [markdown]
 # ## Runs
@@ -1260,14 +1269,46 @@ ax.annotate(
     f"N_eff = {n_star:.2e}\nD = {d_star:.2e} ({d_star / U_TOTAL:.1f} epochs)\n"
     f"predicted NLL = {loss_at(np.array([n_star]), C_PREDICT)[0]:.3f}",
     (C_PREDICT, n_star),
-    textcoords="offset points",
-    xytext=(-12, -48),
+    textcoords="axes fraction",
+    xytext=(0.97, 0.06),
     ha="right",
     fontsize=8.5,
 )
 ax.set_xlabel("training FLOPs")
 ax.set_ylabel("compute-optimal effective parameters")
 ax.set_title("Compute-optimal capacity, extrapolated")
+for index, run in enumerate(o59_runs):
+    compute = run["endpoint"]["training_flops"]
+    per_policy = run["n_eff_per_policy_prefix"]
+    per_suffix = run["n_eff_per_suffix_position"]
+    ax.plot([compute, compute], [per_suffix, per_policy], color=ACCENT, lw=1, ls=":")
+    ax.scatter(
+        compute,
+        per_policy,
+        marker="s",
+        s=45,
+        color=ACCENT,
+        zorder=5,
+        label="O59: per supervised policy prefix" if index == 0 else None,
+    )
+    ax.scatter(
+        compute,
+        per_suffix,
+        marker="s",
+        s=45,
+        facecolor="none",
+        edgecolor=ACCENT,
+        zorder=5,
+        label="O59: per suffix position" if index == 0 else None,
+    )
+    ax.annotate(
+        run["phase"],
+        (compute, per_policy),
+        xytext=(-8 if index == 0 else 8, 8),
+        textcoords="offset points",
+        ha="right" if index == 0 else "left",
+        fontsize=8,
+    )
 ax.legend(fontsize=8.5, loc="upper left")
 
 fig.suptitle("Iso-FLOP structure from the parametric fit (minima below the family range are extrapolations)")
@@ -1275,6 +1316,110 @@ fig.tight_layout(rect=(0, 0.06, 1, 1))
 if compute_figure_note():
     fig.text(0.008, 0.008, compute_figure_note(), fontsize=8, color=MUTED)
 fig.savefig(FIGURES / "09_isoflop_fit.png")
+
+# %% [markdown]
+# ## 14 — O59 compute and a horizon-matched diagnostic
+#
+# Keep the O39 fit fixed. O59 did not log next-frame NLL. Its rollout NLL minus
+# exposure gap recovers teacher-forced frame +4 loss, with the button group
+# restricted to targets compatible with the sampled trigger. Return conditioning,
+# validation data, codec, and context differ; this is not an equivalent objective.
+
+# %%
+offset_checkpoints = pd.DataFrame(o59_evidence["o39_checkpoints"])
+if set(offset_checkpoints.run_id) != set(fit_df.run_id):
+    raise ValueError("O39 offset evidence does not match the accepted scaling checkpoints")
+fig, axes = plt.subplots(1, 2, figsize=(13.5, 5.6))
+ax = axes[0]
+compute_grid = np.geomspace(1e16, 1e20, 200)
+optimal_loss = [float(loss_at(np.array([n_eff_opt(c)]), c)[0]) for c in compute_grid]
+ax.plot(
+    compute_grid,
+    optimal_loss,
+    color=MODEL_COLOR[MODELS[5]],
+    lw=2,
+    ls="--",
+    label="O39 fit: predicted compute-optimal loss",
+)
+ax.scatter(
+    fit_df.training_flops, fit_df.validation_nll, s=24, color=MUTED, alpha=0.7, label="O39 measured weighted objective"
+)
+for index, run in enumerate(o59_runs):
+    compute = run["endpoint"]["training_flops"]
+    predicted = float(loss_at(np.array([n_eff_opt(compute)]), compute)[0])
+    ax.axvline(compute, color=ACCENT, ls=":" if index == 0 else "--", lw=1)
+    ax.scatter(compute, predicted, marker="D", facecolor=SURFACE, edgecolor=ACCENT, s=65, zorder=4)
+    ax.annotate(
+        f"O59 {run['phase']} budget\n{compute:.2e} FLOPs; fit {predicted:.3f}",
+        (compute, predicted),
+        xytext=(-12, 82 if index == 0 else 35),
+        textcoords="offset points",
+        ha="right",
+        fontsize=9,
+        arrowprops={"arrowstyle": "-", "color": ACCENT},
+    )
+ax.set_xscale("log")
+ax.set_xlabel("training FLOPs")
+ax.set_ylabel("O39 weighted validation objective (bits)")
+ax.set_title("Same compute axis; diamonds are O39 predictions")
+ax.legend(fontsize=8, loc="upper right")
+
+ax = axes[1]
+for model, group in offset_checkpoints.groupby("model", sort=False):
+    group = group.sort_values("training_flops")
+    ax.plot(
+        group.training_flops,
+        group.val_nll_o04,
+        color=MODEL_COLOR[model],
+        marker="o",
+        ms=4,
+        lw=1.2,
+        alpha=0.8,
+        label=f"O39 {model}",
+    )
+for index, run in enumerate(o59_runs):
+    history = pd.DataFrame(run["validation_history"])
+    ax.plot(
+        history.training_flops,
+        history.teacher_forced_o04_proxy_bits,
+        color=ACCENT,
+        ls=":" if index == 0 else "-",
+        lw=2,
+        label=f"O59 {run['phase']} proxy",
+    )
+    endpoint = run["endpoint"]
+    ax.scatter(
+        endpoint["training_flops"], endpoint["teacher_forced_o04_proxy_bits"], color=ACCENT, marker="s", s=45, zorder=4
+    )
+    ax.annotate(
+        f"{endpoint['teacher_forced_o04_proxy_bits']:.3f}",
+        (endpoint["training_flops"], endpoint["teacher_forced_o04_proxy_bits"]),
+        xytext=(-28, 14 if index == 0 else -17),
+        textcoords="offset points",
+        fontsize=9,
+    )
+ax.set_xscale("log")
+ax.set_xlabel("cumulative training FLOPs, including the stable parent")
+ax.set_ylabel("teacher-forced frame +4 joint NLL (bits)")
+ax.set_title("Matched horizon; different data and conditioning")
+ax.legend(fontsize=8, ncol=2, loc="upper right")
+fig.suptitle("O59 versus O39: compute evidence and a frame +4 loss proxy")
+fig.tight_layout(rect=(0, 0.10, 1, 0.95))
+fig.text(
+    0.015,
+    0.045,
+    "O59 proxy = val/rollout_nll − val/exposure_gap. Buttons use compatible targets only; observed future returns condition validation.",
+    fontsize=8,
+    color=MUTED,
+)
+fig.text(
+    0.015,
+    0.015,
+    "O59 is excluded from the O39 fit. Its raw weighted NLL is not plotted against the O39 objective. W&B endpoint logs establish progress, not launch success.",
+    fontsize=8,
+    color=MUTED,
+)
+fig.savefig(FIGURES / "14_o59_compute_comparison.png")
 
 print("\nRuns that would bracket each iso-FLOP minimum:")
 for c in FLOP_LEVELS + [C_PREDICT]:

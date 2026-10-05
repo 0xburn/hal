@@ -1,0 +1,98 @@
+[
+  {
+    "global_step": 102400,
+    "val/change_f1": 0.25331881642341614,
+    "val/exact_frame_acc": 0.6040852665901184,
+    "val/exposure_gap": 2.4887265958901006,
+    "val/far_nll": 0.22813495849729065,
+    "val/near_nll": 0.884760184768132,
+    "val/nll": 1.1128951432654226,
+    "val/rollout_nll": 3.5337033156550217,
+    "val/sampled_transition_rate": 0.01930745504796505,
+    "val/sequence_acc": 0.48876953125
+  },
+  {
+    "global_step": 106496,
+    "val/change_f1": 0.26056796312332153,
+    "val/exact_frame_acc": 0.605712890625,
+    "val/exposure_gap": 2.4211826501769136,
+    "val/far_nll": 0.22637476945512075,
+    "val/near_nll": 0.8885392053545698,
+    "val/nll": 1.1149139748096906,
+    "val/rollout_nll": 3.460968202613207,
+    "val/sampled_transition_rate": 0.01967366598546505,
+    "val/sequence_acc": 0.49072265625
+  },
+  {
+    "global_step": 110592,
+    "val/change_f1": 0.2604369521141052,
+    "val/exact_frame_acc": 0.6045735478401184,
+    "val/exposure_gap": 2.429930306518257,
+    "val/far_nll": 0.22559529098509581,
+    "val/near_nll": 0.8816305138927004,
+    "val/nll": 1.1072258048777963,
+    "val/rollout_nll": 3.4723271599835854,
+    "val/sampled_transition_rate": 0.01987711526453495,
+    "val/sequence_acc": 0.49072265625
+  },
+  {
+    "global_step": 114688,
+    "val/change_f1": 0.26335135102272034,
+    "val/exact_frame_acc": 0.6067708134651184,
+    "val/exposure_gap": 2.401228292937158,
+    "val/far_nll": 0.224586911619474,
+    "val/near_nll": 0.8754180996302416,
+    "val/nll": 1.1000050112497157,
+    "val/rollout_nll": 3.440082017049516,
+    "val/sampled_transition_rate": 0.01991780661046505,
+    "val/sequence_acc": 0.4892578125
+  },
+  {
+    "global_step": 118784,
+    "val/change_f1": 0.2661185562610626,
+    "val/exact_frame_acc": 0.6070963740348816,
+    "val/exposure_gap": 2.401339721365815,
+    "val/far_nll": 0.22271900584607374,
+    "val/near_nll": 0.8729489294461533,
+    "val/nll": 1.095667935292227,
+    "val/rollout_nll": 3.435150660092764,
+    "val/sampled_transition_rate": 0.01985677145421505,
+    "val/sequence_acc": 0.48974609375
+  },
+  {
+    "global_step": 122880,
+    "val/change_f1": 0.2728442847728729,
+    "val/exact_frame_acc": 0.6082356572151184,
+    "val/exposure_gap": 2.3833708323482297,
+    "val/far_nll": 0.222118392737418,
+    "val/near_nll": 0.8687841188408323,
+    "val/nll": 1.0909025115782502,
+    "val/rollout_nll": 3.412617041948813,
+    "val/sampled_transition_rate": 0.02067057229578495,
+    "val/sequence_acc": 0.48876953125
+  },
+  {
+    "global_step": 126976,
+    "val/change_f1": 0.2724338471889496,
+    "val/exact_frame_acc": 0.610595703125,
+    "val/exposure_gap": 2.3578960871738963,
+    "val/far_nll": 0.22119617294354266,
+    "val/near_nll": 0.8691686446681401,
+    "val/nll": 1.090364817611683,
+    "val/rollout_nll": 3.383367026838232,
+    "val/sampled_transition_rate": 0.02036539651453495,
+    "val/sequence_acc": 0.48779296875
+  },
+  {
+    "global_step": 131072,
+    "val/change_f1": 0.2771471440792084,
+    "val/exact_frame_acc": 0.6126301884651184,
+    "val/exposure_gap": 2.3491679697444314,
+    "val/far_nll": 0.2205892405242588,
+    "val/near_nll": 0.8664349082169086,
+    "val/nll": 1.0870241487411674,
+    "val/rollout_nll": 3.3723972892194585,
+    "val/sampled_transition_rate": 0.02081298828125,
+    "val/sequence_acc": 0.48828125
+  }
+]
