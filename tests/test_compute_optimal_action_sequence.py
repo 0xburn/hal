@@ -33,6 +33,7 @@ def test_production_architecture_and_parameter_contract() -> None:
     assert not cfg.return_conditioning
     assert cfg.arch.head_offsets == tuple(range(1, 31))
     assert cfg.arch.sample_chunk_length == 30
+    assert cfg.arch.main_stick_layout == "legacy65"
     with torch.device("meta"):
         model = _MODULE.make_model(cfg)
     counts = _MODULE.subsystem_parameter_counts(model)

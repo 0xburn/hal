@@ -142,6 +142,7 @@ from hal.models.controller_codec import CONTROLLER_GROUP_NAMES
 from hal.models.controller_codec import TRIGGER_LEFT_CHANNEL
 from hal.models.controller_codec import TRIGGER_RIGHT_CHANNEL
 from hal.models.controller_codec import TRIGGERS_GROUP
+from hal.models.controller_codec import MainStickLayout
 from hal.models.sampling import validate_sampling_temperature
 from hal.representation.features import ITEM_PLAYER_COLUMNS
 from hal.representation.features import ITEM_PLAYER_PROJECTION
@@ -521,6 +522,7 @@ class Architecture:
     item_hidden_dim: int = 64
     item_dim: int = 32
     value_hidden_dim: int = 512
+    main_stick_layout: MainStickLayout = "legacy65"
 
     @property
     def direct_loss_start(self) -> int:
@@ -2127,6 +2129,8 @@ def make_policy(
         raise ValueError(f"inference temperature {engine.temperature} does not match policy temperature {temperature}")
     if action_trace is not None and decode_seed is None:
         raise ValueError("action tracing requires a fixed decode_seed")
+    if action_trace is not None and action_trace.group_vocabs != model.codec.group_vocabs:
+        raise ValueError("action trace vocabulary does not match the model codec")
     seed = torch.seed() if decode_seed is None else decode_seed
     trace_sink = (
         None

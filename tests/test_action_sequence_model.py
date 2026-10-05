@@ -8,6 +8,7 @@ import torch
 
 from hal.models.action_sequence import ActionSequenceConfig
 from hal.models.action_sequence import ActionSequenceTransformer
+from hal.models.action_sequence import NonlinearActionHead
 from hal.models.action_sequence import TemporalBlock
 
 _FIXTURE = Path(__file__).parent / "fixtures" / "o59" / "model_proxy_parity.json"
@@ -17,6 +18,31 @@ def test_default_059_parameter_count() -> None:
     with torch.device("meta"):
         model = ActionSequenceTransformer(ActionSequenceConfig())
     assert sum(parameter.numel() for parameter in model.parameters()) == 246_862_205
+
+
+def test_pruned81_model_uses_81_way_main_stick_heads() -> None:
+    config = ActionSequenceConfig(
+        d_model=32,
+        n_layers=1,
+        n_heads=4,
+        temporal_d_model=32,
+        temporal_layers=1,
+        temporal_heads=4,
+        temporal_ff_dim=64,
+        group_head_dim=16,
+        value_hidden_dim=16,
+        main_stick_layout="pruned81",
+    )
+    with torch.device("meta"):
+        model = ActionSequenceTransformer(config)
+
+    main_stick = model.temporal.outputs["main_stick"]
+    trunk_main_stick = model.temporal.trunk_outputs["main_stick"]
+    assert isinstance(main_stick, NonlinearActionHead)
+    assert isinstance(trunk_main_stick, NonlinearActionHead)
+    assert model.codec.group_vocabs == (256, 81, 9, 25)
+    assert main_stick.down.out_features == 81
+    assert trunk_main_stick.down.out_features == 81
 
 
 def test_zero_width_omits_return_conditioning_parameters_and_modulation() -> None:
