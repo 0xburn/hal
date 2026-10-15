@@ -1,7 +1,7 @@
 # x_pilot matchup run
 
 Historical record. Status and commands below apply to the recorded release.
-See [current deployment status](status.md) and [the runbook](README.md).
+See [current deployment status](../status.md) and [the runbook](../README.md).
 
 ## Status
 

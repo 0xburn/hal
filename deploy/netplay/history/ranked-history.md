@@ -1,7 +1,7 @@
 # Ranked deployment history through October 1, 2026
 
-Historical evidence from the retired host. Use [ranked.md](ranked.md) for the
-maintained entry point and [status.md](status.md) for current infrastructure.
+Historical evidence from the retired host. Use [ranked.md](../ranked.md) for the
+maintained entry point and [status.md](../status.md) for current infrastructure.
 
 # Ranked play on G4
 

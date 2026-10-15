@@ -1,7 +1,7 @@
 # Frontend deployment and Ranked restart — September 30, 2026
 
 Historical record. Status and commands below apply to the recorded release.
-See [current deployment status](status.md) and [the runbook](README.md).
+See [current deployment status](../status.md) and [the runbook](../README.md).
 
 The new frontend is live. The owner then canceled the direct-play restart
 and asked to resume Ranked. The existing Ranked container started at

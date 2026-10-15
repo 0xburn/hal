@@ -1,7 +1,7 @@
 # G4 stop — October 1, 2026 UTC
 
 Historical record. Status and commands below apply to the recorded release.
-See [current deployment status](status.md) and [the runbook](README.md).
+See [current deployment status](../status.md) and [the runbook](../README.md).
 
 The owner requested a VM stop. The G4 instance and its disk remain available
 for a later restart. Direct play, the local test player, and Twitch are stopped.

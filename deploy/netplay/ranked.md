@@ -113,6 +113,6 @@ expiry operation. Preserve local records and receipts until uploads are verified
 
 ## Evidence
 
-[Ranked history](ranked-history.md) retains measurements, failures, commands and
-results. [Teardown](g4-teardown.md) records the 106 verified replay files and local
+[Ranked history](history/ranked-history.md) retains measurements, failures, commands and
+results. [Teardown](history/g4-teardown.md) records the 106 verified replay files and local
 backup. These are historical results, not qualification of the integrated release.

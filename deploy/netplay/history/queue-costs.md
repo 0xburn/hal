@@ -1,7 +1,7 @@
 # Queue read quota fix
 
 Historical record. Status and commands below apply to the recorded release.
-See [current deployment status](status.md) and [the runbook](README.md).
+See [current deployment status](../status.md) and [the runbook](../README.md).
 
 The owner paused the evaluation after Cloudflare reported the daily
 5,000,000 SQL rows-read limit. The public capacity endpoint returned HTTP 500.

@@ -1,7 +1,7 @@
 # G4 teardown — October 1, 2026 UTC
 
 Historical record. Status and commands below apply to the recorded release.
-See [current deployment status](status.md) and [the runbook](README.md).
+See [current deployment status](../status.md) and [the runbook](../README.md).
 
 The owner requested verification of all R2 replay uploads, then deletion of
 `hal-netplay-g4`. The scope includes its single RTX PRO 6000 Blackwell GPU

@@ -24,8 +24,8 @@ The prepared local image ID is
 
 The former ranked VM used the same name but instance ID `4269454647821964449`.
 Its VM and disk were deleted October 1. That deletion does not describe the
-replacement host's retained disk. See [teardown](g4-teardown.md) and the later
-[shutdown](g4-stop-2026-10-02.md).
+replacement host's retained disk. See [teardown](history/g4-teardown.md) and the later
+[shutdown](history/g4-stop-2026-10-02.md).
 
 ## Assets and credentials
 

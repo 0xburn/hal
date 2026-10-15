@@ -1,7 +1,7 @@
 # Free-tier queue architecture — October 2, 2026
 
 Status: approved for implementation and redeployment. The implementation uses
-runner protocol 4 and storage schema 7. See `free-tier-rollout.md` for test and
+runner protocol 4 and storage schema 7. See `history/free-tier-rollout.md` for test and
 release status. The original audit used commit 64ed8dec.
 
 ## Finding

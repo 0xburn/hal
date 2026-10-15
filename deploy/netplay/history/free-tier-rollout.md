@@ -1,7 +1,7 @@
 # Shared queue control rollout — October 2, 2026
 
 Historical record. Status and commands below apply to the recorded release.
-See [current deployment status](status.md) and [the runbook](README.md).
+See [current deployment status](../status.md) and [the runbook](../README.md).
 
 ## Release state
 
@@ -92,7 +92,7 @@ The design's request scenario remains 25,000 dynamic Worker requests and 44,832
 base DO requests per day. Reserve a further 5,000 DO requests for subscription
 and acknowledgement messages: 49,832 total. Outgoing messages are not billed
 requests; incoming socket messages are charged at 20:1. Actual traffic must stay
-within the stated connection and command envelope. See `free-tier-design.md`.
+within the stated connection and command envelope. See `../free-tier-design.md`.
 
 ## Validation commands
 

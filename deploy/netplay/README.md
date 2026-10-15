@@ -179,9 +179,9 @@ need their own verification.
 
 ## Historical evidence
 
-[Deployment history](history.md), [ranked history](ranked-history.md),
-[eight-slot qualification](direct8.md), [shared-control rollout](free-tier-rollout.md),
-[replay teardown](g4-teardown.md), and [Phillip campaign](x-pilot.md) retain exact
+[Deployment history](history/history.md), [ranked history](history/ranked-history.md),
+[eight-slot qualification](history/direct8.md), [shared-control rollout](history/free-tier-rollout.md),
+[replay teardown](history/g4-teardown.md), and [Phillip campaign](history/x-pilot.md) retain exact
 commands, failures, skips and measurements. These records are not current setup
 instructions. The last measured eight-stream inference p99 was 21.148 ms;
 the separate neutral-input renderer check measured 59.94 FPS. Neither establishes

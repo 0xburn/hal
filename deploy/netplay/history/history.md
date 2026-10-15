@@ -1,7 +1,7 @@
 # Netplay deployment history through October 2, 2026
 
 Historical evidence. Commands and status statements below describe earlier
-releases. Use [README](README.md) and [deployment status](status.md) for current
+releases. Use [README](../README.md) and [deployment status](../status.md) for current
 operation. Source overrides and old capture methods below are not launch steps.
 
 # HAL netplay deployment
@@ -858,7 +858,7 @@ The completed replay uploaded, and the helper started the next game.
 
 See [the rollout record](free-tier-rollout.md) for the current release state,
 architecture, measured daily load, commands, failures and remaining checks.
-The approved design is [free-tier-design.md](free-tier-design.md).
+The approved design is [free-tier-design.md](../free-tier-design.md).
 
 The updated runner uses one control socket for all slots. The browser receives status by
 push. Slot polling and stream queue-depth reads stay on G4. New admissions and
