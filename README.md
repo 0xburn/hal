@@ -1,143 +1,132 @@
 # HAL
 
-Training superhuman AI for *Super Smash Bros. Melee* via imitation learning and RL.
+HAL trains a transformer to play *Super Smash Bros. Melee* from Slippi replays of human games, then runs it in Dolphin. The [Hillclimbing Melee](https://ericyuegu.com/hillclimbing-melee/) blog post explains the approach and the results.
 
-HAL is named after both [HAL Laboratory](https://en.wikipedia.org/wiki/HAL_Laboratory), the developer of Super Smash Bros. Melee, and [HAL 9000](https://en.wikipedia.org/wiki/HAL_9000), the infamous robot villain from 2001: A Space Odyssey.
+| Release | Link |
+| --- | --- |
+| Model: HAL 250M, a 247M-parameter policy | [ericyuegu/hal-base-250m-rc](https://huggingface.co/ericyuegu/hal-base-250m-rc) |
+| Dataset: 1.3 million games as MosaicML Streaming shards | [ericyuegu/hal-mds-dataset](https://huggingface.co/datasets/ericyuegu/hal-mds-dataset) |
 
-Blog: https://ericyuegu.com/melee-pt1.
+## Setup
 
-## Quick start
+You need Linux, an NVIDIA GPU, [uv](https://docs.astral.sh/uv/), and a Melee 1.02 NTSC ISO.
 
-Setup venv:
 ```bash
+git clone https://github.com/ericyuegu/hal && cd hal
 uv sync
-source .venv/bin/activate
+uv run fetch --name dolphin-exiai                  # headless Dolphin for CPU matches
+uv run fetch --name Slippi_Online-x86_64.AppImage  # Slippi Dolphin with a window
+export HAL_ISO_PATH=/path/to/ssbm.iso
 ```
 
-Use `uv sync --group analysis` for the retained notebooks, or
-`uv sync --extra netplay-server` for the service and its API tests.
+## Download the model
 
-To download ready-made datasets and emulator for training and eval, request keys for the S3 bucket from the maintainer [@ericyuegu](https://github.com/ericyuegu).
-
-You can copy keys to `.env` or your `.bashrc`.
-```
-source .env
-uv run fetch    # will download to `<repo_root>/data/` by default
-```
-
-The maintained training program is experiment 059. It requires the published
-policy-world-v8 corpus and its pinned manifests.
-```
-uv run experiments/059_muon_action_sequence.py
-```
-
-To launch experiments on cloud, wrap your local training command with a launcher script:
-```
-uv run scripts/launch_vast.py --max-price 1.0 -- uv run experiments/059_muon_action_sequence.py
-```
-
-Modal is the default fixed-hardware option. One-time setup requires an authenticated
-Modal profile and a `hal` Secret with the R2 and W&B credentials:
 ```bash
+uv run hf download ericyuegu/hal-base-250m-rc hal-250m.hal --local-dir .
+```
+
+`hal-250m.hal` holds the weights, the feature statistics, and the return calibration. To load it in Python:
+
+```python
+from hal.inference.action_sequence_artifact import load_action_sequence_policy
+
+policy = load_action_sequence_policy("hal-250m.hal", device="cuda")
+```
+
+## Play against HAL
+
+Plug your controller into port 1 of a GameCube controller adapter. On Linux, Dolphin needs the adapter's [udev rule](https://dolphin-emu.org/docs/guides/how-use-official-gc-controller-adapter-wii-u/).
+
+```bash
+uv run hal-policy play hal-250m.hal --character FOX --stage FINAL_DESTINATION
+```
+
+Dolphin opens with HAL on port 2. Pick your character, and HAL starts the match. Dolphin waits for each of HAL's actions, so HAL plays with no input delay. Replays go to `replays/local-play/`.
+
+`--imitate` selects a play style from the training vocabulary: a player's connect code, or `PLATINUM`, `DIAMOND`, or `MASTER`.
+
+## Evaluate against the CPU
+
+```bash
+uv run hal-policy eval hal-250m.hal --n-matches 4
+```
+
+HAL plays a level-9 CPU on Final Destination in headless Dolphin and writes a replay of each match.
+
+## Download the dataset
+
+The [dataset card](https://huggingface.co/datasets/ericyuegu/hal-mds-dataset) describes the sources, the filter, and the columns. The full dataset is large, so start with one split of one source:
+
+```bash
+uv run hf download ericyuegu/hal-mds-dataset --repo-type dataset \
+  --include "ranked-anonymized-1/val/*" --local-dir data/hf
+```
+
+```python
+from streaming import StreamingDataset
+
+ds = StreamingDataset(local="data/hf/ranked-anonymized-1/val", shuffle=False)
+game = ds[0]
+print(game["replay_id"], game["num_frames"], game["p1_position_x"][:10])
+```
+
+## Train with the 059 recipe
+
+[`experiments/059_muon_action_sequence.py`](experiments/059_muon_action_sequence.py) trained HAL 250M. It runs on a Modal B200 and depends on the maintainer's private Cloudflare R2 bucket:
+
+- It streams the corpus from `s3://hal/processed/`. The Hugging Face dataset holds the same files, but the loader reads only from R2.
+- It uploads checkpoints to `s3://hal/runs/`, and `--resume` downloads them.
+- Every 8,192 updates it starts a Modal evaluator, which reads the checkpoint from R2.
+- It logs to W&B.
+
+With access to an R2 or S3 bucket that mirrors `s3://hal/processed/`, copy `.env.example` to `.env`, fill in the keys, and launch:
+
+```bash
+source .env
 uv run modal setup
-source .env
 uv run modal secret create hal \
-  AWS_ENDPOINT_URL="$AWS_ENDPOINT_URL" \
-  AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID" \
-  AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY" \
-  AWS_BUCKET="$AWS_BUCKET" \
+  AWS_ENDPOINT_URL="$AWS_ENDPOINT_URL" AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID" \
+  AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY" AWS_BUCKET="$AWS_BUCKET" \
   WANDB_API_KEY="$WANDB_API_KEY"
+uv run scripts/launch_modal.py -- uv run experiments/059_muon_action_sequence.py train
 ```
-The launcher defaults to one B200, 32 requested/48 maximum CPU cores, 128 GiB
-RAM, a 384 GiB memory limit, and a 2 TiB ephemeral SSD. It submits a detached
-Function by default:
-```bash
-uv run scripts/launch_modal.py --dry-run -- uv run experiments/059_muon_action_sequence.py
-uv run scripts/launch_modal.py -- uv run experiments/059_muon_action_sequence.py
-uv run scripts/launch_modal.py --wait -- uv run experiments/059_muon_action_sequence.py
-```
-Modal can preempt GPU Functions, and each Function attempt is limited to 24 hours.
-The launcher gives an input ten retries and records its run name in the automatically
-created `hal-modal-state` Volume. A replacement attempt adds `--resume <run>` only
-after `runs/<run>/latest.pt` is present in R2. A normal nonzero training exit is
-recorded as terminal and is not run again. PyTorch's training and inference compiler
-caches share the persistent `hal-modal-compile-cache-v1` Volume; temporary compiler
-files remain on the Function's ephemeral SSD. Arbitrary commands must opt out with
-`--no-auto-resume`. Use `uv run scripts/launch_modal.py --help` for resource,
-region, timeout, image, state, compile-cache, and retry options.
 
-Google Compute Engine is also supported. The launcher uses your interactive
-`gcloud auth login` session (no service-account key file) and reads job secrets
-from Secret Manager through the VM's attached service account:
-```
-uv run scripts/launch_gce.py --dry-run --zone us-central1-a -- uv run experiments/059_muon_action_sequence.py
-uv run scripts/launch_gce.py --zone us-central1-a --service-account hal-jobs@PROJECT.iam.gserviceaccount.com -- uv run experiments/059_muon_action_sequence.py
-```
-The service account needs `roles/secretmanager.secretAccessor` on the secrets
-listed by `--secret`. See `uv run scripts/launch_gce.py --help` for GPU, Spot,
-network, disk, and lifecycle options.
-
-## Netplay service
-
-Start the netplay service locally:
+The launcher builds its image from your pushed commit and resumes the run after a preemption. Add `--proxy` after `train` for the 17M-parameter proxy. To turn a checkpoint into a `.hal` file:
 
 ```bash
-cp deploy/netplay/.env.example deploy/netplay/.env
-deploy/netplay/run-local.sh
+uv run hal-policy export runs/<run>/final.pt policy.hal
 ```
 
-See [deploy/netplay/README.md](deploy/netplay/README.md) for requirements,
-Cloudflare publishing, Docker, health checks, and GPU qualification.
-The policy request and timing contract is in [Inference](docs/inference.md).
+The same bucket holds the ISO and test datasets that `uv run fetch` downloads when you omit `--name`. The integration tests and the netplay service in [deploy/netplay](deploy/netplay/README.md) need those files too.
 
+## Layout
 
-## Data
+| Path | Contents |
+| --- | --- |
+| `hal/` | Library code for data, models, inference, emulation, evaluation, and the netplay service |
+| `experiments/` | Training scripts, with 059 as the maintained recipe |
+| `scripts/` | Cloud launchers and benchmarks |
+| `docs/` | Inference and evaluation details, starting at [inference.md](docs/inference.md) |
+| `archive/` | Earlier experiments and notes |
 
-### Raw datasets
+Before you send a change, run the checks in [AGENTS.md](AGENTS.md).
 
-From the Slippi Discord server:
+## Raw replays
 
-- ranked-anonymized-1-116248: https://drive.google.com/file/d/1pFjgh1dapX34s0T-Q1TC7JUO-qjYbQZf/view
-- ranked-anonymized-2-151807: https://drive.google.com/file/d/1jEIzvhpV3778J2s2-Np9vCVqSLf9lZnk/view
-- ranked-anonymized-3-128787: https://drive.google.com/file/d/1glzlkAPxHC58oXZljJXQV8dsTBKmlhkE/view
-- ranked-anonymized-4-148358: https://drive.google.com/file/d/1qdIZUW4Er_Vu6rD3-VUvyak3lKa1KxVk/view
-- ranked-anonymized-5-133261: https://drive.google.com/file/d/1Hqmj6C8g1BzuRAIqOrQcMDL0MX4GtffE/view
-- ranked-anonymized-6-171694: https://drive.google.com/file/d/1g8yZ-Q4ldyhDEmXLSPBoWxywJRMRVGc3/view
+The `ranked-anonymized` sources come from these Slippi ranked dumps, shared on the Slippi Discord server:
 
-### Data preprocessing
+- [ranked-anonymized-1-116248](https://drive.google.com/file/d/1pFjgh1dapX34s0T-Q1TC7JUO-qjYbQZf/view)
+- [ranked-anonymized-2-151807](https://drive.google.com/file/d/1jEIzvhpV3778J2s2-Np9vCVqSLf9lZnk/view)
+- [ranked-anonymized-3-128787](https://drive.google.com/file/d/1glzlkAPxHC58oXZljJXQV8dsTBKmlhkE/view)
+- [ranked-anonymized-4-148358](https://drive.google.com/file/d/1qdIZUW4Er_Vu6rD3-VUvyak3lKa1KxVk/view)
+- [ranked-anonymized-5-133261](https://drive.google.com/file/d/1Hqmj6C8g1BzuRAIqOrQcMDL0MX4GtffE/view)
+- [ranked-anonymized-6-171694](https://drive.google.com/file/d/1g8yZ-Q4ldyhDEmXLSPBoWxywJRMRVGc3/view)
 
-To create your own training datasets from `.slp` files, there are 3 helpful scripts in `hal/scripts/`:
+To build a dataset from a replay archive:
 
 ```bash
-# step 1: indexing - supports directly reading from .7z archives on-the-fly
-uv run hal/scripts/build_index.py --archive data/raw/dev.7z --output data/processed/dev/index.jsonl
-
-# step 2: filtering
-uv run hal/scripts/filter.py --index data/processed/dev/index.jsonl --output data/processed/dev/paths.txt
-
-# step 3: materializing
-uv run hal/scripts/materialize.py --paths-file data/processed/dev/paths.txt --index data/processed/dev/index.jsonl --output data/processed/dev/mds
+uv run hal/scripts/build_index.py --archive replays.7z --output data/processed/mine/index.jsonl
+uv run hal/scripts/filter.py --index data/processed/mine/index.jsonl --output data/processed/mine/paths.txt
+uv run hal/scripts/materialize.py --replay-format policy-world --paths-file data/processed/mine/paths.txt \
+  --index data/processed/mine/index.jsonl --output data/processed/mine/mds
 ```
-
-The example writes full replay rows for extraction and roundtrip diagnostics.
-To write packed policy-world rows directly, add `--replay-format policy-world`
-and choose a fresh output directory. This produces a new corpus; it does not
-reproduce the published 059 corpus identity or row order.
-
-Audit and publish an R2 staging prefix into a fresh final prefix:
-
-```bash
-uv run hal/scripts/publish_mds.py --staging r2:hal/staging/dev --final r2:hal/processed/dev
-```
-
-The maintained v8 construction and audit entrypoint is
-`scripts/rematerialize_policy_world_v8_modal.py`. Inspect its deterministic
-44-source job list with `--dry-run`; `--command status` reads existing publication
-records. Experiment 059 continues to use its published manifests, statistics,
-player-identity sidecar, and vocabulary. Replacing those inputs is a new
-experiment. Roundtrip diagnostics read full MDS rows, not packed policy-world rows.
-
-Training, export, local evaluation, H2H, and service contracts are described in
-[inference.md](docs/inference.md). The [refactor acceptance record](docs/refactor-059.md)
-lists current evidence and the gates that remain open.
-Earlier experiments and their original notes are under [archive/](archive/).
