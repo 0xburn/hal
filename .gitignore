@@ -279,3 +279,6 @@ fabric.properties
 # Cursor IDE
 /.cursor/
 .superpowers/
+
+# Local Orca tool drops
+/.orca/
