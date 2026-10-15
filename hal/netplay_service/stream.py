@@ -95,16 +95,21 @@ def read_stream_state(path: Path) -> StreamState:
     )
 
 
-def overlay_text(state: StreamState, queue_depth: int) -> str:
+def overlay_text(state: StreamState, queue_depth: int, activity: str = "Playing") -> str:
     if queue_depth < 0:
         raise ValueError("queue depth must be non-negative")
     if isinstance(state, IdleStreamState):
         noun = "player" if queue_depth == 1 else "players"
-        return f"Play HAL at 20xx.xyz · {queue_depth} {noun} waiting"
+        return f"Waiting for a challenger · {queue_depth} {noun} in queue"
     character = _CHARACTER_LABELS[state.character]
     imitation = _IMITATION_LABELS[state.imitation]
-    difficulty = "auto" if state.desired_return is None else f"{state.desired_return:g}"
-    return f"HAL · {imitation} {character} · difficulty {difficulty} · Game {state.game_number} · play at 20xx.xyz"
+    if state.desired_return == 20:
+        difficulty = "Easy"
+    elif state.desired_return == 120:
+        difficulty = "Medium"
+    else:
+        difficulty = "Auto" if state.desired_return is None else f"Return {state.desired_return:g}"
+    return f"{activity} · {imitation} · {character} · {difficulty} · Game {state.game_number}"
 
 
 def write_overlay(path: Path, text: str) -> None:
@@ -344,17 +349,22 @@ class StreamSupervisor:
             state = read_stream_state(self._state_path)
         except ValueError:
             state = IdleStreamState()
-        playing = False
+        active = False
+        activity = "Playing"
         try:
             status = read_slot_status(self._slot_status_path)
-            playing = (
+            active = (
                 isinstance(state, GameStreamState)
-                and status.state in (SlotState.PLAYING, SlotState.DEGRADED)
+                and status.state in (SlotState.CONNECTING, SlotState.PLAYING, SlotState.DEGRADED)
                 and 0 <= time.time() - status.updated_at <= SLOT_HEARTBEAT_MAX_AGE_SECONDS
             )
+            if status.state is SlotState.CONNECTING:
+                activity = "Waiting for opponent"
+            elif status.state is SlotState.DEGRADED:
+                activity = "Playing / connection slow"
         except OSError, ValueError:
             pass
-        text = overlay_text(state if playing else IdleStreamState(), depth)
+        text = overlay_text(state if active else IdleStreamState(), depth, activity)
         if not self._overlay_path.exists() or self._overlay_path.read_text() != text + "\n":
             write_overlay(self._overlay_path, text)
         return text

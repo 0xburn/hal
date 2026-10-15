@@ -148,8 +148,10 @@ are distinct: maintenance blocks all API/DO access, including admin calls.
 ## Twitch stream
 
 OBS captures only Dolphin, including menus, at 1080p60 with NVENC. The queue
-selects one stream slot; other emulators are not captured. Direct play shows its
-settings and game number. Ranked displays the smoothed value head on the right.
+selects one stream slot; other emulators are not captured. Direct play offers Easy (desired return 20) and Medium (desired return 120)
+on the 059 policy. The stream shows its settings, game number, and connection
+status beside the live game. OBS continues to show menus between games and
+rematches. A light waiting screen stays visible when Dolphin has no render window. Ranked displays the smoothed value head on the right.
 Neither overlay may contain a connect code. Stream failure must not stop gameplay.
 
 ## Verification checklist

@@ -315,6 +315,23 @@ class ObsStudio(ObsConnection):
         )["sceneItemId"]
 
     def _configure_scene(self, *, ranked: bool = False) -> None:
+        if not ranked:
+            self._color_panel("Paper", 0xFFFFFFFF, 1920, 1080, 0, 0)
+            self._color_panel("Video well", 0xFFFBFBFA, 1248, 936, 32, 72)
+            self._color_panel("Rule", 0xFFEAE7E4, 1, 936, 1312, 72)
+            self._color_panel("Accent", 0xFF636E0E, 64, 4, 1360, 72)
+            self._text_panel("Brand", "HAL / MELEE", 22, 0xFF636E0E, 1360, 106)
+            self._text_panel("Title", "Play HAL", 60, 0xFF13100D, 1360, 164)
+            self._text_panel("Description", "A policy trained\nfrom human replays.", 25, 0xFF6C645C, 1360, 260)
+            self._text_panel("Status label", "LIVE / DIRECT PLAY", 19, 0xFF636E0E, 1360, 390)
+            self._text_panel("Overlay", "Waiting for a challenger", 30, 0xFF13100D, 1360, 440)
+            self._text_panel("Join label", "YOUR NEXT MATCH", 19, 0xFF636E0E, 1360, 820)
+            self._text_panel("Join", "20xx.xyz", 48, 0xFF13100D, 1360, 866)
+            self._text_panel("Footer", "Slippi direct connect", 22, 0xFF6C645C, 1360, 948)
+            self._text_panel("Video label", "HAL / LIVE GAME & MENUS", 18, 0xFF6C645C, 32, 30)
+            self._text_panel(
+                "Video idle", "HAL is waiting for a challenger.\nJoin the queue at 20xx.xyz", 32, 0xFF6C645C, 240, 460
+            )
         self._capture_id = self._create_input(
             "Dolphin",
             "xcomposite_input",
@@ -332,41 +349,48 @@ class ObsStudio(ObsConnection):
                 "sceneItemId": self._capture_id,
                 "sceneItemTransform": {
                     "boundsType": "OBS_BOUNDS_SCALE_INNER",
-                    "boundsWidth": 1920,
-                    "boundsHeight": 1080,
-                    "positionX": 0,
-                    "positionY": 0,
+                    "boundsWidth": 1920 if ranked else 1248,
+                    "boundsHeight": 1080 if ranked else 936,
+                    "positionX": 0 if ranked else 32,
+                    "positionY": 0 if ranked else 72,
                 },
             },
         )
-        if not ranked:
-            overlay_id = self._create_input(
-                "Overlay",
-                "text_ft2_source_v2",
-                {
-                    "text": "Play HAL at 20xx.xyz",
-                    "font": {"face": "DejaVu Sans", "size": 32},
-                    "color1": 0xFFFFFFFF,
-                    "color2": 0xFFFFFFFF,
-                    "outline": True,
-                },
-            )
-            self.request(
-                "SetSceneItemTransform",
-                {
-                    "sceneName": "HAL",
-                    "sceneItemId": overlay_id,
-                    "sceneItemTransform": {"positionX": 36, "positionY": 36},
-                },
-            )
         self._create_input("Game audio", "pulse_output_capture", {"device_id": "hal_stream.monitor"})
         self.request("SetCurrentProgramScene", {"sceneName": "HAL"})
+
+    def _color_panel(self, name: str, color: int, width: int, height: int, x: int, y: int) -> None:
+        item = self._create_input(name, "color_source_v3", {"color": color, "width": width, "height": height})
+        self.request(
+            "SetSceneItemTransform",
+            {"sceneName": "HAL", "sceneItemId": item, "sceneItemTransform": {"positionX": x, "positionY": y}},
+        )
+
+    def _text_panel(self, name: str, text: str, size: int, color: int, x: int, y: int) -> None:
+        item = self._create_input(
+            name,
+            "text_ft2_source_v2",
+            {
+                "text": text,
+                "font": {"face": "DejaVu Sans", "size": size},
+                "color1": color,
+                "color2": color,
+                "word_wrap": True,
+                "custom_width": 470 if x >= 1360 else 900,
+            },
+        )
+        self.request(
+            "SetSceneItemTransform",
+            {"sceneName": "HAL", "sceneItemId": item, "sceneItemTransform": {"positionX": x, "positionY": y}},
+        )
 
     def update(self, text: str) -> None:
         if self._process is None or self._process.poll() is not None:
             raise RuntimeError("OBS exited; see obs.log")
         if text != self._text:
-            self.request("SetInputSettings", {"inputName": "Overlay", "inputSettings": {"text": text}})
+            self.request(
+                "SetInputSettings", {"inputName": "Overlay", "inputSettings": {"text": text.replace(" · ", "\n")}}
+            )
             self._text = text
         self.refresh_window()
 

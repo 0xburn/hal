@@ -30,12 +30,8 @@ import {
   SettingsUpdate,
   updateSettings,
 } from '@/lib/netplay-api';
-import {
-  clampReturn,
-  defaultImitation,
-  toDifficulty,
-  toReturn,
-} from '@/lib/roster';
+import { defaultImitation, toDifficulty, toReturn } from '@/lib/roster';
+import type { Difficulty } from '@/lib/roster';
 
 type SavedJob = { id: string; token: string };
 // Temperature is not exposed; the API applies the policy default.
@@ -135,8 +131,7 @@ function isPrefs(value: unknown): value is Prefs {
     typeof prefs.character === 'string' &&
     typeof prefs.imitation === 'string' &&
     typeof prefs.online_delay === 'number' &&
-    typeof prefs.desired_return === 'number' &&
-    Number.isFinite(prefs.desired_return)
+    (prefs.desired_return === 20 || prefs.desired_return === 120)
   );
 }
 
@@ -245,8 +240,7 @@ export default function Home() {
             online_delay: { type: 'integer', enum: options.online_delays },
             desired_return: {
               type: 'number',
-              minimum: options.desired_return_range[0],
-              maximum: options.desired_return_range[1],
+              enum: [20, 120],
             },
           },
           required: ['player_code', 'character', 'imitation', 'online_delay'],
@@ -519,16 +513,15 @@ function JoinForm({
   const delayValue = options.online_delays.includes(delay)
     ? delay
     : options.online_delays[0];
-  const range = options.desired_return_range;
-  const desiredValue = clampReturn(desired, range);
-  const difficulty = toDifficulty(desiredValue, range);
+  const desiredValue = desired;
+  const difficulty = toDifficulty(desiredValue);
 
   const codeValid = playerCodePattern.test(playerCode);
   const showCodeError = touched && !codeValid;
   const unavailable = capacity !== null && capacity.healthy_slots === 0;
 
-  function setDifficulty(value: number) {
-    setDesired(toReturn(Math.max(0, Math.min(100, value)), range));
+  function setDifficulty(value: Difficulty) {
+    setDesired(toReturn(value));
   }
 
   function submit() {
@@ -558,8 +551,8 @@ function JoinForm({
     '2': () => setOpen('char'),
     d: () => setOpen('diff'),
     '3': () => setOpen('diff'),
-    '[': () => setDifficulty(difficulty - 5),
-    ']': () => setDifficulty(difficulty + 5),
+    '[': () => setDifficulty('easy'),
+    ']': () => setDifficulty('medium'),
     k: () => {
       setOpen(null);
       code.current?.focus();
@@ -806,20 +799,12 @@ function Reservation({
   const ended = job.status === 'ended';
   const [open, setOpen] = useState<Panel | null>(null);
   const editor = useSettingsEditor(job, saved, update, setError);
-  const range = options.desired_return_range;
   const difficulty = toDifficulty(
-    clampReturn(
-      editor.value('desired_return') ?? options.default_desired_return,
-      range,
-    ),
-    range,
+    editor.value('desired_return') ?? options.default_desired_return,
   );
 
-  function setDifficulty(value: number) {
-    editor.set(
-      'desired_return',
-      toReturn(Math.max(0, Math.min(100, value)), range),
-    );
+  function setDifficulty(value: Difficulty) {
+    editor.set('desired_return', toReturn(value));
   }
 
   async function lockNow() {
@@ -837,8 +822,8 @@ function Reservation({
   useHotkeys({
     d: ended ? undefined : () => setOpen('diff'),
     '3': ended ? undefined : () => setOpen('diff'),
-    '[': ended ? undefined : () => setDifficulty(difficulty - 5),
-    ']': ended ? undefined : () => setDifficulty(difficulty + 5),
+    '[': ended ? undefined : () => setDifficulty('easy'),
+    ']': ended ? undefined : () => setDifficulty('medium'),
     p: ended ? undefined : () => setOpen('player'),
     '1': ended ? undefined : () => setOpen('player'),
     c: ended ? undefined : () => setOpen('char'),
@@ -1313,14 +1298,8 @@ function validateToolInput(input: unknown, options: Options): CreateJob {
   if (!options.online_delays.includes(values.online_delay as number))
     throw new Error('online_delay is not available.');
   const desired = values.desired_return;
-  if (
-    desired !== undefined &&
-    (typeof desired !== 'number' ||
-      !Number.isFinite(desired) ||
-      desired < options.desired_return_range[0] ||
-      desired > options.desired_return_range[1])
-  )
-    throw new Error('desired_return is out of range.');
+  if (desired !== undefined && desired !== 20 && desired !== 120)
+    throw new Error('desired_return must be 20 (easy) or 120 (medium).');
   return {
     player_code: values.player_code as string,
     character: values.character as string,

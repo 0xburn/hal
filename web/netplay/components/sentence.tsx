@@ -13,7 +13,7 @@ import {
   matches,
   prefixMatch,
 } from '@/lib/roster';
-import type { Group, Item } from '@/lib/roster';
+import type { Difficulty, Group, Item } from '@/lib/roster';
 
 export type Panel = 'player' | 'char' | 'diff' | 'stage';
 
@@ -35,7 +35,7 @@ export function Sentence({
   options: Options;
   imitation: Slot<string>;
   character: Slot<string>;
-  difficulty?: Slot<number>;
+  difficulty?: Slot<Difficulty>;
   stage?: Slot<string | null>;
   open: Panel | null;
   setOpen: (panel: Panel | null) => void;
@@ -116,10 +116,7 @@ export function Sentence({
         {difficulty && (
           <>
             {' '}
-            on difficulty{' '}
-            <span className="nw">
-              {blank('diff', <span className="num">{difficulty.value}</span>)}.
-            </span>
+            on <span className="nw">{blank('diff', difficulty.value)}.</span>
           </>
         )}
         {stage && (
@@ -355,59 +352,33 @@ function DifficultyPanel({
   set,
   close,
 }: {
-  value: number;
-  set: (value: number) => void;
+  value: Difficulty;
+  set: (value: Difficulty) => void;
   close: () => void;
 }) {
-  const [draft, setDraft] = useState<string | null>(null);
-  const range = useRef<HTMLInputElement>(null);
-  useEffect(() => range.current?.focus(), []);
-
-  function keyDown(event: ReactKeyboardEvent<HTMLInputElement>) {
-    if (event.key !== 'Escape' && event.key !== 'Enter') return;
-    event.preventDefault();
-    event.stopPropagation();
-    close();
-  }
+  const selected = useRef<HTMLButtonElement>(null);
+  useEffect(() => selected.current?.focus(), []);
 
   return (
     <div className="panel">
       <div className="diff">
-        <div className="diffhead">
-          <span className="lbl">Difficulty</span>
-          <input
-            className="lv"
-            inputMode="numeric"
-            aria-label="Difficulty value"
-            value={draft ?? String(value)}
-            onChange={(event) => {
-              setDraft(event.target.value);
-              const next = Number.parseInt(event.target.value, 10);
-              if (Number.isFinite(next)) set(Math.max(0, Math.min(100, next)));
-            }}
-            onBlur={() => setDraft(null)}
-            onKeyDown={keyDown}
-          />
-        </div>
-        <div className="bar">
-          <div className="f" style={{ width: `${value}%` }} />
-          <div className="k" style={{ left: `${value}%` }} />
-          <input
-            ref={range}
-            type="range"
-            min={0}
-            max={100}
-            step={1}
-            value={value}
-            aria-label="Difficulty"
-            onChange={(event) => set(Number(event.target.value))}
-            onKeyDown={keyDown}
-          />
-        </div>
-        <div className="ends">
-          <span>0 · chill</span>
-          <span>locked-in · 100</span>
-        </div>
+        <fieldset className="seg difficulty-toggle">
+          <legend className="lbl">Difficulty</legend>
+          {(['easy', 'medium'] as const).map((level) => (
+            <button
+              key={level}
+              type="button"
+              ref={level === value ? selected : undefined}
+              aria-pressed={level === value}
+              onClick={() => {
+                set(level);
+                close();
+              }}
+            >
+              {level === 'easy' ? 'Easy' : 'Medium'}
+            </button>
+          ))}
+        </fieldset>
       </div>
     </div>
   );

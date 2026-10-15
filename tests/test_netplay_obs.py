@@ -101,7 +101,7 @@ def test_capture_shows_menu_and_game_windows_until_they_disappear(tmp_path: Path
     assert request.call_args.args[1]["sceneItemEnabled"] is False
 
 
-def test_obs_startup_has_no_waiting_card(tmp_path: Path) -> None:
+def test_obs_scene_keeps_a_styled_background_below_live_capture(tmp_path: Path) -> None:
     studio = obs.ObsStudio(":90", tmp_path, {})
     request = Mock(return_value={"sceneItemId": 7})
     studio.request = request
@@ -113,7 +113,22 @@ def test_obs_startup_has_no_waiting_card(tmp_path: Path) -> None:
         for method, data in (call.args for call in request.call_args_list)
         if method in ("CreateInput", "CreateSceneItem") and data["sceneName"] == "HAL"
     ]
-    assert main_sources == ["Dolphin", "Overlay", "Game audio"]
+    assert main_sources.index("Video idle") < main_sources.index("Dolphin")
+    assert main_sources.index("Overlay") < main_sources.index("Dolphin")
+    inputs = {
+        call.args[1]["inputName"]: call.args[1] for call in request.call_args_list if call.args[0] == "CreateInput"
+    }
+    assert inputs["Paper"]["inputSettings"]["color"] == 0xFFFFFFFF
+    assert inputs["Dolphin"]["inputKind"] == "xcomposite_input"
+    assert inputs["Overlay"]["sceneItemEnabled"]
+    transforms = [call.args[1] for call in request.call_args_list if call.args[0] == "SetSceneItemTransform"]
+    assert transforms[-1]["sceneItemTransform"] == {
+        "boundsType": "OBS_BOUNDS_SCALE_INNER",
+        "boundsWidth": 1248,
+        "boundsHeight": 936,
+        "positionX": 32,
+        "positionY": 72,
+    }
 
 
 def test_screenshot_does_not_capture_an_unset_source(tmp_path: Path) -> None:
@@ -185,3 +200,20 @@ def test_gameplay_screenshot_can_exceed_one_megabyte(tmp_path: Path, monkeypatch
             studio.close()
             server.shutdown()
             thread.join(timeout=5)
+
+
+def test_rematch_status_changes_keep_dolphin_visible(tmp_path: Path) -> None:
+    studio = obs.ObsStudio(":90", tmp_path, {})
+    studio._process = Mock()
+    studio._process.poll.return_value = None
+    studio._capture_id = 1
+    studio.request = Mock(return_value={"propertyItems": [{"itemValue": "3\r\nDolphin\r\nAppRun.wrapped"}]})
+    for text in ("Playing · Game 1", "Waiting for opponent · Game 2", "Playing · Game 2"):
+        studio.update(text)
+    visibility = [
+        call.args[1]["sceneItemEnabled"]
+        for call in studio.request.call_args_list
+        if call.args[0] == "SetSceneItemEnabled"
+    ]
+    assert visibility == [True]
+    assert not any(call.args[0] in ("StopStream", "StartStream") for call in studio.request.call_args_list)

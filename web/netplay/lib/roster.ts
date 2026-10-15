@@ -207,18 +207,16 @@ export function prefixMatch(query: string, item: Item): boolean {
   return words(item).some((word) => word.startsWith(q));
 }
 
-// Difficulty is a 0-100 linear rescale of the policy's desired_return range.
-// The API and stored preferences keep raw desired_return, so a rescale never
-// shifts a saved setting.
-export function toDifficulty(desired: number, [low, high]: [number, number]) {
-  const value = Math.round(((desired - low) / (high - low)) * 100);
-  return Math.max(0, Math.min(100, value));
+export type Difficulty = 'easy' | 'medium';
+
+export function toDifficulty(desired: number): Difficulty {
+  if (desired === 20) return 'easy';
+  if (desired === 120) return 'medium';
+  throw new Error(`Unsupported difficulty return: ${desired}`);
 }
 
-export function toReturn(difficulty: number, [low, high]: [number, number]) {
-  return Math.round((low + (difficulty / 100) * (high - low)) * 100) / 100;
-}
-
-export function clampReturn(desired: number, [low, high]: [number, number]) {
-  return Math.max(low, Math.min(high, desired));
+export function toReturn(difficulty: Difficulty): number {
+  if (difficulty === 'easy') return 20;
+  if (difficulty === 'medium') return 120;
+  throw new Error('Unsupported difficulty.');
 }

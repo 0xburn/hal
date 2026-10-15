@@ -924,3 +924,12 @@ kbd {
     animation: none;
   }
 }
+
+.difficulty-toggle {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.difficulty-toggle legend {
+  margin-bottom: 12px;
+}

@@ -106,8 +106,8 @@ def test_overlay_state_has_no_connect_code(tmp_path: Path) -> None:
     game = overlay_text(state, 3)
     idle = overlay_text(IdleStreamState(), 3)
 
-    assert game == "HAL · Master rank Falco · difficulty 25 · Game 12 · play at 20xx.xyz"
-    assert idle == "Play HAL at 20xx.xyz · 3 players waiting"
+    assert game == "Playing · Master rank · Falco · Return 25 · Game 12"
+    assert idle == "Waiting for a challenger · 3 players in queue"
     assert player_code not in path.read_text()
     assert player_code not in game
     assert set(json.loads(path.read_text())) == {
@@ -193,7 +193,7 @@ def test_stream_supervisor_caps_restart_backoff_at_thirty_seconds(tmp_path: Path
     assert studio.close.call_count == 7
 
 
-def test_overlay_hides_connecting_and_stale_game_labels(tmp_path: Path) -> None:
+def test_overlay_shows_connecting_and_hides_stale_game_labels(tmp_path: Path) -> None:
     from hal.netplay_service.health import SlotState
     from hal.netplay_service.health import SlotStatus
     from hal.netplay_service.health import write_slot_status
@@ -211,7 +211,7 @@ def test_overlay_hides_connecting_and_stale_game_labels(tmp_path: Path) -> None:
         slot_status_path=slot,
     )
     for status, age, visible in (
-        (SlotState.CONNECTING, 0, False),
+        (SlotState.CONNECTING, 0, True),
         (SlotState.PLAYING, 0, True),
         (SlotState.PLAYING, 10, False),
         (SlotState.IDLE, 0, False),
@@ -220,3 +220,10 @@ def test_overlay_hides_connecting_and_stale_game_labels(tmp_path: Path) -> None:
         text = supervisor._refresh_overlay(2)
         assert ("iBDW" in text) is visible
         assert "CRYO#610" not in text
+        if status is SlotState.CONNECTING:
+            assert text.startswith("Waiting for opponent")
+
+
+@pytest.mark.parametrize(("desired_return", "label"), [(20, "Easy"), (120, "Medium")])
+def test_overlay_uses_public_difficulty_labels(desired_return: int, label: str) -> None:
+    assert f" · {label} · " in overlay_text(GameStreamState("FOX", "MASTER", desired_return, 1), 0)
