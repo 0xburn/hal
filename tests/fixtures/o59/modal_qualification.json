@@ -629,7 +629,7 @@
     "interrupted_logging_patch": "Removed only the agent-owned unfinished session.py edit; retained patch in local review records.",
     "logs": "runs/refactor-059/merge-review/",
     "recorded_at": "2026-09-27T23:05:11.774861+00:00",
-    "report": "docs/refactor-059-engineering-report.md",
+    "report": "archive/docs/refactor-059-engineering-report.md",
     "ruff_format": "passed",
     "ruff_lint": "passed",
     "runtime_changes_during_checks": false,

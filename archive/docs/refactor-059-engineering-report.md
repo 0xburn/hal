@@ -787,7 +787,7 @@ later, it needs its own explicit contract.
   accepted Blackwell scope, and the fresh repository checks.
 - Preserved unrelated source changes, notebooks, and outputs.
 - Added this engineering report and an exact committed-path inventory in
-  [refactor-059-file-accounting.tsv](refactor-059-file-accounting.tsv). A dash
+  `refactor-059-file-accounting.tsv` (removed; `git show 4c36a2eb:docs/refactor-059-file-accounting.tsv`). A dash
   means the path does not exist on that side of the comparison.
 
 ### What remains outside the committed refactor

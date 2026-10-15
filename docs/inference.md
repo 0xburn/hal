@@ -164,7 +164,7 @@ before they can replace a validated profile.
 The original KV-cache and runtime measurements remain in
 [KV-cache evidence](kv-cache.md) and [runtime validation](runtime-validation.md)
 with their recorded hardware and protocol labels. The current acceptance
-record is [refactor-059.md](refactor-059.md).
+record is [refactor-059.md](../archive/docs/refactor-059.md).
 
 `scripts/qualify_netplay_059.py` runs a separate service and a neutral-input
 peer with two explicit Slippi accounts and separate ports. Run it under an X

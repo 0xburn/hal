@@ -323,7 +323,7 @@ records validate. Its SHA-256 is
 `eb968c0598d314d836c22bf16c976084e7d5bbc00ab28c19fd0e8b340ca98c1f`.
 The fixture records source `f05d41502a429b399fe9b64d534c442d1a9a6379`, a B200,
 Python 3.14.3, Torch 2.11.0+cu130, and the production batch-512/131,072-slot
-loader. [The fixture manifest](../tests/fixtures/o59/artifacts.json) records
+loader. [The fixture manifest](../../tests/fixtures/o59/artifacts.json) records
 its R2 location and environment. The first next-update comparison and a repeated
 unmodified-control comparison have run; their numerical results are recorded below.
 
@@ -353,7 +353,7 @@ Unfinished checks are not passes. A merge review is separate from completion of
 all original qualification targets. Raw large results belong in the existing
 run/artifact store.
 
-The [cloud qualification record](../tests/fixtures/o59/modal_qualification.json)
+The [cloud qualification record](../../tests/fixtures/o59/modal_qualification.json)
 pins completed results and stopped job identities. On the RTX PRO 6000 Blackwell,
 all seven emulator cases pass and production BF16 conditional KL passes before
 and after eviction (overall mean 3.423e-5 nats, p99 5.114e-4). Prepared capacity-2
@@ -781,7 +781,7 @@ HAL_REQUIRE_INTEGRATION=1 uv run pytest -q tests/test_roundtrip.py tests/test_se
 
 ### Numerical and process measurements
 
-The [production BF16 report](../tests/fixtures/o59/production_bf16_kl.md)
+The [production BF16 report](../../tests/fixtures/o59/production_bf16_kl.md)
 compares the real checkpoint's batched cached executor with the immutable
 control's independent batch-one streaming caches. It includes 960 forced
 conditional distributions across two streams and positions before and after
@@ -789,12 +789,12 @@ context eviction. Mean KL is `0.00007230` nats and p99 is `0.00114066` nats;
 both pass the stated limits. All outputs are finite. Capture programs, raw
 artifact hashes, and tested source hashes are included in the report.
 
-The [cache coverage table](../tests/fixtures/o59/acceptance_e_coverage.md)
+The [cache coverage table](../../tests/fixtures/o59/acceptance_e_coverage.md)
 separates CPU small-model tests, CUDA capture tests, production checkpoint
 numerics, and the remaining hardware matrix. In particular, a CPU B32 test
 does not qualify production B32 latency.
 
-The [spawned-process batching report](../tests/fixtures/o59/process_batching_3060.md)
+The [spawned-process batching report](../../tests/fixtures/o59/process_batching_3060.md)
 measures persistent clients, queueing, cache copies, GPU execution, validation,
 and delivery with one shared checkpoint on the RTX 3060. Each condition warms
 20 pairs and measures 200 pairs:
@@ -821,7 +821,7 @@ candidate's repeated BF16 weight conversion caused a measured latency regression
 moving the established one-time linear-weight conversion into artifact model
 construction restored the direct-call result. The failed trial is retained.
 
-The [final direct cached comparison](../tests/fixtures/o59/final_direct_cached_3060.md)
+The [final direct cached comparison](../../tests/fixtures/o59/final_direct_cached_3060.md)
 repeats three alternating pairs after controller decoding was included in
 preparation. Paired throughput is 98.78%, 98.70%, and 99.31% of control; the
 median is 98.78%. Peak GPU allocation is 536.323 MiB versus 536.335 MiB for
@@ -840,11 +840,11 @@ Do not merge different revisions into a single claim of full qualification.
 | Check | Result and evidence |
 |---|---|
 | Locked environment install | `UV_CACHE_DIR=/tmp/hal-uv-cache uv sync --locked --extra netplay-server --group analysis` passed. Only HAL was rebuilt; 22 unused installed packages were removed. No retained version changed. `runs/refactor-059/environment-sync.log`. |
-| Model extraction | Parameter names/order/bytes, initialization RNG, dense states, actions, and logits match on the 17M proxy; default meta parameter count is 246,862,205. [Report](../tests/fixtures/o59/model_proxy_parity.md). |
+| Model extraction | Parameter names/order/bytes, initialization RNG, dense states, actions, and logits match on the 17M proxy; default meta parameter count is 246,862,205. [Report](../../tests/fixtures/o59/model_proxy_parity.md). |
 | Loader committed cursor | Control/candidate synthetic schema-3 fingerprint matches after 37 batches and 20 restored batches: `f0f80015a1e83a5abdfe5a2a8f67dfc116e198ec4b727802054efd457e30b236`. Durable helper: `tests/fixtures/o59/loader_resume_fingerprint.py`. |
 | Validation cohort | All 2,048 replay/start/ego identities and tensor digests match. Durable capture/compare helper: `tests/fixtures/o59/validation_cohort_parity.py`. |
 | Published statistics | All 44 sources and 1,584 sufficient-stat records validate. The 16-feature mixture digest remains `49b8299b93f6afdae28e876490065299959148e4389d12ac9190893ada39f775`. Forty zero-count sentinel records are preserved. |
-| Local preprocessing | Representative `.slp` indexing, selection, full-MDS materialization, stored-schema validation, and local publication audit pass. [Detailed data checks](../tests/fixtures/o59/data_validation.json). |
+| Local preprocessing | Representative `.slp` indexing, selection, full-MDS materialization, stored-schema validation, and local publication audit pass. [Detailed data checks](../../tests/fixtures/o59/data_validation.json). |
 | Artifact contracts | Latest focused run: 28 passed, one CUDA test skipped in the CPU invocation. Includes malformed tensors/buffers, incomplete statistics, old/new capability declarations, and resumed descendants. Actual final checkpoint validation also passes and preserves caller RNG. `runs/refactor-059/artifact-contract-tests-final.log` and `artifact-real-validation.log`. |
 | Root training/tool regressions | 192 passed, four CUDA tests skipped in the CPU invocation; includes the format-4 learning-rate scheduler state and next-update test. `runs/refactor-059/root-callback-parity.log`. |
 | Import boundaries | Five passed; separate interpreters confirm model imports do not load Melee and simulation imports do not load Torch. `runs/refactor-059/package-boundaries.log`. |
@@ -857,10 +857,10 @@ Do not merge different revisions into a single claim of full qualification.
 | Interrupted CPU reruns | The sandboxed API rerun stalled; the escalated third run unintentionally exposed CUDA and was stopped to avoid competing with GPU qualification. The fourth run exhausted the temporary filesystem's per-user quota and aborted, with only 61 descriptors open. These are incomplete runs. Their logs are retained. Three inactive pytest directories were moved intact to `runs/refactor-059/retained-pytest-temp/`; subsequent runs use the NVMe-backed `TMPDIR`. |
 | Mosaic descriptor regression | Explicit compatibility setup now runs at the remaining direct MDS reader boundaries. The focused 42-test sequence ended at 160 open descriptors, versus 808 before the fix; it did not raise the descriptor limit or force collection. A new subprocess regression covers repeated dataset creation. The complete CPU rerun remains required. |
 | Standalone evaluation profiles | 15 passed after making the official-059 factory explicitly use intended action history and the checkpoint p90. Cached profiles retain observed action history. The first test attempt used an unavailable script-package import; the corrected test loads the CLI by file, like the other tool tests. `evaluation-profile-tests{,-rerun}.log` under `runs/refactor-059/`. |
-| CUDA functional suite and device fix | 211 passed, one failed, one integration case deselected. The failure exposed a redundant global-device argument in the experiment evaluation factory. The executor now derives the device from its model; all eight affected factory/evaluation cases passed with CUDA visible. [Report](../tests/fixtures/o59/cuda_functional_3060.md). |
-| RTX 3060 prepared-profile checks | All three opt-in hardware tests passed, including both delay profiles and graph execution across wrap/reset/settings changes. A separate raw capture retained 200 request/delivery samples per profile: delay 2 p95/p99 8.979/9.648 ms; delay 3 8.016/8.918 ms. Preparation took 85.338 seconds. The existing service remained resident and idle at sampled instants. This is not the live Dolphin or soak gate. [Report](../tests/fixtures/o59/netplay_ready_3060.md). |
+| CUDA functional suite and device fix | 211 passed, one failed, one integration case deselected. The failure exposed a redundant global-device argument in the experiment evaluation factory. The executor now derives the device from its model; all eight affected factory/evaluation cases passed with CUDA visible. [Report](../../tests/fixtures/o59/cuda_functional_3060.md). |
+| RTX 3060 prepared-profile checks | All three opt-in hardware tests passed, including both delay profiles and graph execution across wrap/reset/settings changes. A separate raw capture retained 200 request/delivery samples per profile: delay 2 p95/p99 8.979/9.648 ms; delay 3 8.016/8.918 ms. Preparation took 85.338 seconds. The existing service remained resident and idle at sampled instants. This is not the live Dolphin or soak gate. [Report](../../tests/fixtures/o59/netplay_ready_3060.md). |
 | First live service smoke | Inference prepared both profiles, but both Dolphins failed GTK initialization without a display. No gameplay occurred. Cleanup took 1.226 seconds and left no descendants. Raw result: `runs/refactor-059/3060-functional-smoke-20260927-1/run-result.json`. The harness now validates DISPLAY and uses separate test ports. A live retry also requires resolving the existing service's ownership of test account A. |
-| Isolated GPU-process recovery | `HAL_REQUIRE_IDLE_NETPLAY_FAULTS=1` with the capability-v2 bundle, account B, and a new isolated output directory: `pytest -q tests/test_idle_runner_faults_hardware.py -m integration` passed one hardware test, with two non-integration cases deselected, in 67.33 seconds. Initial readiness took 32.148 s. A stopped child terminated in 1.957 s and its replacement was ready in 31.081 s; killing that replacement left the runner unavailable in 1.157 s. No reservations or Dolphin sessions were created, no descendants survived, and source hashes matched. The existing service retained its PID and readiness. [Evidence](../tests/fixtures/o59/runtime_evidence.md). |
+| Isolated GPU-process recovery | `HAL_REQUIRE_IDLE_NETPLAY_FAULTS=1` with the capability-v2 bundle, account B, and a new isolated output directory: `pytest -q tests/test_idle_runner_faults_hardware.py -m integration` passed one hardware test, with two non-integration cases deselected, in 67.33 seconds. Initial readiness took 32.148 s. A stopped child terminated in 1.957 s and its replacement was ready in 31.081 s; killing that replacement left the runner unavailable in 1.157 s. No reservations or Dolphin sessions were created, no descendants survived, and source hashes matched. The existing service retained its PID and readiness. [Evidence](../../tests/fixtures/o59/runtime_evidence.md). |
 | Recovery fixture startup race | The first isolated attempt failed before preparation or signal injection because an absent startup health file is wrapped in `ValueError`. The fixture now waits only for that exact missing-file cause and rejects malformed content. Both the failed and successful attempt records remain under `runs/refactor-059/3060-idle-faults-20260927-{1,2}`. |
 | Static checks during integration | Ruff lint and the complete maintained type target passed. Formatting still reported three agent-owned files being edited. Earlier attempts could not acquire a lock in the read-only default UV cache; reruns used `UV_CACHE_DIR=/tmp/hal-uv-cache`. Final frozen-tree checks remain required. `runs/refactor-059/{ruff,ty,format}-final-pass-{2,3}.log`. |
 | Final integration checks | Global Ruff format/lint and the complete type target passed (`{format,ruff,ty}-final-pass-5.log`). The three formatted files retained identical syntax trees (`format-ast-parity.json`). Subsequent changed process/test files also passed focused static checks. |
@@ -885,7 +885,7 @@ split, with no extraction failures. Its nine staged data objects total 842,904
 bytes; publication adds `_SUCCESS`. Local, staging, and final object checksums
 and lengths match. Both new prefixes are under
 `r2:hal/runs/refactor-059/publication-fixture-ad9b1822beb2`; existing published
-corpora were not changed. The [fixture identity record](../tests/fixtures/o59/publication_fixture.json)
+corpora were not changed. The [fixture identity record](../../tests/fixtures/o59/publication_fixture.json)
 and its capture helper make this check reproducible. Packed-v8 publication is
 covered by the representative row audits below.
 
@@ -971,7 +971,7 @@ before every control and candidate warmup. All six trials then read exactly
 5,243,879,424 physical bytes and wrote none. Median throughput is **100.66%**
 of control, and the highest paired peak-RSS ratio is **97.12%**. This meets the
 limits for the reduced loader-core workload only. The
-[full report](../tests/fixtures/o59/loader_performance.md) includes every trial,
+[full report](../../tests/fixtures/o59/loader_performance.md) includes every trial,
 startup, CPU, I/O, memory, source identity, and the selected R2 evidence archive.
 
 The canonical dense executor retains `ObservationHistory`, bulk CPU window
@@ -1047,7 +1047,7 @@ These trees compare the pinned control with the implemented source layout.
 All maintained runtime modules are expanded below. Unchanged assets and test
 families are collapsed. This is a source inventory, not a qualification claim.
 The exact per-file archive/deletion/addition ledger is
-[`refactor-059-files.json`](refactor-059-files.json).
+`refactor-059-files.json` (removed; `git show 4c36a2eb:docs/refactor-059-files.json`).
 
 ### Before
 
