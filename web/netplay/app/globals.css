@@ -1,4 +1,4 @@
-/* Loud Notebook: paper, ink, 2px outlines, one orange accent. */
+/* Loud Notebook layout in the ericyuegu.com post palette: white paper, cool ink, one teal accent. */
 
 @font-face {
   font-family: 'Schibsted Grotesk';
@@ -37,14 +37,14 @@
 }
 
 :root {
-  --paper: #fbfaf6;
-  --ink: #1c2530;
-  --soft: #5f5b50;
-  --faint: #8c8779;
-  --line: #e4ded0;
-  --wash: #f4f0e6;
-  --acc: #ff5b1f;
-  --acc-wash: #ffe9df;
+  --paper: #fff;
+  --ink: #0d1013;
+  --soft: #5c646c;
+  --faint: #69737c;
+  --line: #e4e7ea;
+  --wash: #f2f4f5;
+  --acc: #0e6e63;
+  --acc-wash: #e6f0ee;
   --good: #2f8a55;
   --warn: #b7791f;
   --bad: #c2362b;
@@ -626,7 +626,7 @@ kbd {
 .sheet {
   position: fixed;
   inset: 0;
-  background: rgba(28, 37, 48, 0.18);
+  background: rgba(13, 16, 19, 0.18);
   display: grid;
   place-items: center;
   z-index: 50;

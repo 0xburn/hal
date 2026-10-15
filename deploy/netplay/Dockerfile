@@ -28,7 +28,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PATH=/opt/venv/bin:$PATH
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-      ca-certificates curl fonts-dejavu-core procps pulseaudio x11-xserver-utils xvfb \
+      ca-certificates curl fontconfig fonts-dejavu-core fonts-ibm-plex procps pulseaudio x11-xserver-utils xvfb \
       obs-studio=30.2.3+dfsg-3~bpo24.04.1 libobs0=30.2.3+dfsg-3~bpo24.04.1 \
       openbox mesa-utils xauth x11-utils tesseract-ocr \
       libfuse2t64 libvulkan1 vulkan-tools \
@@ -43,6 +43,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN mkdir -p /usr/share/glvnd/egl_vendor.d \
     && printf '%s\n' '{"file_format_version":"1.0.0","ICD":{"library_path":"libEGL_nvidia.so.0"}}' \
       > /usr/share/glvnd/egl_vendor.d/10_nvidia.json
+
+# Schibsted Grotesk is the stream overlay's face; Ubuntu does not package it.
+COPY deploy/netplay/fonts/ /usr/local/share/fonts/schibsted-grotesk/
+RUN fc-cache -f /usr/local/share/fonts
 
 COPY --from=builder /.uv/python_install /.uv/python_install
 COPY --from=builder /opt/venv /opt/venv

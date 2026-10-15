@@ -22,6 +22,27 @@ VERSION = "30.2.3"
 PACKAGE_VERSION = "30.2.3.1-3~bpo24.04.1"
 
 
+def _rgb(value: str) -> int:
+    """OBS stores colors as 0xAABBGGRR."""
+    red, green, blue = (int(value[index : index + 2], 16) for index in (1, 3, 5))
+    return 0xFF000000 | blue << 16 | green << 8 | red
+
+
+# Palette and type of the hillclimbing-melee post on ericyuegu.com.
+_SANS = "Schibsted Grotesk"
+_MONO = "IBM Plex Mono"
+_PAPER = _rgb("#FFFFFF")
+_INK = _rgb("#0D1013")
+_INK_SOFT = _rgb("#5C646C")
+_RULE = _rgb("#E4E7EA")
+_ASIDE = _rgb("#FAFBFB")
+_ACCENT = _rgb("#0E6E63")
+# Exact 4:3 so the Dolphin capture fills the well with no letterbox.
+_VIDEO_X, _VIDEO_Y, _VIDEO_W, _VIDEO_H = 36, 36, 1344, 1008
+_SIDE_X = _VIDEO_X + _VIDEO_W + 48
+_SIDE_W = 1920 - 36 - _SIDE_X
+
+
 class ObsNotReady(RuntimeError):
     """The control socket opened before OBS finished loading its scene."""
 
@@ -316,22 +337,65 @@ class ObsStudio(ObsConnection):
 
     def _configure_scene(self, *, ranked: bool = False) -> None:
         if not ranked:
-            self._color_panel("Paper", 0xFFFFFFFF, 1920, 1080, 0, 0)
-            self._color_panel("Video well", 0xFFFBFBFA, 1248, 936, 32, 72)
-            self._color_panel("Rule", 0xFFEAE7E4, 1, 936, 1312, 72)
-            self._color_panel("Accent", 0xFF636E0E, 64, 4, 1360, 72)
-            self._text_panel("Brand", "HAL / MELEE", 22, 0xFF636E0E, 1360, 106)
-            self._text_panel("Title", "Play HAL", 60, 0xFF13100D, 1360, 164)
-            self._text_panel("Description", "A policy trained\nfrom human replays.", 25, 0xFF6C645C, 1360, 260)
-            self._text_panel("Status label", "LIVE / DIRECT PLAY", 19, 0xFF636E0E, 1360, 390)
-            self._text_panel("Overlay", "Waiting for a challenger", 30, 0xFF13100D, 1360, 440)
-            self._text_panel("Join label", "YOUR NEXT MATCH", 19, 0xFF636E0E, 1360, 820)
-            self._text_panel("Join", "20xx.xyz", 48, 0xFF13100D, 1360, 866)
-            self._text_panel("Footer", "Slippi direct connect", 22, 0xFF6C645C, 1360, 948)
-            self._text_panel("Video label", "HAL / LIVE GAME & MENUS", 18, 0xFF6C645C, 32, 30)
+            self._color_panel("Background", _PAPER, 1920, 1080, 0, 0)
+            self._color_panel("Video frame", _RULE, _VIDEO_W + 2, _VIDEO_H + 2, _VIDEO_X - 1, _VIDEO_Y - 1)
+            self._color_panel("Video well", _ASIDE, _VIDEO_W, _VIDEO_H, _VIDEO_X, _VIDEO_Y)
+            center_x = _VIDEO_X + _VIDEO_W // 2
+            center_y = _VIDEO_Y + _VIDEO_H // 2
             self._text_panel(
-                "Video idle", "HAL is waiting for a challenger.\nJoin the queue at 20xx.xyz", 32, 0xFF6C645C, 240, 460
+                "Video idle",
+                "Waiting for a challenger",
+                center_x,
+                center_y - 24,
+                44,
+                _INK,
+                style="SemiBold",
+                centered=True,
             )
+            self._text_panel(
+                "Video idle hint",
+                "Queue up at 20xx.xyz",
+                center_x,
+                center_y + 40,
+                22,
+                _INK_SOFT,
+                face=_MONO,
+                centered=True,
+            )
+
+            x = _SIDE_X
+            self._color_panel("Brand mark", _ACCENT, 12, 12, x, 46)
+            self._text_panel(
+                "Brand", "HAL / SUPER SMASH BROS. MELEE", x + 26, 40, 17, _INK_SOFT, face=_MONO, style="Medium"
+            )
+            self._text_panel("Title", "Play HAL", x - 4, 90, 84, _INK, style="Bold")
+            self._text_panel(
+                "Description", "A neural network that learned\nMelee from human Slippi replays.", x, 206, 24, _INK_SOFT
+            )
+
+            # Same card as the post's release links: hairline frame, aside fill, accent top rule.
+            card_y, card_h = 326, 272
+            self._color_panel("Status frame", _RULE, _SIDE_W, card_h, x, card_y)
+            self._color_panel("Status card", _ASIDE, _SIDE_W - 2, card_h - 2, x + 1, card_y + 1)
+            self._color_panel("Status rule", _ACCENT, _SIDE_W, 3, x, card_y)
+            self._color_panel("Live dot", _ACCENT, 10, 10, x + 32, card_y + 41)
+            self._text_panel("Status label", "LIVE", x + 52, card_y + 34, 17, _ACCENT, face=_MONO, style="Medium")
+            self._text_panel(
+                "Overlay",
+                "Waiting for a challenger",
+                x + 32,
+                card_y + 78,
+                34,
+                _INK,
+                style="SemiBold",
+                width=_SIDE_W - 60,
+            )
+            self._text_panel("Overlay detail", "", x + 32, card_y + 140, 24, _INK_SOFT, width=_SIDE_W - 60)
+
+            self._color_panel("Join rule", _RULE, _SIDE_W, 1, x, 862)
+            self._text_panel("Join label", "PLAY HAL YOURSELF", x, 890, 17, _ACCENT, face=_MONO, style="Medium")
+            self._text_panel("Join", "20xx.xyz", x - 3, 916, 64, _INK, style="Bold")
+            self._text_panel("Footer", "Free · Slippi direct connect", x, 1012, 20, _INK_SOFT)
         self._capture_id = self._create_input(
             "Dolphin",
             "xcomposite_input",
@@ -349,10 +413,10 @@ class ObsStudio(ObsConnection):
                 "sceneItemId": self._capture_id,
                 "sceneItemTransform": {
                     "boundsType": "OBS_BOUNDS_SCALE_INNER",
-                    "boundsWidth": 1920 if ranked else 1248,
-                    "boundsHeight": 1080 if ranked else 936,
-                    "positionX": 0 if ranked else 32,
-                    "positionY": 0 if ranked else 72,
+                    "boundsWidth": 1920 if ranked else _VIDEO_W,
+                    "boundsHeight": 1080 if ranked else _VIDEO_H,
+                    "positionX": 0 if ranked else _VIDEO_X,
+                    "positionY": 0 if ranked else _VIDEO_Y,
                 },
             },
         )
@@ -366,30 +430,45 @@ class ObsStudio(ObsConnection):
             {"sceneName": "HAL", "sceneItemId": item, "sceneItemTransform": {"positionX": x, "positionY": y}},
         )
 
-    def _text_panel(self, name: str, text: str, size: int, color: int, x: int, y: int) -> None:
-        item = self._create_input(
-            name,
-            "text_ft2_source_v2",
-            {
-                "text": text,
-                "font": {"face": "DejaVu Sans", "size": size},
-                "color1": color,
-                "color2": color,
-                "word_wrap": True,
-                "custom_width": 470 if x >= 1360 else 900,
-            },
-        )
+    def _text_panel(
+        self,
+        name: str,
+        text: str,
+        x: int,
+        y: int,
+        size: int,
+        color: int,
+        *,
+        face: str = _SANS,
+        style: str = "Regular",
+        width: int | None = None,
+        centered: bool = False,
+    ) -> None:
+        settings: dict[str, Json] = {
+            "text": text,
+            "font": {"face": face, "style": style, "size": size, "flags": 0},
+            "color1": color,
+            "color2": color,
+            "antialiasing": True,
+        }
+        if width is not None:
+            settings |= {"word_wrap": True, "custom_width": width}
+        item = self._create_input(name, "text_ft2_source_v2", settings)
+        transform: dict[str, Json] = {"positionX": x, "positionY": y}
+        if centered:
+            transform["alignment"] = 0
         self.request(
-            "SetSceneItemTransform",
-            {"sceneName": "HAL", "sceneItemId": item, "sceneItemTransform": {"positionX": x, "positionY": y}},
+            "SetSceneItemTransform", {"sceneName": "HAL", "sceneItemId": item, "sceneItemTransform": transform}
         )
 
     def update(self, text: str) -> None:
         if self._process is None or self._process.poll() is not None:
             raise RuntimeError("OBS exited; see obs.log")
         if text != self._text:
+            headline, *details = text.split(" · ")
+            self.request("SetInputSettings", {"inputName": "Overlay", "inputSettings": {"text": headline}})
             self.request(
-                "SetInputSettings", {"inputName": "Overlay", "inputSettings": {"text": text.replace(" · ", "\n")}}
+                "SetInputSettings", {"inputName": "Overlay detail", "inputSettings": {"text": "\n".join(details)}}
             )
             self._text = text
         self.refresh_window()

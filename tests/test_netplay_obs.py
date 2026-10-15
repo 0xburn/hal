@@ -118,16 +118,16 @@ def test_obs_scene_keeps_a_styled_background_below_live_capture(tmp_path: Path) 
     inputs = {
         call.args[1]["inputName"]: call.args[1] for call in request.call_args_list if call.args[0] == "CreateInput"
     }
-    assert inputs["Paper"]["inputSettings"]["color"] == 0xFFFFFFFF
+    assert inputs["Background"]["inputSettings"]["color"] == 0xFFFFFFFF
     assert inputs["Dolphin"]["inputKind"] == "xcomposite_input"
     assert inputs["Overlay"]["sceneItemEnabled"]
     transforms = [call.args[1] for call in request.call_args_list if call.args[0] == "SetSceneItemTransform"]
     assert transforms[-1]["sceneItemTransform"] == {
         "boundsType": "OBS_BOUNDS_SCALE_INNER",
-        "boundsWidth": 1248,
-        "boundsHeight": 936,
-        "positionX": 32,
-        "positionY": 72,
+        "boundsWidth": 1344,
+        "boundsHeight": 1008,
+        "positionX": 36,
+        "positionY": 36,
     }
 
 

@@ -106,7 +106,7 @@ def test_overlay_state_has_no_connect_code(tmp_path: Path) -> None:
     game = overlay_text(state, 3)
     idle = overlay_text(IdleStreamState(), 3)
 
-    assert game == "Playing · Master rank · Falco · Game 12"
+    assert game == "Playing · Falco · Master rank · Game 12"
     assert idle == "Waiting for a challenger · 3 players in queue"
     assert player_code not in path.read_text()
     assert player_code not in game
@@ -221,10 +221,10 @@ def test_overlay_shows_connecting_and_hides_stale_game_labels(tmp_path: Path) ->
         assert ("iBDW" in text) is visible
         assert "CRYO#610" not in text
         if status is SlotState.CONNECTING:
-            assert text.startswith("Waiting for opponent")
+            assert text.startswith("Connecting to opponent")
 
 
 @pytest.mark.parametrize("desired_return", [20, 120])
 def test_overlay_omits_difficulty(desired_return: int) -> None:
     text = overlay_text(GameStreamState("FOX", "MASTER", desired_return, 1), 0)
-    assert text == "Playing · Master rank · Fox · Game 1"
+    assert text == "Playing · Fox · Master rank · Game 1"

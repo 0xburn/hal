@@ -103,7 +103,7 @@ def overlay_text(state: StreamState, queue_depth: int, activity: str = "Playing"
         return f"Waiting for a challenger · {queue_depth} {noun} in queue"
     character = _CHARACTER_LABELS[state.character]
     imitation = _IMITATION_LABELS[state.imitation]
-    return f"{activity} · {imitation} · {character} · Game {state.game_number}"
+    return f"{activity} · {character} · {imitation} · Game {state.game_number}"
 
 
 def write_overlay(path: Path, text: str) -> None:
@@ -353,9 +353,9 @@ class StreamSupervisor:
                 and 0 <= time.time() - status.updated_at <= SLOT_HEARTBEAT_MAX_AGE_SECONDS
             )
             if status.state is SlotState.CONNECTING:
-                activity = "Waiting for opponent"
+                activity = "Connecting to opponent"
             elif status.state is SlotState.DEGRADED:
-                activity = "Playing / connection slow"
+                activity = "Connection slow"
         except OSError, ValueError:
             pass
         text = overlay_text(state if active else IdleStreamState(), depth, activity)
