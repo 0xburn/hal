@@ -93,13 +93,20 @@ def _manifest_payload(*, rows: int = 19, version: int = 2, encoding: str = "valu
     ).encode()
 
 
+def test_mds_adapter_rejects_sources_that_differ_from_the_selection() -> None:
+    selection = PhysicalShardSelection.from_sources((SourceRowSelection("first", 1),))
+    other = streams.StreamSource("second", "s3://bucket/second", Path("cache"))
+
+    with pytest.raises(ValueError, match="match the selected sources"):
+        MDSStorageAdapter(selection, sources=(other,))
+
+
 def test_mds_adapter_rejects_manifest_hash_version_schema_and_row_drift(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     source = streams.StreamSource("source", "s3://bucket/source", Path("cache"))
     monkeypatch.setattr(streams, "REPO_DIR", str(tmp_path))
-    monkeypatch.setitem(streams.BY_NAME, source.name, source)
     path = source.local_root / "train" / "index.json"
     path.parent.mkdir(parents=True)
     payload = _manifest_payload()
@@ -111,6 +118,7 @@ def test_mds_adapter_rejects_manifest_hash_version_schema_and_row_drift(
     ).hexdigest()
     adapter = object.__new__(MDSStorageAdapter)
     adapter.selection = PhysicalShardSelection.from_sources((SourceRowSelection(source.name, 19),))
+    adapter.sources = (source,)
     adapter.split = "train"
     adapter.manifests = {source.name: SourceManifest(source.name, (19,))}
 

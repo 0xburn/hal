@@ -2120,7 +2120,9 @@ def eval_vs_cpu(
     replan_interval_frames: int | None = None,
     desired_return: float | None = None,
     return_calibration_sha256: str | None = None,
+    iso_path: str | None = None,
 ) -> dict[str, float]:
+    """Play the CPU sweep; ``iso_path`` replaces the pinned ISO, which needs R2."""
     horizon = cfg.prediction_frames
     inference_mode = "eager" if eager else cfg.inference_mode
     inference = (
@@ -2173,7 +2175,7 @@ def eval_vs_cpu(
         with torch.compiler.set_stance("fail_on_recompile"):
             results, rows = sweep_vs_cpu_prior_with_rows(
                 factory,
-                session_cfg=default_session_cfg(replay_dir, instant_match_restart=True),
+                session_cfg=default_session_cfg(replay_dir, instant_match_restart=True, iso_path=iso_path),
                 n_matchups=protocol.n_matchups,
                 max_parallel=protocol.max_parallel,
                 max_frames=protocol.max_frames,
@@ -2657,6 +2659,7 @@ def save_boundary_checkpoint(
     optimizer: torch.optim.Optimizer,
     scheduler: LambdaLR,
     cfg: TrainConfig,
+    corpus: Corpus,
     uploader: BackgroundUploader | None,
     milestone: bool,
     wandb_id: str | None,
@@ -2697,7 +2700,7 @@ def save_boundary_checkpoint(
             "conditioning_protocol": conditioning_protocol(),
             "return_masker": return_masker_state,
             "return_calibration": calibration.state_dict(),
-            "provenance": run_provenance(cfg),
+            "provenance": run_provenance(cfg, corpus),
             "loader": loader_state,
             "identity_masker": (
                 loader_state.get("identity_masker") if identity_masker_state is None else identity_masker_state
@@ -2716,10 +2719,45 @@ def save_boundary_checkpoint(
     return snapshot
 
 
-def load_stats(cfg: TrainConfig) -> dict[str, FeatureStats]:
-    sources = tuple(streams.BY_NAME[name] for name in cfg.source_names)
+@dataclass(frozen=True, slots=True)
+class Corpus:
+    """Where the policy-world v8 sources and the player sidecar are read from.
+
+    R2 and the Hugging Face mirror serve byte-identical index, stats, and sidecar
+    files, and training validates their hashes, so the choice does not change the
+    experiment.
+    """
+
+    sources: tuple[streams.StreamSource, ...]
+    player_sidecar: Path
+    from_huggingface: bool
+
+
+def r2_corpus(cfg: TrainConfig) -> Corpus:
+    return Corpus(
+        sources=tuple(streams.BY_NAME[name] for name in cfg.source_names),
+        player_sidecar=Path(cfg.player_sidecar_local),
+        from_huggingface=False,
+    )
+
+
+def huggingface_corpus(root: Path) -> Corpus:
+    return Corpus(
+        sources=streams.huggingface_policy_world_v8_sources(root),
+        player_sidecar=root / streams.HUGGINGFACE_PLAYER_SIDECAR,
+        from_huggingface=True,
+    )
+
+
+def load_stats(cfg: TrainConfig, corpus: Corpus) -> dict[str, FeatureStats]:
+    if tuple(cfg.source_names) != tuple(source.name for source in corpus.sources):
+        raise ValueError("the corpus does not serve the configured sources in order")
+    paths = []
+    for source in corpus.sources:
+        path = source.local_root / "stats.json"
+        paths.append(path if path.is_file() else streams.pull_stats(source))
     return load_consolidated_mixture_stats(
-        [source.local_root / "stats.json" for source in sources],
+        paths,
         source_mixture_weights(cfg),
         expected_mds_schema_version=cfg.mds_schema_version,
     )
@@ -2747,7 +2785,7 @@ def restore_rng(state: Mapping[str, object]) -> None:
 
 
 @functools.cache
-def run_provenance(cfg: TrainConfig) -> dict[str, object]:
+def run_provenance(cfg: TrainConfig, corpus: Corpus) -> dict[str, object]:
     """Resolve immutable code, data, artifact, optimizer, and environment identities."""
     root = Path(__file__).resolve().parents[1]
     git_sha = os.environ.get("HAL_GIT_SHA")
@@ -2755,9 +2793,7 @@ def run_provenance(cfg: TrainConfig) -> dict[str, object]:
         git_sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
     if re.fullmatch(r"[0-9a-f]{40}", git_sha) is None:
         raise RuntimeError(f"HAL_GIT_SHA must be a full lowercase Git SHA, got {git_sha!r}")
-    statistics = {
-        name: checkpoint_sha256(streams.BY_NAME[name].local_root / "stats.json") for name in cfg.source_names
-    }
+    statistics = {source.name: checkpoint_sha256(source.local_root / "stats.json") for source in corpus.sources}
     return {
         "schema_version": 1,
         "git_sha": git_sha,
@@ -2791,9 +2827,11 @@ def run_provenance(cfg: TrainConfig) -> dict[str, object]:
     }
 
 
-def load_identity_sidecar(cfg: TrainConfig) -> PlayerIdentitySidecar:
+def load_identity_sidecar(cfg: TrainConfig, corpus: Corpus) -> PlayerIdentitySidecar:
+    if corpus.from_huggingface and not corpus.player_sidecar.is_file():
+        streams.pull_huggingface_file(streams.HUGGINGFACE_PLAYER_SIDECAR, corpus.player_sidecar)
     return load_player_identity_artifact(
-        Path(cfg.player_sidecar_local),
+        corpus.player_sidecar,
         remote=cfg.player_sidecar_remote,
         expected_sha256=cfg.player_sidecar_sha256,
         expected_vocabulary_size=cfg.player_vocab_size,
@@ -2846,9 +2884,10 @@ def _make_train_loader(
     cfg: TrainConfig,
     stats: dict[str, FeatureStats],
     player_lookup: ReplayPlayerLookup,
+    corpus: Corpus,
 ) -> BufferedMDSReplayLoader[ReturnBatch]:
     selection = data_selection(cfg)
-    adapter = MDSStorageAdapter(selection, download_retry=cfg.download_retry)
+    adapter = MDSStorageAdapter(selection, sources=corpus.sources, download_retry=cfg.download_retry)
     adapter.validate_manifests(
         expected_sha256=streams.POLICY_WORLD_V8_TRAIN_MANIFEST_SHA256,
         expected_index_version=cfg.mds_index_version,
@@ -2912,15 +2951,16 @@ def _make_train_loader(
 def _make_loaders(
     cfg: TrainConfig,
     stats: dict[str, FeatureStats],
+    corpus: Corpus,
     player_lookup: ReplayPlayerLookup | None = None,
 ) -> tuple[BufferedMDSReplayLoader[ReturnBatch], list[ReturnBatch]]:
     """Build buffered training and the fixed 059 validation cohort."""
     if player_lookup is None:
-        player_lookup = ReplayPlayerLookup(load_identity_sidecar(cfg).by_replay)
-    train_loader = _make_train_loader(cfg, stats, player_lookup)
+        player_lookup = ReplayPlayerLookup(load_identity_sidecar(cfg, corpus).by_replay)
+    train_loader = _make_train_loader(cfg, stats, player_lookup, corpus)
     try:
         val_loader = make_validation_replay_loader(
-            sources=tuple(streams.BY_NAME[name] for name in cfg.source_names),
+            sources=corpus.sources,
             stats=stats,
             context_length=cfg.arch.L_ctx,
             chunk_length=cfg.arch.sample_chunk_length,
@@ -2975,9 +3015,10 @@ def _prepare_training_data(
     stats: dict[str, FeatureStats],
     sidecar: PlayerIdentitySidecar,
     resume_state: dict[str, object] | None,
+    corpus: Corpus,
 ) -> PreparedTrainingData:
     """Start shard workers and the first batch before CUDA allocation."""
-    train_loader, validation = _make_loaders(cfg, stats, ReplayPlayerLookup(sidecar.by_replay))
+    train_loader, validation = _make_loaders(cfg, stats, corpus, ReplayPlayerLookup(sidecar.by_replay))
     try:
         if resume_state is not None:
             loader_state = resume_state.get("loader")
@@ -3011,8 +3052,18 @@ def _prepare_training_data(
     )
 
 
-def _init_wandb(cfg: TrainConfig, run_name: str, resume_state: dict | None) -> None:
+def _init_wandb(cfg: TrainConfig, run_name: str, resume_state: dict | None, *, shared: bool) -> None:
     """Start tracking and declare the experiment's logging semantics."""
+    settings = wandb.Settings(
+        x_label="training",
+        x_primary=True,
+        x_stats_sampling_interval=5.0,
+        x_stats_track_process_tree=True,
+    )
+    # A Modal evaluator logs into this run, which needs shared mode. Otherwise
+    # WANDB_MODE applies, so a run can stay offline.
+    if shared:
+        settings.mode = "shared"
     selection = data_selection(cfg)
     wandb.init(
         project="hal",
@@ -3043,13 +3094,7 @@ def _init_wandb(cfg: TrainConfig, run_name: str, resume_state: dict | None) -> N
             "source_manifest_sha256": streams.POLICY_WORLD_V8_TRAIN_MANIFEST_SHA256,
             "mds_manifest_schema_sha256": cfg.mds_manifest_schema_sha256,
         },
-        settings=wandb.Settings(
-            mode="shared",
-            x_label="training",
-            x_primary=True,
-            x_stats_sampling_interval=5.0,
-            x_stats_track_process_tree=True,
-        ),
+        settings=settings,
     )
     if wandb.run is None:
         return
@@ -3392,6 +3437,54 @@ def spawn_closed_loop_evaluation(
     return call_id
 
 
+type ClosedLoopEval = Literal["modal", "inline", "off"]
+
+
+def run_closed_loop_evaluation(
+    mode: ClosedLoopEval,
+    *,
+    run_name: str,
+    checkpoint: Path,
+    update: int,
+    n_matchups: int,
+    max_parallel: int | None,
+    uploader: BackgroundUploader | None,
+    corpus: Corpus,
+    iso_path: str | None,
+    return_target: Literal["p90", "unconditioned"] = "p90",
+) -> None:
+    """Evaluate one checkpoint against CPUs on Modal, in this process, or not at all.
+
+    Inline evaluation pauses training, loads a second copy of the model on the
+    training device, and logs the same metrics that a Modal evaluator logs.
+    """
+    if mode == "off":
+        return
+    checkpoint_sha = checkpoint_sha256(checkpoint)
+    if mode == "modal":
+        if uploader is None:
+            raise RuntimeError("Modal evaluation reads checkpoints from R2, so it requires push_to_r2")
+        uploader.wait()
+        spawn_closed_loop_evaluation(run_name, update, checkpoint_sha, n_matchups, return_target=return_target)
+        return
+    unconditioned = return_target == "unconditioned"
+    namespace = "eval_unconditioned" if unconditioned else "eval"
+    values = eval_checkpoint(
+        str(checkpoint),
+        n_matchups=n_matchups,
+        max_parallel=max_parallel,
+        output_name=f"eval{n_matchups}-step-{update:07d}" + ("-unconditioned" if unconditioned else ""),
+        upload_run=None if uploader is None else run_name,
+        expected_checkpoint_sha256=checkpoint_sha,
+        wandb_namespace=namespace,
+        return_target=return_target,
+        corpus=corpus,
+        iso_path=iso_path,
+    )
+    metrics = {f"{namespace}/{name}": value for name, value in _eval_wandb_metrics(values).items()}
+    wandb.log({"global_step": update, "eval/checkpoint_step": update, **metrics})
+
+
 def _finalize_training(
     *,
     model: ActionSequenceTransformer,
@@ -3404,6 +3497,9 @@ def _finalize_training(
     run_dir: Path,
     replay_dir: Path,
     uploader: BackgroundUploader | None,
+    corpus: Corpus,
+    closed_loop_eval: ClosedLoopEval,
+    iso_path: str | None,
     loader_wait_fractions: list[float],
     loader_state: dict[str, object],
     identity_masker_state: dict[str, object],
@@ -3414,7 +3510,7 @@ def _finalize_training(
     smoke: bool,
     resume_lineage: tuple[ResumeLineage, ...] = (),
 ) -> None:
-    """Save the final model and queue evaluation for a separate L40S worker."""
+    """Save the final model and evaluate it with and without return conditioning."""
     snapshot = save_boundary_checkpoint(
         run_dir,
         update=update,
@@ -3423,6 +3519,7 @@ def _finalize_training(
         optimizer=optimizer,
         scheduler=scheduler,
         cfg=cfg,
+        corpus=corpus,
         uploader=uploader,
         milestone=cfg.ckpt_every > 0 and update % cfg.ckpt_every == 0,
         wandb_id=None if wandb.run is None else wandb.run.id,
@@ -3438,18 +3535,23 @@ def _finalize_training(
     if uploader is not None:
         uploader.upload(snapshot, key=final_path.name)
 
-    checkpoint_sha = checkpoint_sha256(final_path)
     validation = _validation_wandb_metrics(val_metrics(model, val_cache, cfg), cfg)
     final_metrics = {f"val/{name}": value for name, value in validation.items()}
-    if not smoke:
-        if uploader is None:
-            raise RuntimeError("production evaluation requires R2 checkpoint upload")
-        uploader.wait()
-        spawn_closed_loop_evaluation(run_dir.name, update, checkpoint_sha, cfg.final_eval_n_matchups)
-        spawn_closed_loop_evaluation(
-            run_dir.name, update, checkpoint_sha, cfg.final_eval_n_matchups, return_target="unconditioned"
-        )
     wandb.log({"global_step": update, **final_metrics})
+    if not smoke:
+        for return_target in ("p90", "unconditioned"):
+            run_closed_loop_evaluation(
+                closed_loop_eval,
+                run_name=run_dir.name,
+                checkpoint=final_path,
+                update=update,
+                n_matchups=cfg.final_eval_n_matchups,
+                max_parallel=cfg.eval_max_parallel,
+                uploader=uploader,
+                corpus=corpus,
+                iso_path=iso_path,
+                return_target=return_target,
+            )
 
     mean_wait = float(np.mean(loader_wait_fractions)) if loader_wait_fractions else 0.0
     p95_wait = float(np.percentile(loader_wait_fractions, 95)) if loader_wait_fractions else 0.0
@@ -3532,6 +3634,9 @@ def train(
     cfg: TrainConfig,
     stats: dict[str, FeatureStats],
     *,
+    corpus: Corpus,
+    closed_loop_eval: ClosedLoopEval = "modal",
+    iso_path: str | None = None,
     comment: str = "",
     resume_run: str | None = None,
     resume_state: dict | None = None,
@@ -3556,6 +3661,8 @@ def train(
         lineage = (*lineage, source_transition)
     if smoke and proxy:
         raise ValueError("proxy and smoke modes are mutually exclusive")
+    if closed_loop_eval == "modal" and not cfg.push_to_r2 and not smoke:
+        raise ValueError("Modal evaluation reads checkpoints from R2; use push_to_r2 or another closed_loop_eval")
     if stop_after_update is not None and stop_after_update < 1:
         raise ValueError("stop_after_update must be positive")
     if stop_after_update is not None:
@@ -3570,7 +3677,7 @@ def train(
         run_stop = cfg.max_steps
     run_name = resume_run or make_run_name(Path(__file__).stem, model_tag(cfg), "policy-world-v8", comment)
     uploader = BackgroundUploader(run_name) if cfg.push_to_r2 else None
-    _init_wandb(cfg, run_name, resume_state)
+    _init_wandb(cfg, run_name, resume_state, shared=closed_loop_eval == "modal")
     if cfg.parent_wandb_id is not None and wandb.run is not None and wandb.run.id == cfg.parent_wandb_id:
         raise RuntimeError("the continuation must use a new W&B run id")
     run_dir, replay_dir = setup_run_dir(run_name)
@@ -3578,8 +3685,8 @@ def train(
     np.random.seed(cfg.seed)
     torch.manual_seed(cfg.seed)
     torch.set_float32_matmul_precision("high" if cfg.allow_tf32 else "highest")
-    sidecar = load_identity_sidecar(cfg)
-    prepared_data = _prepare_training_data(cfg, stats, sidecar, resume_state)
+    sidecar = load_identity_sidecar(cfg, corpus)
+    prepared_data = _prepare_training_data(cfg, stats, sidecar, resume_state, corpus)
     model_started = time.monotonic()
     print(f"[model] constructing ActionSequenceTransformer and moving parameters to {DEVICE}", flush=True)
     model = make_model(cfg, sidecar.vocabulary).to(DEVICE)
@@ -3624,7 +3731,7 @@ def train(
             raise ValueError("resume checkpoint has no global RNG state")
         validate_resume_provenance(
             resume_state.get("provenance"),
-            run_provenance(cfg),
+            run_provenance(cfg, corpus),
             transition=source_transition,
             parent_checkpoint_sha256=resume_checkpoint_sha256,
         )
@@ -3677,7 +3784,7 @@ def train(
         wandb.run.summary["loader/worker_start_s"] = prepared_data.worker_start_seconds
         wandb.run.summary["loader/cold_fill_s"] = cold_fill_seconds
     loader_wait_fractions: list[float] = []
-    cache_roots = tuple(streams.BY_NAME[name].local_root for name in cfg.source_names)
+    cache_roots = tuple(source.local_root for source in corpus.sources)
     host_metrics = HostMetricsSampler(
         cache_roots,
         interval_s=cfg.system_metrics_interval_s,
@@ -3829,6 +3936,7 @@ def train(
                     optimizer=optimizer,
                     scheduler=scheduler,
                     cfg=cfg,
+                    corpus=corpus,
                     uploader=uploader,
                     milestone=cfg.eval_every > 0 and update % cfg.eval_every == 0,
                     wandb_id=None if wandb.run is None else wandb.run.id,
@@ -3845,14 +3953,16 @@ def train(
                 boundary_metrics.update({f"val/{name}": value for name, value in values.items()})
             if eval_due:
                 assert checkpoint_path is not None
-                if uploader is None:
-                    raise RuntimeError("production evaluation requires R2 checkpoint upload")
-                uploader.wait()
-                spawn_closed_loop_evaluation(
-                    run_name,
-                    update,
-                    checkpoint_sha256(checkpoint_path),
-                    cfg.eval_n_matchups,
+                run_closed_loop_evaluation(
+                    closed_loop_eval,
+                    run_name=run_name,
+                    checkpoint=checkpoint_path,
+                    update=update,
+                    n_matchups=cfg.eval_n_matchups,
+                    max_parallel=cfg.eval_max_parallel,
+                    uploader=uploader,
+                    corpus=corpus,
+                    iso_path=iso_path,
                 )
             if boundary_metrics:
                 wandb.log({"global_step": update, **boundary_metrics})
@@ -3873,6 +3983,9 @@ def train(
             run_dir=run_dir,
             replay_dir=replay_dir,
             uploader=uploader,
+            corpus=corpus,
+            closed_loop_eval=closed_loop_eval,
+            iso_path=iso_path,
             loader_wait_fractions=loader_wait_fractions,
             loader_state=train_loader.state_dict(),
             identity_masker_state=identity_masker.state_dict(),
@@ -3959,8 +4072,9 @@ def validate_conditioning_state(state: Mapping[str, object], cfg: TrainConfig) -
 
 
 def load_checkpoint(
-    path: str, *, device: str = DEVICE
+    path: str, *, corpus: Corpus | None = None, device: str = DEVICE
 ) -> tuple[ActionSequenceTransformer, TrainConfig, dict[str, FeatureStats], dict]:
+    """Load a checkpoint and its feature statistics; ``corpus`` defaults to R2."""
     state = torch.load(path, map_location=device, weights_only=False)
     cfg = config_from_state(state["cfg"])
     validate_config(cfg)
@@ -3972,7 +4086,7 @@ def load_checkpoint(
     model = make_model(cfg, vocabulary).to(device)
     model.load_state_dict(state["model"])
     model.eval()
-    stats = load_stats(cfg)
+    stats = load_stats(cfg, r2_corpus(cfg) if corpus is None else corpus)
     return model, cfg, stats, state
 
 
@@ -4028,13 +4142,15 @@ def eval_checkpoint(
     replan_interval_frames: int | None = None,
     wandb_namespace: str = "eval",
     return_target: Literal["p90", "unconditioned"] = "p90",
+    corpus: Corpus | None = None,
+    iso_path: str | None = None,
 ) -> dict[str, float]:
     actual_checkpoint_sha256 = checkpoint_sha256(Path(path))
     if expected_checkpoint_sha256 is not None and actual_checkpoint_sha256 != expected_checkpoint_sha256:
         raise ValueError(
             f"checkpoint SHA-256 mismatch: expected {expected_checkpoint_sha256}, got {actual_checkpoint_sha256}"
         )
-    model, cfg, stats, state = load_checkpoint(path)
+    model, cfg, stats, state = load_checkpoint(path, corpus=corpus)
     validate_config(cfg)
     if return_target not in ("p90", "unconditioned"):
         raise ValueError("unknown return target")
@@ -4089,6 +4205,7 @@ def eval_checkpoint(
         replan_interval_frames=replan,
         desired_return=desired_return,
         return_calibration_sha256=calibration_hash,
+        iso_path=iso_path,
     )
     require_complete_eval(values, cfg.final_eval_n_matchups if n_matchups is None else n_matchups)
     if upload_run is not None:
@@ -4121,9 +4238,20 @@ def _remote_run_exists(run_name: str) -> bool:
     return bool(response.get("KeyCount", len(response.get("Contents", ()))))
 
 
+type CorpusLocation = Literal["r2", "huggingface"]
+
+
 @dataclass
 class TrainArgs:
     cfg: TrainConfig = dataclass_field(default_factory=TrainConfig)
+    dataset: CorpusLocation = "r2"
+    """Read the corpus from the private R2 bucket, or stream it from the public Hugging Face mirror."""
+    huggingface_root: Path = streams.HUGGINGFACE_LOCAL_ROOT
+    """Local cache of the Hugging Face dataset, laid out as the repository."""
+    closed_loop_eval: ClosedLoopEval = "modal"
+    """Evaluate checkpoints on a Modal worker, in this process, or not at all."""
+    iso_path: str | None = None
+    """Melee ISO for inline evaluation; the default is the pinned ISO, which needs R2."""
     proxy: bool = False
     comment: str = ""
     resume: str | None = None
@@ -4153,6 +4281,11 @@ class EvalArgs:
     replan_interval_frames: int | None = None
     wandb_namespace: str = "eval"
     return_target: Literal["p90", "unconditioned"] = "p90"
+    dataset: CorpusLocation = "r2"
+    """Where to read the feature statistics: R2, or the Hugging Face mirror."""
+    huggingface_root: Path = streams.HUGGINGFACE_LOCAL_ROOT
+    iso_path: str | None = None
+    """Melee ISO; the default is the pinned ISO, which needs R2."""
 
 
 type Command = (
@@ -4188,6 +4321,8 @@ def main(args: Command) -> None:
             replan_interval_frames=args.replan_interval_frames,
             wandb_namespace=args.wandb_namespace,
             return_target=args.return_target,
+            corpus=None if args.dataset == "r2" else huggingface_corpus(args.huggingface_root),
+            iso_path=args.iso_path,
         )
         return
     resume_run = resume_state = None
@@ -4271,10 +4406,14 @@ def main(args: Command) -> None:
         num_workers=cfg.num_workers if args.resume_num_workers is None else args.resume_num_workers,
         eval_max_parallel=cfg.eval_max_parallel if args.eval_max_parallel is None else args.eval_max_parallel,
     )
-    stats = load_stats(cfg)
+    corpus = r2_corpus(cfg) if args.dataset == "r2" else huggingface_corpus(args.huggingface_root)
+    stats = load_stats(cfg, corpus)
     train(
         cfg,
         stats,
+        corpus=corpus,
+        closed_loop_eval=args.closed_loop_eval,
+        iso_path=args.iso_path,
         comment=args.comment,
         resume_run=resume_run,
         resume_state=resume_state,

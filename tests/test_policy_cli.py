@@ -178,3 +178,20 @@ def test_eval_uses_the_users_iso_instead_of_the_r2_fixture(monkeypatch: pytest.M
 def test_play_rejects_unqualified_delay() -> None:
     with pytest.raises(SystemExit):
         cli._play_parser().parse_args(["policy.hal", "HUMAN#1", "--online-delay", "1"])
+
+
+def test_export_reads_statistics_from_the_huggingface_mirror(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    calls: list[tuple[str, Path, Path | None]] = []
+    monkeypatch.setattr(
+        cli,
+        "export_action_sequence_policy",
+        lambda checkpoint, output, *, huggingface_root: calls.append((checkpoint, output, huggingface_root)),
+    )
+
+    cli.main(["export", "final.pt", str(tmp_path / "policy.hal"), "--huggingface-root", "data/hf"])
+    cli.main(["export", "final.pt", str(tmp_path / "policy.hal")])
+
+    assert calls == [
+        ("final.pt", tmp_path / "policy.hal", Path("data/hf")),
+        ("final.pt", tmp_path / "policy.hal", None),
+    ]

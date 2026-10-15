@@ -55,7 +55,7 @@ HAL plays a level-9 CPU on Final Destination in headless Dolphin and writes a re
 
 ## Download the dataset
 
-The [dataset card](https://huggingface.co/datasets/ericyuegu/hal-mds-dataset) describes the sources, the filter, and the columns. The full dataset is large, so start with one split of one source:
+HAL 250M trained on this dataset. The [dataset card](https://huggingface.co/datasets/ericyuegu/hal-mds-dataset) describes the sources, the filter, and the columns. The training split holds 156 GiB of compressed shards, so start with one split of one source:
 
 ```bash
 uv run hf download ericyuegu/hal-mds-dataset --repo-type dataset \
@@ -72,14 +72,24 @@ print(game["replay_id"], game["num_frames"], game["p1_position_x"][:10])
 
 ## Train with the 059 recipe
 
-[`experiments/059_muon_action_sequence.py`](experiments/059_muon_action_sequence.py) trained HAL 250M. It runs on a Modal B200 and depends on the maintainer's private Cloudflare R2 bucket:
+[`experiments/059_muon_action_sequence.py`](experiments/059_muon_action_sequence.py) trained HAL 250M on one B200. To train it from the Hugging Face dataset on your own machine:
 
-- It streams the corpus from `s3://hal/processed/`. The Hugging Face dataset holds the same files, but the loader reads only from R2.
-- It uploads checkpoints to `s3://hal/runs/`, and `--resume` downloads them.
-- Every 8,192 updates it starts a Modal evaluator, which reads the checkpoint from R2.
-- It logs to W&B.
+```bash
+export WANDB_MODE=offline  # or run `uv run wandb login`
+uv run experiments/059_muon_action_sequence.py train --proxy \
+  --dataset huggingface --closed-loop-eval inline --iso-path "$HAL_ISO_PATH" --cfg.no-push-to-r2
+uv run hal-policy export runs/<run>/final.pt policy.hal --huggingface-root data/hf/hal-mds-dataset
+```
 
-With access to an R2 or S3 bucket that mirrors `s3://hal/processed/`, copy `.env.example` to `.env`, fill in the keys, and launch:
+- `--proxy` trains the 17M-parameter proxy. Leave it out for the 247M model. The recipe fixes the batch at 512 sequences, so the proxy runs out of memory on a 12 GB GPU. The 247M model trained on a B200.
+- `--dataset huggingface` downloads every shard into `data/hf/hal-mds-dataset/` in the background while training runs. A tree from `hf download ericyuegu/hal-mds-dataset --repo-type dataset --local-dir data/hf/hal-mds-dataset` serves as the same cache. Training checks the dataset against the same hashes as the R2 copy.
+- The loader requires free disk for the whole decompressed corpus, about 1.8 TiB, plus a 256 GiB reserve.
+- `--closed-loop-eval inline` pauses training every 8,192 updates and at the end to play 96 matches against level-9 CPUs on this machine. `--eval-max-parallel` caps the number of Dolphin processes. `--closed-loop-eval off` skips these matches.
+- `--cfg.no-push-to-r2` keeps checkpoints in `runs/<run>/` only.
+
+### Train on Modal
+
+The maintainer trains on a Modal B200 with a private Cloudflare R2 bucket. The training job streams the corpus from `s3://hal/processed/` and uploads checkpoints to `s3://hal/runs/`. Every 8,192 updates it starts a Modal evaluator, which reads the checkpoint from R2. With an R2 or S3 bucket of the same layout, copy `.env.example` to `.env`, fill in the keys, and launch:
 
 ```bash
 source .env
@@ -91,13 +101,9 @@ uv run modal secret create hal \
 uv run scripts/launch_modal.py -- uv run experiments/059_muon_action_sequence.py train
 ```
 
-The launcher builds its image from your pushed commit and resumes the run after a preemption. Add `--proxy` after `train` for the 17M-parameter proxy. To turn a checkpoint into a `.hal` file:
+The launcher builds its image from your pushed commit and resumes the run after a preemption.
 
-```bash
-uv run hal-policy export runs/<run>/final.pt policy.hal
-```
-
-The same bucket holds the ISO and test datasets that `uv run fetch` downloads when you omit `--name`. The integration tests and the netplay service in [deploy/netplay](deploy/netplay/README.md) need those files too.
+The bucket also holds the ISO and test datasets that `uv run fetch` downloads when you omit `--name`. The integration tests and the netplay service in [deploy/netplay](deploy/netplay/README.md) need those files.
 
 ## Layout
 

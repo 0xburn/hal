@@ -1446,3 +1446,170 @@ def test_tensor_temperature_matches_scalar_decode() -> None:
                 forced_prefix=forced,
             )
             torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+
+
+def test_huggingface_corpus_serves_the_pinned_sources_and_sidecar(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    cfg = exp.TrainConfig()
+    corpus = exp.huggingface_corpus(tmp_path)
+    pulled: list[tuple[str, Path]] = []
+    loaded: list[Path] = []
+
+    def pull(path: str, dest: Path) -> Path:
+        pulled.append((path, dest))
+        dest.write_bytes(b"sidecar")
+        return dest
+
+    def load(path: Path, **_kwargs: object) -> str:
+        loaded.append(path)
+        return "sidecar"
+
+    monkeypatch.setattr(exp.streams, "pull_huggingface_file", pull)
+    monkeypatch.setattr(exp, "load_player_identity_artifact", load)
+
+    assert [source.name for source in corpus.sources] == list(cfg.source_names)
+    assert exp.load_identity_sidecar(cfg, corpus) == "sidecar"
+    assert exp.load_identity_sidecar(cfg, corpus) == "sidecar"
+    assert pulled == [("player_codes.jsonl.gz", tmp_path / "player_codes.jsonl.gz")]
+    assert loaded == [tmp_path / "player_codes.jsonl.gz"] * 2
+    with pytest.raises(ValueError, match="configured sources"):
+        exp.load_stats(replace(cfg, source_names=cfg.source_names[:1]), corpus)
+
+
+def test_closed_loop_evaluation_off_does_nothing(tmp_path: Path) -> None:
+    exp.run_closed_loop_evaluation(
+        "off",
+        run_name="run",
+        checkpoint=tmp_path / "missing.pt",
+        update=8192,
+        n_matchups=96,
+        max_parallel=None,
+        uploader=None,
+        corpus=exp.huggingface_corpus(tmp_path),
+        iso_path=None,
+    )
+
+
+def test_modal_evaluation_requires_r2_checkpoints(tmp_path: Path) -> None:
+    checkpoint = tmp_path / "step.pt"
+    checkpoint.write_bytes(b"checkpoint")
+
+    with pytest.raises(RuntimeError, match="push_to_r2"):
+        exp.run_closed_loop_evaluation(
+            "modal",
+            run_name="run",
+            checkpoint=checkpoint,
+            update=8192,
+            n_matchups=96,
+            max_parallel=None,
+            uploader=None,
+            corpus=exp.huggingface_corpus(tmp_path),
+            iso_path=None,
+        )
+    with pytest.raises(ValueError, match="push_to_r2"):
+        exp.train(
+            replace(exp.TrainConfig(), push_to_r2=False),
+            {},
+            corpus=exp.huggingface_corpus(tmp_path),
+            closed_loop_eval="modal",
+        )
+
+
+def test_inline_evaluation_runs_in_process_and_logs_like_modal(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    checkpoint = tmp_path / "step.pt"
+    checkpoint.write_bytes(b"checkpoint")
+    corpus = exp.huggingface_corpus(tmp_path)
+    calls: list[dict[str, object]] = []
+    logged: list[dict[str, float]] = []
+
+    def evaluate(path: str, **kwargs: object) -> dict[str, float]:
+        calls.append({"path": path, **kwargs})
+        return {"stocks_taken_per_min": 1.5}
+
+    monkeypatch.setattr(exp, "eval_checkpoint", evaluate)
+    monkeypatch.setattr(exp, "_eval_wandb_metrics", lambda values: values)
+    monkeypatch.setattr(exp.wandb, "log", logged.append)
+
+    exp.run_closed_loop_evaluation(
+        "inline",
+        run_name="run",
+        checkpoint=checkpoint,
+        update=8192,
+        n_matchups=96,
+        max_parallel=8,
+        uploader=None,
+        corpus=corpus,
+        iso_path="ssbm.iso",
+        return_target="unconditioned",
+    )
+
+    assert calls == [
+        {
+            "path": str(checkpoint),
+            "n_matchups": 96,
+            "max_parallel": 8,
+            "output_name": "eval96-step-0008192-unconditioned",
+            "upload_run": None,
+            "expected_checkpoint_sha256": hashlib.sha256(b"checkpoint").hexdigest(),
+            "wandb_namespace": "eval_unconditioned",
+            "return_target": "unconditioned",
+            "corpus": corpus,
+            "iso_path": "ssbm.iso",
+        }
+    ]
+    assert logged == [
+        {"global_step": 8192, "eval/checkpoint_step": 8192, "eval_unconditioned/stocks_taken_per_min": 1.5}
+    ]
+
+
+def test_train_command_selects_huggingface_data_and_inline_evaluation() -> None:
+    import tyro
+
+    args = tyro.cli(
+        exp.Command,
+        args=[
+            "train",
+            "--dataset",
+            "huggingface",
+            "--huggingface-root",
+            "hf",
+            "--closed-loop-eval",
+            "inline",
+            "--iso-path",
+            "ssbm.iso",
+            "--cfg.no-push-to-r2",
+        ],
+    )
+
+    assert isinstance(args, exp.TrainArgs)
+    assert (args.dataset, args.huggingface_root, args.closed_loop_eval, args.iso_path) == (
+        "huggingface",
+        Path("hf"),
+        "inline",
+        "ssbm.iso",
+    )
+    assert args.cfg.push_to_r2 is False
+
+
+@pytest.mark.parametrize("shared", [True, False])
+def test_wandb_shares_the_run_only_with_a_modal_evaluator(shared: bool, monkeypatch: pytest.MonkeyPatch) -> None:
+    class Stop(Exception):
+        pass
+
+    modes: list[str] = []
+
+    def init(*, settings: Any, **_kwargs: object) -> None:
+        modes.append(settings.mode)
+        raise Stop
+
+    monkeypatch.setenv("WANDB_MODE", "offline")
+    monkeypatch.setattr(exp.wandb, "init", init)
+
+    with pytest.raises(Stop):
+        exp._init_wandb(exp.TrainConfig(), "run", None, shared=shared)
+
+    assert len(modes) == 1
+    assert (modes[0] == "shared") is shared

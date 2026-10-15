@@ -80,6 +80,11 @@ def _policy_parser() -> argparse.ArgumentParser:
     export = commands.add_parser("export", help="export a supported 059 checkpoint")
     export.add_argument("checkpoint")
     export.add_argument("output", type=Path)
+    export.add_argument(
+        "--huggingface-root",
+        type=Path,
+        help="read feature statistics from the Hugging Face mirror cached here, not from R2",
+    )
     evaluate = commands.add_parser("eval", help="evaluate an artifact against local CPUs")
     evaluate.add_argument("policy")
     evaluate.add_argument("--profile", choices=("local", "official-059", "local-stride-one"), default="local")
@@ -274,7 +279,7 @@ def _play(args: argparse.Namespace) -> None:
 def main(argv: Sequence[str] | None = None) -> None:
     args = _policy_parser().parse_args(argv)
     if args.command == "export":
-        export_action_sequence_policy(args.checkpoint, args.output)
+        export_action_sequence_policy(args.checkpoint, args.output, huggingface_root=args.huggingface_root)
         print(args.output.resolve())
         return
     if args.command == "play":

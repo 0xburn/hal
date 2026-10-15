@@ -26,6 +26,8 @@ already gitignored via `/data/`. Treat the cache as streaming-managed.
 To pre-warm before going offline, iterate the dataset once end-to-end.
 """
 
+import os
+import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Final
@@ -40,8 +42,8 @@ from hal.paths import REPO_DIR
 class StreamSource:
     """One MDS dataset with `{train, val, test}/` splits served from R2.
 
-    `remote` is the s3:// URI of the MDS root; `local` is its cache mirror
-    relative to repo root. `for_split(name)` returns the (remote, local)
+    `remote` is the s3:// or hf:// URI of the MDS root; `local` is its cache
+    mirror, relative to repo root unless absolute. `for_split(name)` returns the (remote, local)
     pair ready to drop into `StreamingDataset`.
     """
 
@@ -175,6 +177,29 @@ POLICY_WORLD_V8_SOURCES: Final[tuple[StreamSource, ...]] = (
     *RANKED_ANONYMIZED_POLICY_WORLD_V8,
     *PROFESSIONAL_POLICY_WORLD_V8.values(),
 )
+
+# The public mirror of the policy-world v8 corpus. Each source keeps its R2
+# name, index.json, and stats.json; only the folder layout differs.
+HUGGINGFACE_DATASET: Final[str] = "ericyuegu/hal-mds-dataset"
+HUGGINGFACE_PLAYER_SIDECAR: Final[str] = "player_codes.jsonl.gz"
+HUGGINGFACE_LOCAL_ROOT: Final[Path] = Path("data/hf/hal-mds-dataset")
+
+
+def huggingface_policy_world_v8_sources(root: Path) -> tuple[StreamSource, ...]:
+    """Policy-world v8 sources that stream from Hugging Face into ``root``.
+
+    ``root`` mirrors the dataset repository, so a tree written by
+    ``hf download ericyuegu/hal-mds-dataset --local-dir <root>`` serves as the cache.
+    """
+    folders = (
+        *(f"ranked-anonymized-{rank}" for rank in range(1, 7)),
+        *(f"pro/{slug}" for slug in PROFESSIONAL_PLAYER_SLUGS),
+    )
+    return tuple(
+        StreamSource(name=source.name, remote=f"hf://datasets/{HUGGINGFACE_DATASET}/{folder}", local=root / folder)
+        for source, folder in zip(POLICY_WORLD_V8_SOURCES, folders, strict=True)
+    )
+
 
 # Verified against the immutable train splits on R2 on 2026-08-23. The replay
 # counts also define the natural multi-stream sampling and normalization mix.
@@ -501,11 +526,26 @@ def pull_stats(src: StreamSource) -> Path:
     Training needs it before the first batch. ``ensure_stats`` performs this
     pull lazily for the selected data root. Shards still stream lazily.
     """
-    bucket, key = _split_uri(src.remote)
     dest = src.local_root / "stats.json"
     dest.parent.mkdir(parents=True, exist_ok=True)
-    r2.client().download_file(bucket, f"{key}/stats.json", str(dest))
+    huggingface_prefix = f"hf://datasets/{HUGGINGFACE_DATASET}/"
+    if src.remote.startswith(huggingface_prefix):
+        pull_huggingface_file(f"{src.remote.removeprefix(huggingface_prefix)}/stats.json", dest)
+    else:
+        bucket, key = _split_uri(src.remote)
+        r2.client().download_file(bucket, f"{key}/stats.json", str(dest))
     logger.info(f"[streams] {src.name}: stats.json -> {dest}")
+    return dest
+
+
+def pull_huggingface_file(path: str, dest: Path) -> Path:
+    """Download one file of the public dataset to ``dest``."""
+    from huggingface_hub import hf_hub_download
+
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(dir=dest.parent) as staging:
+        downloaded = hf_hub_download(HUGGINGFACE_DATASET, path, repo_type="dataset", local_dir=staging)
+        os.replace(downloaded, dest)
     return dest
 
 

@@ -128,7 +128,7 @@ def main() -> None:
     cfg = experiment.config_from_state(state["cfg"])
     experiment.validate_config(cfg)
     experiment.validate_conditioning_state(state, cfg)
-    current_provenance = experiment.run_provenance(cfg)
+    current_provenance = experiment.run_provenance(cfg, experiment.r2_corpus(cfg))
     if args.mode == "control":
         if args.source_transition is not None:
             raise ValueError("the control uses the checkpoint's exact source without a transition")
@@ -162,11 +162,13 @@ def main() -> None:
     np.random.seed(cfg.seed)
     torch.manual_seed(cfg.seed)
     torch.set_float32_matmul_precision("high" if cfg.allow_tf32 else "highest")
-    stats = experiment.load_stats(cfg)
-    sidecar = experiment.load_identity_sidecar(cfg)
+    stats = experiment.load_stats(cfg, experiment.r2_corpus(cfg))
+    sidecar = experiment.load_identity_sidecar(cfg, experiment.r2_corpus(cfg))
 
     with ExitStack() as resources:
-        loader = experiment._make_train_loader(cfg, stats, experiment.ReplayPlayerLookup(sidecar.by_replay))
+        loader = experiment._make_train_loader(
+            cfg, stats, experiment.ReplayPlayerLookup(sidecar.by_replay), experiment.r2_corpus(cfg)
+        )
         resources.callback(loader.close)
         raw_capture = _RawBatchCapture(loader, loader.batch_transform, experiment._return_batch_state)
         loader.batch_transform = raw_capture

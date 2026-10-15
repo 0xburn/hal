@@ -149,3 +149,61 @@ def test_consolidated_mixture_stats_check_every_schema(tmp_path: Path) -> None:
 
     with pytest.raises(ValueError, match="mds_schema_version"):
         load_consolidated_mixture_stats([first, second], [1.0, 1.0], expected_mds_schema_version=7)
+
+
+def test_huggingface_sources_mirror_the_v8_registry(tmp_path: Path) -> None:
+    sources = streams.huggingface_policy_world_v8_sources(tmp_path)
+
+    assert [source.name for source in sources] == [source.name for source in streams.POLICY_WORLD_V8_SOURCES]
+    ranked_one, pro_aklo = sources[0], sources[6]
+    assert ranked_one.remote == "hf://datasets/ericyuegu/hal-mds-dataset/ranked-anonymized-1"
+    assert ranked_one.for_split("train") == (
+        "hf://datasets/ericyuegu/hal-mds-dataset/ranked-anonymized-1/train",
+        tmp_path / "ranked-anonymized-1" / "train",
+    )
+    assert pro_aklo.name == "professional-aklo-policy-world-v8"
+    assert pro_aklo.local_root == tmp_path / "pro" / "aklo"
+
+
+def test_pull_stats_reads_huggingface_sources_from_the_hub(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    calls: list[tuple[str, Path]] = []
+
+    def fake_pull(path: str, dest: Path) -> Path:
+        calls.append((path, dest))
+        return dest
+
+    monkeypatch.setattr(streams, "pull_huggingface_file", fake_pull)
+    source = streams.huggingface_policy_world_v8_sources(tmp_path)[6]
+
+    assert streams.pull_stats(source) == tmp_path / "pro" / "aklo" / "stats.json"
+    assert calls == [("pro/aklo/stats.json", tmp_path / "pro" / "aklo" / "stats.json")]
+
+
+def test_export_statistics_come_from_the_selected_mirror(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    from hal.inference.action_sequence_artifact import source_stats_paths
+
+    names = tuple(source.name for source in streams.POLICY_WORLD_V8_SOURCES)
+    cached = tmp_path / "ranked-anonymized-1" / "stats.json"
+    cached.parent.mkdir()
+    cached.write_text("{}")
+    pulled: list[str] = []
+
+    def fake_pull_stats(src: streams.StreamSource) -> Path:
+        pulled.append(src.name)
+        return src.local_root / "stats.json"
+
+    monkeypatch.setattr(streams, "pull_stats", fake_pull_stats)
+
+    paths = source_stats_paths(names, tmp_path)
+
+    assert paths[0] == cached
+    assert paths[6] == tmp_path / "pro" / "aklo" / "stats.json"
+    assert pulled == list(names[1:])
+    with pytest.raises(ValueError, match="registry order"):
+        source_stats_paths(names[:1], tmp_path)

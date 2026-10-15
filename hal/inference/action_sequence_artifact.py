@@ -5,6 +5,7 @@ import json
 import math
 import re
 import tempfile
+from collections.abc import Sequence
 from dataclasses import dataclass
 from dataclasses import replace
 from pathlib import Path
@@ -352,12 +353,33 @@ def read_checkpoint(path: Path) -> tuple[dict[str, object], CheckpointContract, 
     return raw, cfg, codes, p90
 
 
-def export_action_sequence_policy(checkpoint_source: str | Path, destination: str | Path) -> PolicyBundleManifest:
+def source_stats_paths(source_names: Sequence[str], huggingface_root: Path | None) -> tuple[Path, ...]:
+    """Return each source's local stats.json, downloading any that are missing."""
+    if huggingface_root is None:
+        sources = tuple(streams.BY_NAME[name] for name in source_names)
+    else:
+        sources = streams.huggingface_policy_world_v8_sources(huggingface_root)
+        if tuple(source.name for source in sources) != tuple(source_names):
+            raise ValueError("the Hugging Face mirror serves only the policy-world-v8 sources in registry order")
+    paths = []
+    for source in sources:
+        path = source.local_root / "stats.json"
+        paths.append(path if path.is_file() else streams.pull_stats(source))
+    return tuple(paths)
+
+
+def export_action_sequence_policy(
+    checkpoint_source: str | Path, destination: str | Path, *, huggingface_root: Path | None = None
+) -> PolicyBundleManifest:
+    """Bundle a checkpoint with its feature statistics.
+
+    The statistics come from R2, or from the Hugging Face mirror cached under
+    ``huggingface_root``. Both serve the same files.
+    """
     checkpoint = resolve_checkpoint(str(checkpoint_source))
     raw, cfg, _codes, p90 = read_checkpoint(checkpoint)
     source_names = cfg.source_names
-    sources = tuple(streams.BY_NAME[name] for name in source_names)
-    paths = tuple(streams.ensure_stats(source.local_root / "stats.json") for source in sources)
+    paths = source_stats_paths(source_names, huggingface_root)
     stats = load_consolidated_mixture_stats(
         paths,
         tuple(float(streams.POLICY_WORLD_V8_TRAIN_REPLAYS[name]) for name in source_names),

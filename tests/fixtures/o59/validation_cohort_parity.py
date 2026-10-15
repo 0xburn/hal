@@ -144,8 +144,8 @@ def _control(repo: Path, checkout: Path, output: Path) -> None:
     cfg = experiment.TrainConfig(
         player_sidecar_local=str(repo / "data/processed/player-identity-v1/professional-code-v1.jsonl.gz")
     )
-    stats = experiment.load_stats(cfg)
-    sidecar = experiment.load_identity_sidecar(cfg)
+    stats = experiment.load_stats(cfg, experiment.r2_corpus(cfg))
+    sidecar = experiment.load_identity_sidecar(cfg, experiment.r2_corpus(cfg))
     projection = FeatureProjection(
         columns=experiment.ITEM_PLAYER_PROJECTION.columns
         | {
@@ -248,8 +248,8 @@ def _candidate(repo: Path, fixture: Path, output: Path | None) -> None:
     cfg = experiment.TrainConfig(
         player_sidecar_local=str(repo / "data/processed/player-identity-v1/professional-code-v1.jsonl.gz")
     )
-    stats = experiment.load_stats(cfg)
-    sidecar = experiment.load_identity_sidecar(cfg)
+    stats = experiment.load_stats(cfg, experiment.r2_corpus(cfg))
+    sidecar = experiment.load_identity_sidecar(cfg, experiment.r2_corpus(cfg))
     loader = make_validation_replay_loader(
         sources=tuple(streams.BY_NAME[name] for name in cfg.source_names),
         stats=stats,

@@ -528,11 +528,16 @@ class MDSStorageAdapter:
         self,
         selection: PhysicalShardSelection,
         *,
+        sources: Sequence[streams_lib.StreamSource] | None = None,
         split: str = "train",
         download_retry: int = 8,
     ) -> None:
+        """``sources`` locates each selected source; the default is the R2 registry."""
+        if sources is None:
+            sources = tuple(streams_lib.BY_NAME[view.source] for view in selection.sources)
+        if tuple(source.name for source in sources) != tuple(view.source for view in selection.sources):
+            raise ValueError("stream sources must match the selected sources in order")
         patch_streaming()
-        sources = tuple(streams_lib.BY_NAME[view.source] for view in selection.sources)
         mosaic_streams = [
             Stream(
                 remote=source.remote,
@@ -553,6 +558,7 @@ class MDSStorageAdapter:
             batch_size=1,
         )
         self.selection = selection
+        self.sources = tuple(sources)
         self.split = split
         self.manifests = self._manifests()
         self.last_read_bytes = 0
@@ -613,9 +619,9 @@ class MDSStorageAdapter:
         ):
             raise ValueError("expected MDS schema SHA-256 is invalid")
 
-        for source in self.selection.sources:
-            name = source.source
-            path = streams_lib.BY_NAME[name].local_root / self.split / "index.json"
+        for source in self.sources:
+            name = source.name
+            path = source.local_root / self.split / "index.json"
             payload = path.read_bytes()
             actual_hash = hashlib.sha256(payload).hexdigest()
             if actual_hash != expected_sha256[name]:
